@@ -15,7 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Installing dependencies
-        run: npm install
+        run: |
+          cd ..
+          npm install
       - name: Running tests
         run: npm test
       - name: Building App
