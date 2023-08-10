@@ -1,0 +1,30 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Installing dependencies
+        run: npm install
+      - name: Running tests
+        run: npm test
+      - name: Building App
+        run: npm run build
+      - name: Deploy to vercel
+        run: npx vercel --token ${{ secrets.VERCEL_TOKEN }} --prod
