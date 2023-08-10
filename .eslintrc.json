@@ -31,6 +31,10 @@
     "no-magic-numbers": 0,
     "max-lines-per-function": 0,
     "react/jsx-child-element-spacing": "off",
+    "sort-imports": ["error", {
+      "ignoreDeclarationSort": true,
+      "ignoreMemberSort": false
+    }],
     "space-before-function-paren": ["error", {
       "anonymous": "never",
       "named": "never",
