@@ -1,0 +1,22 @@
+name: Next App CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Installing dependencies
+        run: npm install
+      - name: Running tests
+        run: npm test
+      - name: Building App
+        run: npm run build
