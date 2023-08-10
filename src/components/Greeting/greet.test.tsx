@@ -6,7 +6,7 @@ describe('Greet', () => {
   test('renders correctly', () => {
     render(<Greet />)
     const headingElement = screen.getByText('HI there from team QuickIPO')
-    
+
     expect(headingElement).toBeInTheDocument()
   })
 })
