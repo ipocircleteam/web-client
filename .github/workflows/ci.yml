@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Installing dependencies
         run: |
-          ls
+          ls -al /home/runner/work/website-client/website-client/package.json
           npm install
       - name: Running tests
         run: npm test
