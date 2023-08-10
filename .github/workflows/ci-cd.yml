@@ -22,5 +22,3 @@ jobs:
           node-version: 14
       - name: Installing dependencies
         run: npm install
-      - name: Deploy to vercel
-        run: npx vercel --token ${{ secrets.VERCEL_TOKEN }} --prod
