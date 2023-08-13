@@ -1,5 +1,11 @@
+import Menu from '@/components/Menu/menu'
 import React from 'react'
 
 export default function IpoTracker() {
-  return <h1>IPO Tracker Hu Mai</h1>
+  return (
+    <>
+      <Menu />
+      <h1>IPO Tracker Hu Mai</h1>
+    </>
+  )
 }

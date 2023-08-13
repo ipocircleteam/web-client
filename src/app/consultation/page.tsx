@@ -1,5 +1,10 @@
+import Menu from '@/components/Menu/menu'
 import React from 'react'
 
 export default function Consultation() {
-  return <h1>Consultation Hu Mai</h1>
+  return
+  ;<>
+    <Menu />
+    <h1>Consultation Hu Mai</h1>
+  </>
 }
