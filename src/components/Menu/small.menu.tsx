@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CallBackType } from './menu.types'
 import { Bars } from '../../../public/icons'
-import { LogoSample } from '../../../public/logo'
+import { Logo2 } from '../../../public/logo'
 import MenuList from './menu-list'
 import $ from 'jquery'
 
@@ -32,7 +32,7 @@ function Navbar(props: CallBackType) {
           className="ml-5"
           alt="IPOCircle"
           height={80}
-          src={LogoSample}
+          src={Logo2}
           width={80}
         />
       </Link>

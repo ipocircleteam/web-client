@@ -12,7 +12,7 @@ export function IpoTable(props: TableDataType) {
         {/* TABLE HEADING */}
         <tr className="w-[100%] p-4 text-[13px] lg:text-[15px] font-semibold text-grey-500 custom-tablerow">
           <td className="w-[5%]">#</td>
-          <td className="w-[15%]">Name</td>
+          <td className="w-[15%]">IPO Name</td>
           <td className="w-[15%]">Open Date</td>
           <td className="w-[15%]">End Date</td>
           <td className="w-[15%]">Status</td>

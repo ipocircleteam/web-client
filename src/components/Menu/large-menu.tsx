@@ -1,23 +1,26 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { LogoSample } from '../../../public/logo'
+import { Logo6 } from '../../../public/logo'
 import CTAbutton from '../Buttons/cta-btn'
 
 export default function LargeMenu() {
   return (
     <div
-      className="p-[10px] m-0 w-[100vw] flex justify-between items-center border-b-2"
+      className="px-[10px] py-[5px] m-0 w-[100vw] flex justify-between items-center border-b-2"
       data-testid="large-menu"
     >
       <Link href="/">
-        <Image
-          className="ml-5"
-          alt="IPOCircle"
-          height={80}
-          src={LogoSample}
-          width={80}
-        />
+        <div className="flex justify-center items-center text-[1.5rem] font-bold">
+          <Image
+            className="ml-5 m-0 p-0"
+            alt="IPOCircle"
+            height={45}
+            src={Logo6}
+            width={180}
+          />
+          {/* <label className='text-primary ml-1'>IPO</label><label className='text-secondary'>Circle</label> */}
+        </div>
       </Link>
 
       <div className="m-0 flex justify-end items-center px-2">

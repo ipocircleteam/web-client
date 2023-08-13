@@ -10,7 +10,7 @@ export default function Hero() {
       <span className="flex justify-center items-center w-[85vw] sm:w-[95vw] mx-auto">
         <h1 className="text-[2rem] md:text-[3rem] lg:text-[4rem] font-bold leading-[1] ">
           <label className="text-primary">India's first </label>
-          <label className="text-secondary">online grey market</label>
+          <label className="text-secondary">IPO consultancy platform</label>
         </h1>
       </span>
 
@@ -18,12 +18,12 @@ export default function Hero() {
         className="my-4 md:my-2 text-[1rem] md:text-[1.5rem] leading-tight text-primary 
       w-[90vw] sm:w-[95vw] mx-auto"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing <br />
-        elit. Sed a tortor leo.
+        Invest smartly in IPOs with our data backed consultancy <br />
+        and increase your profit probability
       </p>
       <div className="my-4">
         <LargeCTAbutton
-          text="Get Free Consulting"
+          text="Get Started For Free"
           function={() => {
             window.location.replace('/consultation')
           }}
