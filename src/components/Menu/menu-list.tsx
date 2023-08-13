@@ -8,7 +8,7 @@ export default function MenuList(props: CallBackType) {
   return (
     <div
       id="Menulist"
-      className="custom-menu-transition shadow-lg bg-base fixed top-0 w-[50vw] h-[50vh] p-2 text-left"
+      className="custom-menu-transition shadow-lg bg-base fixed top-0 w-[60vw] h-[50vh] p-2 text-left"
     >
       <div className="flex m-0 border border-t-0 border-l-0 border-r-0 cursor-pointer justify-end items-center px-4 pt-2">
         <Image
@@ -41,7 +41,7 @@ export default function MenuList(props: CallBackType) {
           href="/ipotracker"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
-          Analyse
+          Analyser
         </Link>
       </div>
       <div className="m-2">
