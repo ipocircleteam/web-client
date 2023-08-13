@@ -12,7 +12,7 @@ describe('home page hero renders correctly', () => {
   test('button renders correctly', () => {
     render(<Hero />)
     const buttonEl = screen.getByRole('button', {
-      name: 'Free Consulting',
+      name: 'Get Free Consulting',
     })
     expect(buttonEl).toBeInTheDocument()
   })

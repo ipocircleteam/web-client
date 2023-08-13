@@ -2,9 +2,7 @@ export type RowDataType = {
   sno: number
   ipoID: string
   name: string
-  lotprice: number
-  sta: number
-  application: number
+  opendate: string
   enddate: string
   status: string
 }

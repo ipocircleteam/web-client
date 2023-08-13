@@ -22,7 +22,7 @@ export default function Hero() {
         elit. Sed a tortor leo.
       </p>
       <div className="my-4">
-        <LargeCTAbutton text="Free Consulting" function={() => {}} />
+        <LargeCTAbutton text="Get Free Consulting" function={() => {}} />
       </div>
     </div>
   )
