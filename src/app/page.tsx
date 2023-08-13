@@ -1,5 +1,11 @@
-import { Greet } from '@/components/Greeting/greet'
+import Hero from '@/components/Hero/hero'
+import Menu from '@/components/Menu/menu'
 
 export default function Home() {
-  return <Greet />
+  return (
+    <>
+      <Menu />
+      <Hero />
+    </>
+  )
 }

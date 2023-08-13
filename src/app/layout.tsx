@@ -6,8 +6,8 @@ import React from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'QuickIPO',
-  description: 'India first online grey market',
+  title: 'IPOCircle',
+  description: 'Providing end to end IPO solutions',
 }
 
 export default function RootLayout({
