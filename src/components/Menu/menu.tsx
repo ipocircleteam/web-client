@@ -8,5 +8,5 @@ import SmallMenu from './small.menu'
 export default function Menu() {
   const width = useWindowWidth()
 
-  return <>{width > 600 ? <LargeMenu /> : <SmallMenu />}</>
+  return <>{width && width > 600 ? <LargeMenu /> : <SmallMenu />}</>
 }
