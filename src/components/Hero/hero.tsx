@@ -8,9 +8,9 @@ export default function Hero() {
   return (
     <div className="my-[50px] md:mt-[4rem] md:mb-0 text-center ">
       <span className="flex justify-center items-center w-[85vw] sm:w-[95vw] mx-auto">
-        <h1 className="text-[2rem] md:text-[3rem] lg:text-[4rem] font-bold leading-[1] ">
+        <h1 className="text-[2rem] md:text-[3rem] lg:text-[3.8rem] font-bold leading-[1] ">
           <label className="text-primary">India's first </label>
-          <label className="text-secondary">IPO consultancy platform</label>
+          <label className="text-secondary">IPO Consultancy Platform</label>
         </h1>
       </span>
 

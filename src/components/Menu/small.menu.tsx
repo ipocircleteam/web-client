@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CallBackType } from './menu.types'
 import { Bars } from '../../../public/icons'
-import { Logo2 } from '../../../public/logo'
+import { Logo6 } from '../../../public/logo'
 import MenuList from './menu-list'
 import $ from 'jquery'
 
@@ -29,11 +29,11 @@ function Navbar(props: CallBackType) {
     <div className="flex justify-between items-center border border-bottom p-4">
       <Link href="/">
         <Image
-          className="ml-5"
+          className=""
           alt="IPOCircle"
-          height={80}
-          src={Logo2}
-          width={80}
+          height={150}
+          src={Logo6}
+          width={150}
         />
       </Link>
 
