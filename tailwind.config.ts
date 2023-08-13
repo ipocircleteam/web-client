@@ -14,8 +14,7 @@ const config: Config = {
       xl: '1440px',
     },
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      base: ['Raleway', 'sans-serif'],
     },
     extend: {
       colors: {

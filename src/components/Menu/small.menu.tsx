@@ -1,7 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { CallBackType } from './menu.types'
 import { Bars } from '../../../public/icons'
+import { LogoSample } from '../../../public/logo'
 import MenuList from './menu-list'
 import $ from 'jquery'
 
@@ -25,19 +27,24 @@ export default function SmallMenu() {
 function Navbar(props: CallBackType) {
   return (
     <div className="flex justify-between items-center border border-bottom px-4 pt-2">
-      <div className=" m-0 cursor-pointer">
-        <Image alt="IPOCircle" height={50} src="/" width={80} />
-      </div>
-
-      <div className="m-0 cursor-pointer">
+      <Link href="/">
         <Image
-          onClick={props.callback}
-          alt="Menu"
-          height={20}
-          src={Bars}
-          width={20}
+          className="ml-5"
+          alt="IPOCircle"
+          height={80}
+          src={LogoSample}
+          width={80}
         />
-      </div>
+      </Link>
+
+      <Image
+        onClick={props.callback}
+        className="m-0 cursor-pointer"
+        alt="Menu"
+        height={20}
+        src={Bars}
+        width={20}
+      />
     </div>
   )
 }

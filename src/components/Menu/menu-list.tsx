@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Cross } from '../../../public/icons'
 import { CallBackType } from './menu.types'
+import CTAbutton from '../Buttons/cta-btn'
 
 export default function MenuList(props: CallBackType) {
   return (
@@ -45,12 +46,7 @@ export default function MenuList(props: CallBackType) {
         </Link>
       </div>
       <div className="m-2">
-        <button
-          className="text-primary text-[20px] bg-secondary py-2 px-4 font-semibold rounded-lg border border-secondary
-          hover:bg-base hover:border-secondary custom-btn-transition text-base hover:text-primary"
-        >
-          Free Consulting
-        </button>
+        <CTAbutton text="Free Consulting" function={() => {}} />
       </div>
     </div>
   )
