@@ -3,25 +3,25 @@
 @tailwind utilities;
 
 body {
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
-.custom-btn-transition{
-    transition: background-color 0.2s ease;
+.custom-btn-transition {
+  transition: background-color 0.2s ease;
 }
 
-.custom-menu-transition{
-    position: fixed;
-    right: -90vw;
-    transition: posiiton 0.2s linear;
-    animation: slidein 0.3s forwards;
+.custom-menu-transition {
+  position: fixed;
+  right: -90vw;
+  transition: posiiton 0.2s linear;
+  animation: slidein 0.3s forwards;
 }
 
 @keyframes slidein {
-    from{
-        right: -90vw;
-    }
-    to{
-        right: 0vw;
-    }
+  from {
+    right: -90vw;
+  }
+  to {
+    right: 0vw;
+  }
 }

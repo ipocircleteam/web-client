@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import React from 'react'
 import useWindowWidth from '@/hooks/useWindowWidth'
@@ -8,9 +8,5 @@ import SmallMenu from './small.menu'
 export default function Menu() {
   const width = useWindowWidth()
 
-  return (
-    <>
-      {width > 600 ? <LargeMenu /> : <SmallMenu />}
-    </>
-  )
+  return <>{width > 600 ? <LargeMenu /> : <SmallMenu />}</>
 }

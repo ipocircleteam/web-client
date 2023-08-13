@@ -3,7 +3,6 @@ import '@testing-library/jest-dom/extend-expect'
 import Menu from './menu'
 
 describe('Renders Menu Bar correctly', () => {
-
   test('renders logo correctly', () => {
     render(<Menu />)
     const logoEl = screen.getByRole('img')
@@ -22,7 +21,7 @@ describe('Renders Menu Bar correctly', () => {
       name: 'Analyse',
     })
     const consultingButton = screen.getByRole('button', {
-      name: 'Free Consulting'
+      name: 'Free Consulting',
     })
     expect(gmp).toBeInTheDocument()
     expect(ipos).toBeInTheDocument()
@@ -33,7 +32,7 @@ describe('Renders Menu Bar correctly', () => {
   test('renders large menu for screen width greater than 600', () => {
     Object.defineProperty(window, 'innerwidth', { value: 300, writable: true })
     render(<Menu />)
-    const largeMenu = screen.getByTestId("large-menu")
+    const largeMenu = screen.getByTestId('large-menu')
     expect(largeMenu).toBeInTheDocument
   })
 
@@ -43,6 +42,4 @@ describe('Renders Menu Bar correctly', () => {
   //   const smallMenu = screen.getByTestId("small-menu")
   //   expect(smallMenu).toBeInTheDocument
   // })
-
-
 })

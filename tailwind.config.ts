@@ -22,9 +22,9 @@ const config: Config = {
         base: '#FFFFFF',
         baseTwo: '#D9D9D9',
         primary: '#012C7A',
-        secondary: '#00BE9D'
+        secondary: '#00BE9D',
       },
-    }
+    },
   },
   plugins: [],
 }

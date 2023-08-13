@@ -7,11 +7,11 @@ import $ from 'jquery'
 
 export default function SmallMenu() {
   const openMenu = () => {
-    $("#Menulist").toggleClass('hidden')
+    $('#Menulist').toggleClass('hidden')
   }
 
   const closeMenu = () => {
-    $("#Menulist").toggleClass('hidden')
+    $('#Menulist').toggleClass('hidden')
   }
 
   return (

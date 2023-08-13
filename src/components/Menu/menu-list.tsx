@@ -44,13 +44,13 @@ export default function MenuList(props: CallBackType) {
           Analyse
         </Link>
       </div>
-          <div className='m-2'>
-          <button
-        className="text-primary text-[20px] bg-secondary py-2 px-4 font-semibold rounded-lg border border-secondary
+      <div className="m-2">
+        <button
+          className="text-primary text-[20px] bg-secondary py-2 px-4 font-semibold rounded-lg border border-secondary
           hover:bg-base hover:border-secondary custom-btn-transition text-base hover:text-primary"
-      >
-        Free Consulting
-      </button>
+        >
+          Free Consulting
+        </button>
       </div>
     </div>
   )
