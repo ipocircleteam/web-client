@@ -22,7 +22,12 @@ export default function Hero() {
         elit. Sed a tortor leo.
       </p>
       <div className="my-4">
-        <LargeCTAbutton text="Get Free Consulting" function={() => {}} />
+        <LargeCTAbutton
+          text="Get Free Consulting"
+          function={() => {
+            window.location.replace('/consultation')
+          }}
+        />
       </div>
     </div>
   )

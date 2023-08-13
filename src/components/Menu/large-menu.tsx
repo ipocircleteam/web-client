@@ -42,7 +42,12 @@ export default function LargeMenu() {
           Analyse
         </Link>
 
-        <CTAbutton text="Free Consulting" function={() => {}} />
+        <CTAbutton
+          text="Free Consulting"
+          function={() => {
+            window.location.replace('/consultation')
+          }}
+        />
       </div>
     </div>
   )
