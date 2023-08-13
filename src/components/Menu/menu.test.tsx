@@ -1,6 +1,11 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import Menu from './menu'
+import { JSDOM } from 'jsdom';
+
+const { window } = new JSDOM('<!doctype html><html><body></body></html>');
+
+global.document = window.document;
 
 describe('Renders Menu Bar correctly', () => {
   test('renders logo correctly', () => {
