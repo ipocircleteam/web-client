@@ -20,3 +20,12 @@ body {
   position: fixed;
   right: 0vw;
 }
+
+.custom-tablerow {
+  border-bottom: rgb(224, 221, 221) 1px solid;
+  height: 50px;
+}
+
+.shift-view {
+  background-color: #c0ddf9;
+}

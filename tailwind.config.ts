@@ -23,6 +23,7 @@ const config: Config = {
         baseTwo: '#D9D9D9',
         primary: '#012C7A',
         secondary: '#00BE9D',
+        primaryShade: '#C0DDF9',
       },
     },
   },
