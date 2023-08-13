@@ -6,7 +6,7 @@ import LargeCTAbutton from '../Buttons/large-cta-btn'
 
 export default function Hero() {
   return (
-    <div className="my-6 md:my-4 text-center">
+    <div className="my-6 md:my-0 md:mt-[25px] text-center">
       <span className="flex justify-center items-center w-[95vw] mx-auto">
         <h1 className="text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[1] ">
           <label className="text-primary">India's first </label>

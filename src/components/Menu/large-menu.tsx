@@ -7,7 +7,7 @@ import CTAbutton from '../Buttons/cta-btn'
 export default function LargeMenu() {
   return (
     <div
-      className="p-4 m-0 w-[100vw] flex justify-between items-center border-b-2"
+      className="p-[10px] m-0 w-[100vw] flex justify-between items-center border-b-2"
       data-testid="large-menu"
     >
       <Link href="/">
