@@ -26,7 +26,7 @@ export default function SmallMenu() {
 
 function Navbar(props: CallBackType) {
   return (
-    <div className="flex justify-between items-center border border-bottom px-4 pt-2">
+    <div className="flex justify-between items-center border border-bottom p-4">
       <Link href="/">
         <Image
           className="ml-5"
