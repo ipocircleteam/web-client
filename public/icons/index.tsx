@@ -1,2 +1,6 @@
 export { default as Bars } from './bars.svg'
 export { default as Cross } from './x.svg'
+export { default as Instagram } from './instagram.svg'
+export { default as Twitter } from './twitter.svg'
+export { default as Linkedin } from './linkedin.svg'
+export { default as Blog } from './blog.svg'

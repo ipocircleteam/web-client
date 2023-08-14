@@ -29,3 +29,137 @@ body {
 .shift-view {
   background-color: #c0ddf9;
 }
+
+.translate-feature-right {
+  position: relative;
+  left: 0;
+  animation: TranslateXRight 0.5s ease-in forwards;
+}
+
+@keyframes TranslateXRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100px;
+  }
+}
+
+.translate-feature-left {
+  position: relative;
+  right: 0;
+  animation: TranslateXLeft 0.5s ease-in forwards;
+}
+
+@keyframes TranslateXLeft {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100px;
+  }
+}
+
+.custom-animate-ping {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(34 197 94 / var(--tw-text-opacity));
+  border-radius: 50%;
+  animation: radiate 1s infinite;
+}
+
+@keyframes radiate {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+}
+
+.custom-scale {
+  position: fixed;
+  height: 0vw;
+  animation: ScaleUp 0.1s forwards ease-in-out;
+}
+
+@keyframes ScaleUp {
+  from {
+    height: 0vw;
+  }
+  to {
+    height: 20vw;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  @keyframes ScaleUp {
+    from {
+      height: 0vw;
+    }
+    to {
+      height: 30vw;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  @keyframes ScaleUp {
+    from {
+      height: 0vw;
+    }
+    to {
+      height: 40vw;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  @keyframes ScaleUp {
+    from {
+      height: 0vw;
+    }
+    to {
+      height: 80vw;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  @keyframes ScaleUp {
+    from {
+      height: 0vw;
+    }
+    to {
+      height: 90vw;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  @keyframes ScaleUp {
+    from {
+      height: 0vw;
+    }
+    to {
+      height: 120vw;
+    }
+  }
+}
+
+.custom-gradient {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    270deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 190, 157, 1) 0%,
+    rgba(9, 74, 121, 1) 100%
+  );
+}
