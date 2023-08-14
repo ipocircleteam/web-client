@@ -1,4 +1,5 @@
 import { RowDataType } from './components/IPOData/ipodata.types'
+import { BlogDataType } from './components/Articles/article.types'
 
 export const mainipodata: RowDataType[] = [
   {
@@ -22,7 +23,7 @@ export const mainipodata: RowDataType[] = [
     ipoID: 'ipo00123',
     name: 'IPOCircle Inc',
     opendate: '12 Aug 2023',
-    enddate: '14 Aug 2023',
+    enddate: '19 Aug 2023',
     status: 'Live',
   },
   {
@@ -115,5 +116,23 @@ export const smeipodata: RowDataType[] = [
     opendate: '1 Aug 2023',
     enddate: '12 Aug 2023',
     status: 'Closed',
+  },
+]
+
+export const blogData: BlogDataType[] = [
+  {
+    id: '1',
+    title: 'Expected returns on TVS',
+    para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget odio in risus efficitur faucibus. Aliquam id ante id justo commodo porta. In non arcu sit amet arcu rhoncus scelerisque. Mauris viverra bibendum turpis, vel convallis sem lacinia eu. Curabitur sed nulla eu lacus vulputate lobortis. Donec aliquam feugiat vehicula.',
+  },
+  {
+    id: '2',
+    title: '2023 IPO Analysis',
+    para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget odio in risus efficitur faucibus. Aliquam id ante id justo commodo porta. In non arcu sit amet arcu rhoncus scelerisque. Mauris viverra bibendum turpis, vel convallis sem lacinia eu. Curabitur sed nulla eu lacus vulputate lobortis. Donec aliquam feugiat vehicula.',
+  },
+  {
+    id: '3',
+    title: 'Future of IPOs',
+    para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget odio in risus efficitur faucibus. Aliquam id ante id justo commodo porta. In non arcu sit amet arcu rhoncus scelerisque. Mauris viverra bibendum turpis, vel convallis sem lacinia eu. Curabitur sed nulla eu lacus vulputate lobortis. Donec aliquam feugiat vehicula.',
   },
 ]

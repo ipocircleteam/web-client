@@ -9,7 +9,7 @@ export default function Keto() {
   return (
     <>
       <KetoForm />
-      <div className="my-[100px] text-center w-[95vw] md:w-[90vw] mx-auto rounded-lg px-4 bg-blue-50 py-4">
+      <div className="my-[25px] text-center w-[95vw] md:w-[90vw] mx-auto rounded-lg px-4 bg-blue-50 py-4">
         <h1 className="text-secondary text-[2rem] md:text-[2.5rem] font-semibold text-center leading-tight mb-4 md:mb-0">
           Don't have money to invest in IPOs?
         </h1>
