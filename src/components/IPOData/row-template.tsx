@@ -51,8 +51,14 @@ export default function TableRow(props: RowDataType) {
 
       <td className={statusClass + ' w-[10%] '}>
         <div className="m-0 p-0 flex justify-center items-center">
-          <Blink blinkClass={blinkClass} />
-          {width && width > 600 ? props.status : ''}
+          {width && width > 600 ? (
+            <>
+              {props.status === 'Live' ? <Blink blinkClass={blinkClass} /> : ''}
+              {props.status}
+            </>
+          ) : (
+            <Blink blinkClass={blinkClass} />
+          )}
         </div>
       </td>
 

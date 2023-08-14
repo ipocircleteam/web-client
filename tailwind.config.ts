@@ -12,6 +12,7 @@ const config: Config = {
       md: '600px',
       mdlg: '800px',
       lg: '976px',
+      lgx: '1200px',
       xl: '1440px',
     },
     fontFamily: {

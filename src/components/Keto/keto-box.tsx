@@ -5,7 +5,7 @@ import $ from 'jquery'
 import Image from 'next/image'
 import { Cross } from '../../../public/icons'
 import CTAbutton from '../Buttons/cta-btn'
-import { Logo6 } from '../../../public/logo'
+import { Logo } from '../../../public/logo'
 import Form from './form'
 
 export default function KetoForm() {

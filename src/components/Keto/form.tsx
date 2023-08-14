@@ -5,7 +5,7 @@ import $ from 'jquery'
 import Image from 'next/image'
 import { Cross } from '../../../public/icons'
 import CTAbutton from '../Buttons/cta-btn'
-import { Logo6 } from '../../../public/logo'
+import { Logo } from '../../../public/logo'
 
 export default function Form() {
   const [name, setName] = useState('')
