@@ -163,3 +163,21 @@ body {
     rgba(9, 74, 121, 1) 100%
   );
 }
+
+.scaling-transition {
+  transition: transform(scale()) 10s ease-in-out;
+}
+
+.scaling-transition:hover {
+  transform: scale(1);
+  animation: Scaling 0.1s forwards linear;
+}
+
+@keyframes Scaling {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}

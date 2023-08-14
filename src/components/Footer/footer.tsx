@@ -40,8 +40,10 @@ function SocialLinks() {
 
 function CompanyInfo() {
   return (
-    <div className="flex flex-col justify-between p-4 sm:w-[50%]">
-      <Image src={Logo} alt="" width={400} />
+    <div className="flex flex-col justify-between p-4 sm:w-[50%] border">
+      <div className="w-[300px] h-[80px] p-2 overflow-hidden border">
+        <Image src={Logo} alt="" width={300} />
+      </div>
       <div className="mx-2">
         <p>&#169; {new Date().getFullYear()} IPOCircle. All rights reserved</p>
         <SocialLinks />

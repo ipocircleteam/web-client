@@ -6,6 +6,7 @@ import Hero from '@/components/Hero/hero'
 import { IpoData } from '@/components/IPOData/ipo-data'
 import Keto from '@/components/Keto/keto'
 import Menu from '@/components/Menu/menu'
+import Products from '@/components/Products/products'
 import Head from 'next/head'
 
 export default function Home() {
@@ -22,7 +23,8 @@ export default function Home() {
       <Hero />
       <IpoData />
       <HomeBanner />
-      {/* <Features /> */}
+      <Products />
+      <Features />
       <Articles />
       <Keto />
       <Footer />

@@ -1,5 +1,6 @@
 import { RowDataType } from './components/IPOData/ipodata.types'
 import { BlogDataType } from './components/Articles/article.types'
+import { ProductDataType } from './components/Products/product.types'
 
 export const mainipodata: RowDataType[] = [
   {
@@ -134,5 +135,20 @@ export const blogData: BlogDataType[] = [
     id: '3',
     title: 'Future of IPOs',
     para: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget odio in risus efficitur faucibus. Aliquam id ante id justo commodo porta. In non arcu sit amet arcu rhoncus scelerisque. Mauris viverra bibendum turpis, vel convallis sem lacinia eu. Curabitur sed nulla eu lacus vulputate lobortis. Donec aliquam feugiat vehicula.',
+  },
+]
+
+export const ProductsData: ProductDataType[] = [
+  {
+    title: 'Algorithmic Consulting',
+    link: '/',
+  },
+  {
+    title: 'Gamma',
+    link: '/',
+  },
+  {
+    title: 'Feature 3',
+    link: '/',
   },
 ]

@@ -4,7 +4,7 @@ import { blogData } from '@/dummydata'
 
 export default function Articles() {
   return (
-    <div className="mt-[50px] w-[100vw] mx-auto p-4">
+    <div className="mt-[30px] w-[100vw] mx-auto p-4">
       <h1 className="text-secondary text-[1.4rem] font-bold text-center leading-tight mb-4">
         What's buzzing in the market?
       </h1>
