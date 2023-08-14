@@ -38,7 +38,7 @@ export default function Form() {
       </div>
 
       <section id="form" className="w-[90%] md:w-[70%] mx-auto text-center">
-        <label className="text-base mx-auto font-bold text-[1.2rem] text-center">
+        <label className="text-base mx-auto font-bold text-[1.4rem] text-center">
           Get notified when we launch our new features
         </label>
 
@@ -64,8 +64,8 @@ export default function Form() {
 
         <button
           onClick={submitForm}
-          className=" w-[100%] bg-base p-2 my-2 font-semibold rounded-lg border border-secondary
-          hover:bg-base hover:border-secondary custom-btn-transition text-primary hover:text-secondary"
+          className=" w-[100%] bg-primary p-2 my-2 font-semibold rounded-lg
+          hover:bg-base hover:border-secondary custom-btn-transition text-secondary"
         >
           Submit
         </button>
