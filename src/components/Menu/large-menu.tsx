@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Logo6 } from '../../../public/logo'
+import { Logo } from '../../../public/logo'
 import CTAbutton from '../Buttons/cta-btn'
 
 export default function LargeMenu() {
@@ -16,8 +16,8 @@ export default function LargeMenu() {
             className="ml-5 m-0 p-0"
             alt="IPOCircle"
             height={45}
-            src={Logo6}
-            width={180}
+            src={Logo}
+            width={160}
           />
           {/* <label className='text-primary ml-1'>IPO</label><label className='text-secondary'>Circle</label> */}
         </div>

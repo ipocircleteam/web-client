@@ -7,7 +7,7 @@ import { Blog } from '../../../public/images'
 
 export default function HomwBanner() {
   return (
-    <section className="bg-primary mt-[60px] mx-auto md:flex justify-center items-center w-[100vw] p-4 px-6">
+    <section className="bg-primary mt-[40px] mx-auto md:flex justify-center items-center w-[100vw] p-4 px-6">
       <div className="w-[80vw] md:w-[60vw] lg:w-[50vw] text-center md:text-left mx-auto">
         <h1 className="text-secondary text-[2rem] md:text-[3rem] font-semibold leading-tight">
           Don't know how IPOs work?

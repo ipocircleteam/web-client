@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { Logo6 } from '../../../public/logo'
+import { Logo } from '../../../public/logo'
 import Link from 'next/link'
 import { Instagram, Linkedin, Twitter, Blog } from '../../../public/icons'
 
@@ -41,7 +41,7 @@ function SocialLinks() {
 function CompanyInfo() {
   return (
     <div className="flex flex-col justify-between p-4 sm:w-[50%]">
-      <Image src={Logo6} alt="" width={400} />
+      <Image src={Logo} alt="" width={400} />
       <div className="mx-2">
         <p>&#169; {new Date().getFullYear()} IPOCircle. All rights reserved</p>
         <SocialLinks />
