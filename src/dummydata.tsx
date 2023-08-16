@@ -1,6 +1,6 @@
-import { RowDataType } from './components/IPOData/ipodata.types'
-import { BlogDataType } from './components/Articles/article.types'
-import { ProductDataType } from './components/Products/product.types'
+import { RowDataType } from './components/Home-Page/IPOData/ipodata.types'
+import { BlogDataType } from './components/Home-Page/Articles/article.types'
+import { ProductDataType } from './components/Home-Page/Products/product.types'
 
 export const mainipodata: RowDataType[] = [
   {

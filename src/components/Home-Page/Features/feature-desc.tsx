@@ -1,28 +1,6 @@
 import React from 'react'
-import FeatureCard from './feature-card'
-import FeatureCardTwo from './feature-card-two'
-import Image from 'next/image'
-import { Dashboard } from '../../../public/images'
 
-export default function Features() {
-  return (
-    <div className="my-[20px] mt-[2rem] lg:mt-[5rem] w-[80vw] mx-auto mb-[110px]">
-      <div className="text-center text-primary font-bold leading-tight text-[2rem] lg:mb-[50px]">
-        <h1>Why you should trust us?</h1>
-      </div>
-
-      <div className="flex flex-wrap justify-center items-center">
-        <FeaturePoints />
-
-        <div className="w-[100%] lg:w-[50%] h-[auto] lg:h-[350px] rounded-2xl border overflow-hidden">
-          <Image src={Dashboard} alt="" />
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function FeaturePoints() {
+export default function FeatureDesc() {
   return (
     <div className="w-[100%] lg:w-[40%]">
       <section className="w-[100%] lg:w-[80%] mx-auto lg:mx-4 my-4">

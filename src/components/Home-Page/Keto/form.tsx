@@ -3,9 +3,9 @@
 import React, { useState } from 'react'
 import $ from 'jquery'
 import Image from 'next/image'
-import { Cross } from '../../../public/icons'
-import CTAbutton from '../Buttons/cta-btn'
-import { Logo } from '../../../public/logo'
+import { Cross } from '../../../../public/icons'
+import CTAbutton from '../../Buttons/cta-btn'
+import { Logo } from '../../../../public/logo'
 
 export default function Form() {
   const [name, setName] = useState('')

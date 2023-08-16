@@ -1,8 +1,8 @@
 'use client'
 
 import React from 'react'
-import CTAbutton from '../Buttons/cta-btn'
-import LargeCTAbutton from '../Buttons/large-cta-btn'
+import CTAbutton from '../../Buttons/cta-btn'
+import LargeCTAbutton from '../../Buttons/large-cta-btn'
 
 export default function Hero() {
   return (

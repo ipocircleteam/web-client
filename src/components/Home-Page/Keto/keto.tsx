@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import CTAbutton from '../Buttons/cta-btn'
+import CTAbutton from '../../Buttons/cta-btn'
 import KetoForm from './keto-box'
 import $ from 'jquery'
 

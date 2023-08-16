@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { Blog1, Blog2, Blog3 } from '../../../public/blog'
+import { Blog2 } from '../../../../public/blog'
 import { BlogDataType } from './article.types'
 import Link from 'next/link'
 

@@ -4,7 +4,7 @@ import React from 'react'
 import { RowDataType } from './ipodata.types'
 import useWindowWidth from '@/hooks/useWindowWidth'
 import Image from 'next/image'
-import { RightArrow } from '../../../public/icons'
+import { RightArrow } from '../../../../public/icons'
 
 export default function TableRow(props: RowDataType) {
   const width = useWindowWidth()

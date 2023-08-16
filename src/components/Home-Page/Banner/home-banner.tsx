@@ -1,11 +1,11 @@
 'use client'
 
 import React from 'react'
-import CTAbutton from '../Buttons/cta-btn'
+import CTAbutton from '../../Buttons/cta-btn'
 import Image from 'next/image'
-import { Blog } from '../../../public/images'
+import { Blog } from '../../../../public/images'
 
-export default function HomwBanner() {
+export default function HomeBanner() {
   return (
     <section className="bg-primary mt-[40px] py-[40px] mx-auto md:flex justify-center items-center w-[100vw] p-4 px-6">
       <div className="w-[80vw] md:w-[60vw] lg:w-[50vw] text-center md:text-center mx-auto">
