@@ -23,7 +23,7 @@ export default function GraphPanel(props: { darkMode: boolean }) {
     <div
       className={
         (props.darkMode ? 'bg-panelLight' : 'bg-gray-300') +
-        ' w-[90vw] mx-auto custom-shadow-panel overflow-hidden flex justify-center items-center flex-wrap h-[auto] my-[20px] rounded-lg p-2'
+        'w-[95vw] sm:w-[90vw] mx-auto custom-shadow-panel overflow-hidden flex justify-center items-center flex-wrap h-[auto] my-[20px] rounded-lg p-2'
       }
     >
       <PieCard width={300} height={270} data={data1} colors={COLORS} />
