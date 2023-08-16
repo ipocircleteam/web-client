@@ -28,7 +28,7 @@ export default function TrackerMenu(props: {
   }
 
   return (
-    <div className="flex justify-between items-center px-4 py-4">
+    <div className="flex flex-wrap justify-between items-center px-4 py-4">
       <section className="flex justify-start items-center">
         <span className="overflow-hidden w-[60px] mr-2">
           <Link href="/">

@@ -11,7 +11,14 @@ export default function NavButons(props: {
   darkMode: boolean
 }) {
   return (
-    <section className="flex justify-center items-center">
+    <section
+      className={
+        (props.darkMode
+          ? 'bg-panelDark md:bg-transparent '
+          : 'bg-gray-400 md:bg-transparent ') +
+        'flex justify-center items-center flex-wrap border border-secondary md:border-none rounded md:bg-none my-2 md:my-0'
+      }
+    >
       <TrackerBtn
         text="Filters"
         contentType="text"

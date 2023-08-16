@@ -191,3 +191,7 @@ body {
 .custom-shadow-panel {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.custom-bg-image {
+  background-image: url('../../public/backgrounds/tracker.jpeg');
+  background-size: cover;
+}
