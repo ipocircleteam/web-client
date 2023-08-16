@@ -26,7 +26,7 @@ export default function Form() {
 
   return (
     <>
-      <div className="flex m-0 cursor-pointer justify-end items-center px-4 pt-2">
+      <div className="flex m-0 cursor-pointer justify-end items-center px-4">
         <Image
           onClick={closeForm}
           alt="Menu"

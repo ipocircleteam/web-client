@@ -34,8 +34,8 @@ export default function KetoForm() {
       ></div>
       <div
         id="Ketoform"
-        className="custom-scale custom-gradient border border-secondary hidden fixed left-[5vw] mdlg:left-[25vw] 
-        bottom-[0vw] w-[90vw] mdlg:w-[50vw] shadow-slate-900 rounded-t-xl z-50"
+        className="custom-scale bg-[#E3DAD5] border border-secondary hidden fixed left-[5vw] mdlg:left-[25vw] 
+       w-[90vw] mdlg:w-[50vw] shadow-slate-900 rounded-xl h-[20vw] z-50 top-[15vw]"
       >
         <Form />
 

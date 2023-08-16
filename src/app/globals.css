@@ -86,16 +86,17 @@ body {
 
 .custom-scale {
   position: fixed;
-  height: 0vw;
+  transform: scale(0);
   animation: ScaleUp 0.1s forwards ease-in-out;
+  animation: Popup 0.1s forwards ease-in-out;
 }
 
-@keyframes ScaleUp {
+@keyframes Popup {
   from {
-    height: 0vw;
+    transform: scale(0);
   }
   to {
-    height: 20vw;
+    transform: scale(1);
   }
 }
 

@@ -13,10 +13,10 @@ export default function ArticleContent(props: {
     <section className="md:flex my-2 md:my-2 flex-wrap justify-between items-center">
       {/* blog content */}
       <span className="md:w-[70%]">
-        <h1 className="text- font-semibold text-[1.6rem] md:text-[2rem] leading-tight">
+        <h1 className="text-primary font-semibold text-[1.6rem] md:text-[1.8rem] leading-tight">
           {props.title}
         </h1>
-        <p className="leading-tight text-[1rem] md:text-[1rem] my-2 text-gray-600">
+        <p className="leading-tight text-justify text-[1rem] md:text-[1rem] my-2 text-primary">
           {props.desc.substring(0, 300)}
         </p>
       </span>

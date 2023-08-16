@@ -8,15 +8,8 @@ import ArticleContent from './article-content'
 export default function ArticleCard(props: ArticleDataType) {
   return (
     <Link href={'/blog/' + props.blogId}>
-      <div className="border border-r-0 border-l-0 border-t-0 p-[10px] py-[20px] mx-auto">
+      <div className="border border-r-0 border-l-0 border-t-0 p-[30px] py-[35px] mx-auto">
         <section className="w-[95%] mx-auto">
-          <AuthorDetails
-            authorName={props.data.author.name}
-            authorDesignation={props.data.author.designation}
-            authorDp={props.data.author.dp}
-            createdAt={props.data.createdAt}
-          />
-
           <ArticleContent
             title={props.data.title}
             desc={props.data.desc}
