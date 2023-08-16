@@ -14,12 +14,13 @@ export default function TrackerTable(props: { darkMode: boolean }) {
       <table className="w-[100%]">
         <tr
           className={
-            (props.darkMode ? 'text-[#FFFFFF]' : 'text-primary') +
-            ' flex justify-around text-left items-center h-[40px] border border-b border-gray-800'
+            (props.darkMode ? 'text-baseTwo' : 'text-primary') +
+            ' flex justify-around items-center h-[40px] border border-b border-gray-800'
           }
         >
           <td>S.No</td>
           <td>Company</td>
+          <td>Issue</td>
           <td>Listing</td>
           <td>DayEnd</td>
           <td>Current</td>

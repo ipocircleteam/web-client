@@ -15,6 +15,7 @@ export default function RowTemplate(props: {
     >
       <td>{props.index}</td>
       <td>{props.data.company}</td>
+      <td>{props.data.issue}</td>
       <td>{props.data.listing}</td>
       <td>{props.data.dayend}</td>
       <td>{props.data.current}</td>
