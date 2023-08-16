@@ -23,6 +23,7 @@
     "jest-environment-jsdom": "^29.6.2",
     "jquery": "^3.7.0",
     "next": "13.4.13",
+    "next-cloudinary": "^4.18.0",
     "postcss": "8.4.27",
     "prettier": "^3.0.1",
     "react": "18.2.0",
