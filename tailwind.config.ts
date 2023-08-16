@@ -25,6 +25,8 @@ const config: Config = {
         primary: '#012C7A',
         secondary: '#00BE9D',
         primaryShade: '#C0DDF9',
+        panelDark: '#213555',
+        panelLight: '#19376D',
       },
     },
   },
