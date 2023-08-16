@@ -140,7 +140,7 @@ export const blogData: BlogDataType[] = [
 
 export const ProductsData: ProductDataType[] = [
   {
-    title: 'Algorithmic Consulting',
+    title: 'Nexus',
     link: '/',
   },
   {
@@ -148,7 +148,7 @@ export const ProductsData: ProductDataType[] = [
     link: '/',
   },
   {
-    title: 'Feature 3',
+    title: 'Insiduous',
     link: '/',
   },
 ]

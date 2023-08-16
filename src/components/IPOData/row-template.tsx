@@ -29,7 +29,7 @@ export default function TableRow(props: RowDataType) {
 
   return (
     <tr
-      className="w-[100%] cursor-pointer p-4 text-primary custom-tablerow text-[13px] md:text-[1.1rem]"
+      className="w-[100%] scaling-transition cursor-pointer p-4 text-primary custom-tablerow text-[13px] md:text-[1.1rem]"
       onClick={openIpoPage}
     >
       <td className="w-[10%]">{props.sno}</td>
