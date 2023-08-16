@@ -2,6 +2,7 @@ import { RowDataType } from './components/Home-Page/IPOData/ipodata.types'
 import { BlogDataType } from './components/Home-Page/Articles/article.types'
 import { ProductDataType } from './components/Home-Page/Products/product.types'
 import { ArticleDataType } from './components/Blog/article.types'
+import { TrackerDataType } from './components/IpoTracker/TrackerTable/table.types'
 
 export const mainipodata: RowDataType[] = [
   {
@@ -241,5 +242,68 @@ export const articlesData: ArticleDataType[] = [
         dp: 'http://res.cloudinary.com/deo80u7qs/image/upload/v1692152111/s6z3ezb235rz5lg9zqbc.png',
       },
     },
+  },
+]
+
+export const trackerData: TrackerDataType[] = [
+  {
+    company: 'IPOCIRCLE',
+    listing: 5000,
+    current: 5000,
+    dayend: 5000,
+  },
+  {
+    company: 'IPOCIRCLE',
+    listing: 5000,
+    current: 5000,
+    dayend: 5000,
+  },
+  {
+    company: 'IPOCIRCLE',
+    listing: 5000,
+    current: 5000,
+    dayend: 5000,
+  },
+  {
+    company: 'IPOCIRCLE',
+    listing: 5000,
+    current: 5000,
+    dayend: 5000,
+  },
+  {
+    company: 'IPOCIRCLE',
+    listing: 5000,
+    current: 5000,
+    dayend: 5000,
+  },
+  {
+    company: 'IPOCIRCLE',
+    listing: 5000,
+    current: 5000,
+    dayend: 5000,
+  },
+  {
+    company: 'IPOCIRCLE',
+    listing: 5000,
+    current: 5000,
+    dayend: 5000,
+  },
+  {
+    company: 'IPOCIRCLE',
+    listing: 5000,
+    current: 5000,
+    dayend: 5000,
+  },
+  {
+    company: 'IPOCIRCLE',
+    listing: 5000,
+    current: 5000,
+    dayend: 5000,
+  },
+  {
+    company: 'IPOCIRCLE',
+    listing: 5000,
+    current: 5000,
+    dayend: 5000,
   },
 ]

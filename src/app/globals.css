@@ -195,3 +195,52 @@ body {
   background-image: url('../../public/backgrounds/tracker.jpeg');
   background-size: cover;
 }
+
+.custom-filter-panel {
+  width: 0vw;
+  padding: 0;
+  margin: 0;
+  animation: OpenFilter 0.5s ease-in-out forwards;
+}
+
+@keyframes OpenFilter {
+  from {
+    width: 0vw;
+  }
+  to {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  @keyframes OpenFilter {
+    from {
+      width: 0vw;
+    }
+    to {
+      width: 50vw;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  @keyframes OpenFilter {
+    from {
+      width: 0vw;
+    }
+    to {
+      width: 60vw;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  @keyframes OpenFilter {
+    from {
+      width: 0vw;
+    }
+    to {
+      width: 70vw;
+    }
+  }
+}
