@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Logo } from '../../../public/logo'
-import CTAbutton from '../Buttons/cta-btn'
+import { LargeNavigationLinks } from './navigation-links'
 
 export default function LargeMenu() {
   return (
@@ -19,39 +19,10 @@ export default function LargeMenu() {
             src={Logo}
             width={160}
           />
-          {/* <label className='text-primary ml-1'>IPO</label><label className='text-secondary'>Circle</label> */}
         </div>
       </Link>
 
-      <div className="m-0 flex justify-end items-center px-2">
-        <Link
-          href="/gmp"
-          className="mx-4 text-primary hover:text-secondary font-semibold"
-        >
-          GMP
-        </Link>
-
-        <Link
-          href="/ipo"
-          className="mx-4 text-primary hover:text-secondary font-semibold"
-        >
-          IPOs
-        </Link>
-
-        <Link
-          href="/ipotracker"
-          className="mx-4 text-primary hover:text-secondary font-semibold"
-        >
-          Analyse
-        </Link>
-
-        <CTAbutton
-          text="Free Consulting"
-          function={() => {
-            window.location.replace('/consultation')
-          }}
-        />
-      </div>
+      <LargeNavigationLinks />
     </div>
   )
 }

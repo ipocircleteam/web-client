@@ -1,11 +1,7 @@
 import React from 'react'
-import { TrackerDataType } from './table.types'
+import { RowTemplateType, TrackerDataType } from './table.types'
 
-export default function RowTemplate(props: {
-  data: TrackerDataType
-  index: number
-  darkMode: boolean
-}) {
+export default function RowTemplate(props: RowTemplateType) {
   return (
     <tr
       className={

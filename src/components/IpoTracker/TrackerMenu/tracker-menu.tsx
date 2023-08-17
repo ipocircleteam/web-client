@@ -7,11 +7,9 @@ import Image from 'next/image'
 import { GreenLogoIcon } from '../../../../public/logo'
 import Filter from '../TrackerFilter/filter'
 import $ from 'jquery'
+import { TrackerMenuType } from './trackermenu.types'
 
-export default function TrackerMenu(props: {
-  darkMode: boolean
-  toggleMode: () => void
-}) {
+export default function TrackerMenu(props: TrackerMenuType) {
   const [isFullScreen, setIsFullScreen] = useState(false)
 
   const toggleFullScreen = () => {

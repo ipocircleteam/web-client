@@ -6,3 +6,9 @@ export type TrackerDataType = {
   current: number
   sector: string
 }
+
+export type RowTemplateType = {
+  data: TrackerDataType
+  index: number
+  darkMode: boolean
+}

@@ -30,10 +30,6 @@ export default function HomeBanner() {
           Explore GAMMA for FREE
         </button>
       </div>
-
-      {/* <div className="w-[50vw] mx-auto my-2 md:my-0 md:w-[50vw] lg:w-[40vw] flex justify-center md:justify-end">
-        <Image src={Blog} alt="" />
-      </div> */}
     </section>
   )
 }

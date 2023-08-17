@@ -10,5 +10,3 @@ export default function Menu() {
 
   return <>{width && width > 600 ? <LargeMenu /> : <SmallMenu />}</>
 }
-
-// {width && width > 600 ? <LargeMenu /> : <SmallMenu />}
