@@ -4,6 +4,7 @@ import { ProductDataType } from './components/Home-Page/Products/product.types'
 import { ArticleDataType } from './components/Blog/article.types'
 import { TrackerDataType } from './components/IpoTracker/TrackerTable/table.types'
 
+// HOME PAGE IPO TABLE - MAIN VIEW
 export const mainipodata: RowDataType[] = [
   {
     sno: 1,
@@ -63,6 +64,7 @@ export const mainipodata: RowDataType[] = [
   },
 ]
 
+// HOME PAGE IPO TABLE - SME VIEW
 export const smeipodata: RowDataType[] = [
   {
     sno: 1,
@@ -122,6 +124,7 @@ export const smeipodata: RowDataType[] = [
   },
 ]
 
+// HOME PAGE BLOG
 export const blogData: BlogDataType[] = [
   {
     id: '1',
@@ -140,6 +143,7 @@ export const blogData: BlogDataType[] = [
   },
 ]
 
+// HOME PAGE PRODUCTS
 export const ProductsData: ProductDataType[] = [
   {
     title: 'Nexus',
@@ -155,6 +159,7 @@ export const ProductsData: ProductDataType[] = [
   },
 ]
 
+// BLOG PAGE ARTCLES
 export const articlesData: ArticleDataType[] = [
   {
     blogId: 'blogipocircle0001',
@@ -245,6 +250,7 @@ export const articlesData: ArticleDataType[] = [
   },
 ]
 
+// IPO TRACKER DUMMY DATA
 export const trackerData: TrackerDataType[] = [
   {
     company: 'IPOCIRCLE',

@@ -1,6 +1,7 @@
 import { trackerData } from '@/dummydata'
 import React from 'react'
 import RowTemplate from './row-template'
+import TableHead from './table-head'
 
 export default function TrackerTable(props: { darkMode: boolean }) {
   const theme = props.darkMode ? 'text-[#FFFFFF]' : 'text-primary'
@@ -12,19 +13,8 @@ export default function TrackerTable(props: { darkMode: boolean }) {
       }
     >
       <table className="w-[100%]">
-        <tr
-          className={
-            (props.darkMode ? 'text-baseTwo' : 'text-primary') +
-            ' flex justify-around items-center h-[40px] border border-b border-gray-800'
-          }
-        >
-          <td>S.No</td>
-          <td>Company</td>
-          <td>Issue</td>
-          <td>Listing</td>
-          <td>DayEnd</td>
-          <td>Current</td>
-        </tr>
+        <TableHead darkMode={props.darkMode} />
+
         {trackerData.map((item, index) => {
           return (
             <RowTemplate data={item} index={index} darkMode={props.darkMode} />

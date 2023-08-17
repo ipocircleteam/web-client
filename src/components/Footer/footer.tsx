@@ -4,7 +4,7 @@ import { Logo } from '../../../public/logo'
 import Link from 'next/link'
 import PageLinks from './page-links'
 import CompanyInfo from './company-info'
-import FooterText from './footes-text'
+import FooterText from './footer-text'
 
 export default function Footer() {
   return (

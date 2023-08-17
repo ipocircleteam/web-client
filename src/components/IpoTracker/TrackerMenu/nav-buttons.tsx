@@ -2,14 +2,9 @@ import React from 'react'
 import TrackerBtn from '@/components/Buttons/tracker-btn'
 import Image from 'next/image'
 import { Compress, Expand, Light, Dark } from '../../../../public/icons'
+import { NavButtonsType } from './trackermenu.types'
 
-export default function NavButons(props: {
-  toggleFilters: () => void
-  toggleFullScreen: () => void
-  toggleMode: () => void
-  isFullScreen: boolean
-  darkMode: boolean
-}) {
+export default function NavButons(props: NavButtonsType) {
   return (
     <section
       className={
