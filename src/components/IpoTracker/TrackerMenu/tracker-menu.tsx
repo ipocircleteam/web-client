@@ -23,43 +23,35 @@ export default function TrackerMenu(props: TrackerMenuType) {
     setIsFullScreen(!isFullScreen)
   }
 
-  const toggleFilters = () => {
-    $('#filter').toggleClass('hidden')
-  }
-
   return (
-    <>
-      <Filter />
-      <div className="flex flex-wrap justify-between items-center px-4 py-4">
-        <section className="flex justify-start items-center">
-          <span className="overflow-hidden w-[60px] mr-2">
-            <Link href="/">
-              <Image
-                src={GreenLogoIcon}
-                className="bg-white"
-                width={60}
-                alt="IPO"
-              />
-            </Link>
-          </span>
-          <h1
-            className={
-              (props.darkMode ? 'text-[#FFFFFF]' : 'text-primary') +
-              ' text-[1.9rem] space-x-2 uppercase font-semibold leading-loose'
-            }
-          >
-            Tracker
-          </h1>
-        </section>
+    <div className="flex flex-wrap justify-between items-center px-4 py-4">
+      <section className="flex justify-start items-center">
+        <span className="overflow-hidden w-[60px] mr-2">
+          <Link href="/">
+            <Image
+              src={GreenLogoIcon}
+              className="bg-white"
+              width={60}
+              alt="IPO"
+            />
+          </Link>
+        </span>
+        <h1
+          className={
+            (props.darkMode ? 'text-[#FFFFFF]' : 'text-primary') +
+            ' text-[1.9rem] space-x-2 uppercase font-semibold leading-loose'
+          }
+        >
+          Tracker
+        </h1>
+      </section>
 
-        <NavButtons
-          isFullScreen={isFullScreen}
-          darkMode={props.darkMode}
-          toggleMode={props.toggleMode}
-          toggleFilters={toggleFilters}
-          toggleFullScreen={toggleFullScreen}
-        />
-      </div>
-    </>
+      <NavButtons
+        isFullScreen={isFullScreen}
+        darkMode={props.darkMode}
+        toggleMode={props.toggleMode}
+        toggleFullScreen={toggleFullScreen}
+      />
+    </div>
   )
 }
