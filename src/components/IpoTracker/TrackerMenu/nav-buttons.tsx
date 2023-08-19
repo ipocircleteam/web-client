@@ -15,15 +15,6 @@ export default function NavButons(props: NavButtonsType) {
       }
     >
       <TrackerBtn
-        text="Filters"
-        contentType="text"
-        darkMode={props.darkMode}
-        callback={props.toggleFilters}
-      >
-        <p className="uppercase">Filters</p>
-      </TrackerBtn>
-
-      <TrackerBtn
         text="Exit"
         contentType="text"
         darkMode={props.darkMode}

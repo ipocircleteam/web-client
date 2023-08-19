@@ -4,7 +4,6 @@ export type TrackerMenuType = {
 }
 
 export type NavButtonsType = {
-  toggleFilters: () => void
   toggleFullScreen: () => void
   toggleMode: () => void
   isFullScreen: boolean

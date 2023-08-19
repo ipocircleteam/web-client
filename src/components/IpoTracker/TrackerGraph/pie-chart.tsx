@@ -12,6 +12,8 @@ import {
 export default function PieChartComponent(props: {
   width: number
   height: number
+  innerRadius: number
+  outerRadius: number
   data: { name: string; value: number }[]
   colors: string[]
 }) {
@@ -32,8 +34,8 @@ export default function PieChartComponent(props: {
           nameKey="name"
           cx="50%"
           cy="50%"
-          innerRadius={30}
-          outerRadius={120}
+          innerRadius={props.innerRadius}
+          outerRadius={props.outerRadius}
           fill="#8884d8"
         >
           {props.data.map((entry, index) => (
