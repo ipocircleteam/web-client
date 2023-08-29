@@ -23,7 +23,7 @@ export default function IpoTracker() {
       <Filter />
       <div
         className={
-          (isDark ? 'custom-bg-image' : 'bg-baseTwo') +
+          (isDark ? 'bg-[#0c1a3b]' : 'bg-baseTwo') +
           ' min-h-[100vh] overflow-hidden'
         }
       >

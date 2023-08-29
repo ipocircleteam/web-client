@@ -9,8 +9,8 @@ export default function Hero() {
     <div className="my-[50px] md:mt-[4rem] md:mb-0 text-center ">
       <span className="flex justify-center items-center w-[85vw] sm:w-[95vw] mx-auto">
         <h1 className="text-[2rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[1] ">
-          <label className="text-primary">India's first </label>
-          <label className="text-secondary">IPO Consultancy Platform</label>
+          <label className="text-primary">Unlock </label>
+          <label className="text-secondary">Your IPO Advantage</label>
         </h1>
       </span>
 
@@ -18,8 +18,7 @@ export default function Hero() {
         className="my-4 md:my-2 text-[1rem] md:text-[1.5rem] leading-tight text-primary 
       w-[90vw] sm:w-[95vw] mx-auto"
       >
-        Invest smartly in IPOs with our personalised tools <br />
-        and increase your profit probability
+        Uniting Tools, Data, and Research at your fingertips 
       </p>
       <div className="my-4">
         <LargeCTAbutton
