@@ -5,9 +5,9 @@ import React from 'react'
 
 export default function IPO() {
   return (
-    <>
+    <div className="mt-[80px]">
       <Menu />
       <IpoDatabase />
-    </>
+    </div>
   )
 }

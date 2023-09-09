@@ -8,5 +8,9 @@ import SmallMenu from './small.menu'
 export default function Menu() {
   const width = useWindowWidth()
 
-  return <>{width && width > 600 ? <LargeMenu /> : <SmallMenu />}</>
+  return (
+    <div className="fixed top-0 bg-white">
+      {width && width > 600 ? <LargeMenu /> : <SmallMenu />}
+    </div>
+  )
 }

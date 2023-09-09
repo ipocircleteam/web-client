@@ -23,7 +23,7 @@ export function IpoData() {
         className="text-secondary my-2 text-center w-[100%] mx-auto text-[18px] 
             hover:text-primary cursor-pointer"
       >
-        <Link href="/ipos">See All</Link>
+        <Link href="/ipo">See All</Link>
       </div>
     </section>
   )
