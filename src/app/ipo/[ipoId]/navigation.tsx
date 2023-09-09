@@ -3,6 +3,7 @@ import React from 'react'
 export default function Navigation() {
   return (
     <>
+      <label className="text-gray-400">Items on this page</label>
       <NavigationItem text="Company Details" />
       <NavigationItem text="IPO Details" />
       <NavigationItem text="IPO Reservation" />

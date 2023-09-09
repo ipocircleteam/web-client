@@ -6,7 +6,7 @@ import NameDivider from '@/components/Global/name-divider'
 export default function CompanyDetails() {
   return (
     <>
-      <NameDivider text="Company Details" />
+      <NameDivider text="Company Details" width={80} />
       <div className="w-[100%]">
         <div className="flex justify-between items-center">
           <section className="flex justify-start items-center">
