@@ -1,3 +1,5 @@
+import { IpoData } from '@/components/Home-Page/IPOData/ipo-data'
+import IpoDatabase from '@/components/Ipo/ipo-database'
 import Menu from '@/components/Menu/menu'
 import React from 'react'
 
@@ -5,7 +7,7 @@ export default function IPO() {
   return (
     <>
       <Menu />
-      <h1>IPO Hu Mai</h1>
+      <IpoDatabase />
     </>
   )
 }

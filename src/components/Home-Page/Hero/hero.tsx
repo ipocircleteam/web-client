@@ -18,7 +18,7 @@ export default function Hero() {
         className="my-4 md:my-2 text-[1rem] md:text-[1.5rem] leading-tight text-primary 
       w-[90vw] sm:w-[95vw] mx-auto"
       >
-        Uniting Tools, Data, and Research at your fingertips 
+        Uniting Tools, Data, and Research at your fingertips
       </p>
       <div className="my-4">
         <LargeCTAbutton
