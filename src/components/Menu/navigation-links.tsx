@@ -29,7 +29,7 @@ export function LargeNavigationLinks() {
       </Link>
 
       <CTAbutton
-        text="Free Consulting"
+        text="Algorithm"
         function={() => {
           window.location.replace('/consultation')
         }}
