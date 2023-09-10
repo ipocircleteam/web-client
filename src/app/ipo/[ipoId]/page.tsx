@@ -12,7 +12,6 @@ export default function IPODetailsPage() {
   return (
     <>
       <Menu />
-      <h1>ID for selected IPO is -: {path?.substring(5)}</h1>
       <div className="mt-[70px] flex items-start">
         <div className="w-[80%]">
           <Content />
