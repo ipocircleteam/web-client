@@ -8,7 +8,7 @@ export default function PageLinks() {
         <h1 className="font-semibold">Company</h1>
         <Link href="/about">About</Link>
         <Link href="/careers">Careers</Link>
-        <Link href="/blog">Blog</Link>
+        <a href="/blog">Blog</a>
         <Link href="/legal">Legal</Link>
         <Link href="/privacypolicy">Privacy</Link>
       </div>

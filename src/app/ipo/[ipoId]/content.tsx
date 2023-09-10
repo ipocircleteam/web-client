@@ -7,6 +7,9 @@ import LotSize from './tables/lot-size'
 import PerformanceIndicators from './tables/performance'
 import IpoReservation from './tables/ipo-reservation'
 import PromoterHoldings from './tables/promoter-holdings'
+import CompanyFinancials from './company-financials'
+import ObjectIssue from './object-issue'
+import GMP from './gmp'
 
 export default function Content() {
   return (
@@ -45,6 +48,10 @@ export default function Content() {
           <PromoterHoldings />
         </div>
       </div>
+
+      <CompanyFinancials />
+      <ObjectIssue />
+      <GMP />
     </div>
   )
 }
