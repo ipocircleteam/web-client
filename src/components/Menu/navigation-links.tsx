@@ -31,7 +31,7 @@ export function LargeNavigationLinks() {
       <CTAbutton
         text="Algorithm"
         function={() => {
-          window.location.replace('/consultation')
+          window.location.replace('/algorithm')
         }}
       />
     </div>
@@ -53,34 +53,39 @@ export function SmallNavigationLinks(props: { callback: () => void }) {
       </div>
 
       <div className="m-2 text-[20px]">
-        <Link
+        <a
           href="/gmp"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
           GMP
-        </Link>
+        </a>
       </div>
 
       <div className="m-2 text-[20px]">
-        <Link
+        <a
           href="/ipo"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
           IPOs
-        </Link>
+        </a>
       </div>
 
       <div className="m-2 text-[20px]">
-        <Link
+        <a
           href="/ipotracker"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
           Analyser
-        </Link>
+        </a>
       </div>
 
-      <div className="m-2">
-        <CTAbutton text="Free Consulting" function={() => {}} />
+      <div className="m-2 text-[20px]">
+        <a
+          href="/algorithm"
+          className="mx-4 text-primary hover:text-secondary font-semibold"
+        >
+          Algorithm
+        </a>
       </div>
     </>
   )
