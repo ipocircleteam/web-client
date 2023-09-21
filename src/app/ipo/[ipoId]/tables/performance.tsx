@@ -4,30 +4,30 @@ export default function PerformanceIndicators() {
   return (
     <table
       id="performanceIndicators"
-      className="w-[80%] mx-auto border-2 text-primary border-primary"
+      className="w-[40%] mt-[20px] mx-auto border text-slate-600 border-primary"
     >
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Market Cap (EG)</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Market Cap (EG)</td>
         <td className="px-[10px]">000000</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">ROE</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">ROE</td>
         <td className="px-[10px]">100%</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">ROCE</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">ROCE</td>
         <td className="px-[10px]">300%</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Debt</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Debt</td>
         <td className="px-[10px]">150%</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">EPS</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">EPS</td>
         <td className="px-[10px]">120%</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">RoNW</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">RoNW</td>
         <td className="px-[10px]">90%</td>
       </tr>
     </table>

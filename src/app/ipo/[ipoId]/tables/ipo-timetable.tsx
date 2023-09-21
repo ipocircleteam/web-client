@@ -4,38 +4,38 @@ export default function IpoTimeTable() {
   return (
     <table
       id="ipoTimetable"
-      className="w-[80%] mx-auto border-2 text-primary border-primary"
+      className="w-[50%] mt-[20px] mx-auto border text-slate-600 border-primary"
     >
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Open Date</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Open Date</td>
         <td className="px-[10px]">30 September 2023</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Close Date</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Close Date</td>
         <td className="px-[10px]">5 October 2023</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Allotment Date</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Allotment Date</td>
         <td className="px-[10px]">8 October 2023</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Initiation of refunds</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Initiation of refunds</td>
         <td className="px-[10px]">8 October 2023</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Credit of ...</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Credit of ...</td>
         <td className="px-[10px]">nhi bataunga</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Listing Date</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Listing Date</td>
         <td className="px-[10px]">8 October 2023</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Cutoff</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Cutoff</td>
         <td className="px-[10px]">---</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Time UPF</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Time UPF</td>
         <td className="px-[10px]">---</td>
       </tr>
     </table>

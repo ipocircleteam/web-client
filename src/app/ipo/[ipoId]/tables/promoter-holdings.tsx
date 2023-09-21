@@ -4,14 +4,14 @@ export default function PromoterHoldings() {
   return (
     <table
       id="promoterHoldings"
-      className="w-[80%] mx-auto border-2 text-primary "
+      className="w-[80%] mx-auto border text-slate-600 "
     >
-      <tr className="border-2">
-        <td className="pl-[10px] border-r-2">Pre-issue share holding</td>
+      <tr className="border">
+        <td className="pl-[10px] border-r">Pre-issue share holding</td>
         <td className="pl-[10px]">100%</td>
       </tr>
-      <tr className="border-2">
-        <td className="pl-[10px] border-r-2">Post-issue share holding</td>
+      <tr className="border">
+        <td className="pl-[10px] border-r">Post-issue share holding</td>
         <td className="pl-[10px]">100%</td>
       </tr>
     </table>

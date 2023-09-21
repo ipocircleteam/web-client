@@ -58,7 +58,7 @@ const data = [
 
 export default function GMP() {
   return (
-    <div id="gmp">
+    <div id="gmp" className="mt-[20px]">
       <NameDivider text="GMP" width={90} />
       <div className="w-[100%] text-center my-0">
         <label className="mx-auto text-primary">

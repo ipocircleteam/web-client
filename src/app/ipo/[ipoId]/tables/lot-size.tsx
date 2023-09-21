@@ -4,30 +4,30 @@ export default function LotSize() {
   return (
     <table
       id="ipoLotSize"
-      className="w-[80%] mx-auto border-2 text-primary border-primary"
+      className="w-[50%] mt-[20px] mx-auto border text-slate-600 border-primary"
     >
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Retail (min)</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Retail (min)</td>
         <td className="px-[10px]">200</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Retail (max)</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Retail (max)</td>
         <td className="px-[10px]">200</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">S-HNI (min)</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">S-HNI (min)</td>
         <td className="px-[10px]">200</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">S-HNI (max)</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">S-HNI (max)</td>
         <td className="px-[10px]">200</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">B-HNI (min)</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">B-HNI (min)</td>
         <td className="px-[10px]">nhi bataunga</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">B-HNI (max)</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">B-HNI (max)</td>
         <td className="px-[10px]">200</td>
       </tr>
     </table>

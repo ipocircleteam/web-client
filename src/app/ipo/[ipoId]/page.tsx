@@ -20,7 +20,7 @@ export default function IPODetailsPage() {
       <Menu />
       <div className="mt-[70px] flex items-start overflow-hidden">
         <div className="mdlg:w-[75vw] lg:w-[80vw] left-0">
-          <div className="w-[">
+          <div className="w-[100%] overflow-hidden">
             <div className="mdlg:hidden px-[20px]">
               <label
                 className=" text-[1rem] cursor-pointer underline"

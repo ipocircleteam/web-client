@@ -4,42 +4,42 @@ export default function IpoDetails() {
   return (
     <table
       id="ipoDetails"
-      className="w-[80%] mx-auto border-2 text-primary border-primary"
+      className="w-[100%] md:w-[50%] mx-auto mt-[20px] border text-slate-600 font-normal border-primary"
     >
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">IPO Date</td>
+      <tr className="border">
+        <td className="px-[10px] border">IPO Date</td>
         <td className="px-[10px]">8 October 2023</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Face Value</td>
+      <tr className="border">
+        <td className="px-[10px] border">Face Value</td>
         <td className="px-[10px]">Rs 15000</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Price Band</td>
+      <tr className="border">
+        <td className="px-[10px] border">Price Band</td>
         <td className="px-[10px]">Rs 15000</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Lot Size (retails)</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Lot Size (retails)</td>
         <td className="px-[10px]">200</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Total Size</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Total Size</td>
         <td className="px-[10px]">200</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Fresh Issue</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Fresh Issue</td>
         <td className="px-[10px]">200</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">OFS</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">OFS</td>
         <td className="px-[10px]">200</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Issue Type</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Issue Type</td>
         <td className="px-[10px]">HNI</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Listing At</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Listing At</td>
         <td className="px-[10px]">Rs 20000</td>
       </tr>
     </table>

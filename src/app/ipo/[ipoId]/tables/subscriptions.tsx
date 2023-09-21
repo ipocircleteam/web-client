@@ -4,21 +4,21 @@ import React from 'react'
 export default function Subscriptions() {
   return (
     <div id="subscriptionsTable">
-      <table className="w-[80%] mx-auto border-2 text-primary ">
-        <tr className="border-2">
-          <td className="pl-[10px] border-r-2">QIB</td>
+      <table className="w-[40%] mt-[20px] mx-auto border text-slate-600 ">
+        <tr className="border">
+          <td className="pl-[10px] border-r">QIB</td>
           <td className="pl-[10px]">text hu ji</td>
         </tr>
-        <tr className="border-2">
-          <td className="pl-[10px] border-r-2">NII (SNII)</td>
+        <tr className="border">
+          <td className="pl-[10px] border-r">NII (SNII)</td>
           <td className="pl-[10px]">100</td>
         </tr>
-        <tr className="border-2">
-          <td className="pl-[10px] border-r-2">NII (BNII)</td>
+        <tr className="border">
+          <td className="pl-[10px] border-r">NII (BNII)</td>
           <td className="pl-[10px]">100</td>
         </tr>
-        <tr className="border-2">
-          <td className="pl-[10px] border-r-2">Retail</td>
+        <tr className="border">
+          <td className="pl-[10px] border-r">Retail</td>
           <td className="pl-[10px]">100</td>
         </tr>
       </table>
