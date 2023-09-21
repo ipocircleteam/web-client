@@ -49,7 +49,7 @@ export default function KetoForm() {
           <br />
 
           <label className="text-primary text-[15px] leading-tight">
-            We'll inform you as soon as we launch.
+            We will inform you as soon as we launch.
           </label>
 
           <div className="w-[90%] mx-auto flex justify-center mt-[30px] md:mt-[50px] text-primary font-bold text-[1.5rem]">

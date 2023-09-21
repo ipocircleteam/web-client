@@ -5,7 +5,7 @@ import NameDivider from '@/components/Global/name-divider'
 
 export default function CompanyDetails() {
   return (
-    <>
+    <div id="companyDetails">
       <NameDivider text="Company Details" width={80} />
       <div className="w-[100%]">
         <div className="flex justify-between items-center">
@@ -39,6 +39,6 @@ export default function CompanyDetails() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   )
 }

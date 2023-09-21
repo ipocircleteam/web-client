@@ -2,7 +2,10 @@ import React from 'react'
 
 export default function PerformanceIndicators() {
   return (
-    <table className="w-[80%] mx-auto border-2 text-primary border-primary">
+    <table
+      id="performanceIndicators"
+      className="w-[80%] mx-auto border-2 text-primary border-primary"
+    >
       <tr className="border-2">
         <td className="px-[10px] border-r-2">Market Cap (EG)</td>
         <td className="px-[10px]">000000</td>

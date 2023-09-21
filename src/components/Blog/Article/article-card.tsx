@@ -17,8 +17,8 @@ export default function ArticleCard(props: ArticleDataType) {
           />
 
           <section className="flex justify-center md:justify-start items-center mt-1">
-            {props.data.topic.map((topic) => {
-              return <Tag title={topic} />
+            {props.data.topic.map((topic, index) => {
+              return <Tag title={topic} key={'blog-' + index} />
             })}
             <Tag title={props.data.readingTime + ' min'} />
           </section>

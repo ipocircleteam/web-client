@@ -15,9 +15,9 @@ export default function LargeMenu() {
           <Image
             className="ml-5 m-0 p-0"
             alt="IPOCircle"
-            height={45}
+            height={35}
             src={Logo}
-            width={160}
+            width={120}
           />
         </div>
       </Link>

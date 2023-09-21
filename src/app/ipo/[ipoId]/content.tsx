@@ -10,10 +10,12 @@ import PromoterHoldings from './tables/promoter-holdings'
 import CompanyFinancials from './company-financials'
 import ObjectIssue from './object-issue'
 import GMP from './gmp'
+import Subscriptions from './tables/subscriptions'
+import AnchorDetails from './tables/anchor-details'
 
 export default function Content() {
   return (
-    <div className="w-[90%] mx-auto p-2 border">
+    <div className="w-[90%] mx-auto p-2">
       <CompanyDetails />
 
       <div className="w-[100%] flex flex-wrap justify-around items-start">
@@ -52,6 +54,17 @@ export default function Content() {
       <CompanyFinancials />
       <ObjectIssue />
       <GMP />
+
+      <div className="w-[100%] flex flex-wrap justify-around items-start">
+        <div className="w-[50%]">
+          <NameDivider text="Anchor Details" width={70} />
+          <AnchorDetails />
+        </div>
+        <div className="w-[50%]">
+          <NameDivider text="Subscriptions" width={70} />
+          <Subscriptions />
+        </div>
+      </div>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function ObjectIssue() {
   return (
-    <div>
+    <div id="objectOfIssue">
       <NameDivider text="Object of the issue" width={80} />
       <p className="w-[90%] mx-auto">
         Maecenas a lacus libero. Praesent convallis pellentesque turpis, vitae

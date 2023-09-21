@@ -10,6 +10,7 @@ export default function useWindowWidth() {
 
   if (!isClient) return
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEventListener('resize', () => {
     setWidth(window.innerWidth)
   })

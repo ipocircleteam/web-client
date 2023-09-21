@@ -36,13 +36,13 @@ export default function TableRow(props: {
       className={
         'w-[100%] ' +
         (props.scaling === true ? 'scaling-transition' : '') +
-        ' cursor-pointer p-4 text-primary custom-tablerow text-[13px] md:text-[1.1rem]'
+        ' p-4 text-primary custom-tablerow text-[13px] md:text-[1.1rem]'
       }
       // onClick={openIpoPage}
     >
       <td className="w-[10%]">{props.data.sno}</td>
 
-      <td title="See details" className="w-[30%] text-left">
+      <td title="See details" className="w-[30%] text-left cursor-pointer">
         <div className="m-0 p-0 flex flex-wrap justify-start items-center">
           <a className="w-[100%]" href={'/ipo/' + props.data.ipoID}>
             {props.data.name.substring(0, 12) + ''}
@@ -80,7 +80,7 @@ export default function TableRow(props: {
       <td className="w-[5%] cursor-pointer">
         <button
           title="See more"
-          className=" text-primary flex items-center justify-center m-1 w-[30px] h-[20px] rounded-sm"
+          className=" text-primary cursor-pointer flex items-center justify-center m-1 w-[30px] h-[20px] rounded-sm"
         >
           <a className="w-[100%]" href={'/ipo/' + props.data.ipoID}>
             <Image

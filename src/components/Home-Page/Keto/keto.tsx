@@ -11,7 +11,7 @@ export default function Keto() {
       <KetoForm />
       <div className="my-[25px] text-center w-[80vw] md:w-[90vw] mx-auto rounded-lg px-4 bg-blue-50 py-[30px]">
         <h1 className="text-primary text-[1.5rem] md:text-[2rem] font-semibold text-center leading-tight">
-          Don't have money to invest in IPOs?
+          Do not have money to invest in IPOs?
         </h1>
         <h1 className="text-primary text-[1.1rem] md:text-[1.2rem] font-semibold text-center leading-tight  mb-0">
           Want to maximise your profit probability in STA ?

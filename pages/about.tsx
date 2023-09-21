@@ -6,7 +6,7 @@ interface SSGPageProps {
 }
 
 const SSGPage: NextPage<SSGPageProps> = ({ serverData }) => {
-  return <div>// WRITE CODE HERE</div>
+  return <div></div>
 }
 
 export const getStaticProps: GetStaticProps<SSGPageProps> = async () => {

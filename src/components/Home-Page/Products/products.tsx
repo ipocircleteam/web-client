@@ -10,8 +10,14 @@ export default function Products() {
       </h1>
 
       <section className="flex flex-wrap justify-around items-center w-[90vw] md:w-[80vw] mx-auto">
-        {ProductsData.map((item) => {
-          return <ProductCard title={item.title} link={item.link} />
+        {ProductsData.map((item, index) => {
+          return (
+            <ProductCard
+              title={item.title}
+              link={item.link}
+              key={'product-' + index}
+            />
+          )
         })}
       </section>
     </div>

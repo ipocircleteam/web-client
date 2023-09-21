@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function CompanyFinancials() {
   return (
-    <div>
+    <div id="companyFinancials">
       <NameDivider text="Company Financials" width={80} />
       <table className="w-[80%] mx-auto border-2 text-primary ">
         <tr className="border-2">
