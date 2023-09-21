@@ -10,7 +10,7 @@ export default function IpoDatabase() {
         IPO Database
       </h1>
 
-      <div className="w-[100%] flex justify-between items-start my-[10px] px-3">
+      <div className="w-[100%] flex flex-wrap justify-between items-start my-[10px] px-3">
         <div className="w-[78%] border">
           <Table />
         </div>

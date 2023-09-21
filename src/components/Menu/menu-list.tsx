@@ -7,7 +7,7 @@ import { SmallNavigationLinks } from './navigation-links'
 
 export default function MenuList(props: CallBackType) {
   return (
-    <>
+    <div className="">
       <div
         id="menu-overlay"
         className="fixed hidden z-10 top-0 w-[100vw] h-[100vh]"
@@ -23,6 +23,6 @@ export default function MenuList(props: CallBackType) {
       >
         <SmallNavigationLinks callback={props.callback} />
       </div>
-    </>
+    </div>
   )
 }

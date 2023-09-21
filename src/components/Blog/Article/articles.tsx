@@ -10,8 +10,14 @@ export default function Articles() {
       </h1>
       <hr />
       <section>
-        {articlesData.map((article) => {
-          return <ArticleCard blogId={article.blogId} data={article.data} />
+        {articlesData.map((article, index) => {
+          return (
+            <ArticleCard
+              blogId={article.blogId}
+              data={article.data}
+              key={'article-' + index}
+            />
+          )
         })}
       </section>
     </div>

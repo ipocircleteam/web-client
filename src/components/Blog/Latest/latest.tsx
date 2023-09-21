@@ -12,9 +12,9 @@ export default function Latest() {
       </h1>
       <hr />
       <section>
-        {latest.map((item) => {
+        {latest.map((item, index) => {
           return (
-            <Link href={'/blog/' + item.blogId}>
+            <Link href={'/blog/' + item.blogId} key={'link-' + index}>
               <TrendingCard title={item.data.title} desc={item.data.desc} />
             </Link>
           )

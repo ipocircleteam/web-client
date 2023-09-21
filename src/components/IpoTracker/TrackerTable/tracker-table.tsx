@@ -17,7 +17,12 @@ export default function TrackerTable(props: { darkMode: boolean }) {
 
         {trackerData.map((item, index) => {
           return (
-            <RowTemplate data={item} index={index} darkMode={props.darkMode} />
+            <RowTemplate
+              key={'row-' + index}
+              data={item}
+              index={index}
+              darkMode={props.darkMode}
+            />
           )
         })}
       </table>
