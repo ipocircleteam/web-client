@@ -7,7 +7,7 @@ import { LargeNavigationLinks } from './navigation-links'
 export default function LargeMenu() {
   return (
     <div
-      className="px-[10px] py-[5px] m-0 w-[100vw] flex justify-between items-center border-b-2"
+      className="px-[10px] py-[7px] m-0 w-[100vw] flex justify-between items-center border-b"
       data-testid="large-menu"
     >
       <Link href="/">
