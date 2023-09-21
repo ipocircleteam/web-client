@@ -244,3 +244,7 @@ body {
     }
   }
 }
+
+.translate-algo {
+  transform: translateY(400px);
+}
