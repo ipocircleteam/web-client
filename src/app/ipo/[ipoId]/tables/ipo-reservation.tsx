@@ -4,18 +4,18 @@ export default function IpoReservation() {
   return (
     <table
       id="ipoReservation"
-      className="w-[80%] mx-auto border-2 text-primary border-primary"
+      className="w-[80%] mt-[20px] mx-auto border text-slate-600 border-primary"
     >
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">QIB SHares Offerred</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">QIB SHares Offerred</td>
         <td className="px-[10px]">200</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">NIL Sares Offerred</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">NIL Sares Offerred</td>
         <td className="px-[10px]">200</td>
       </tr>
-      <tr className="border-2">
-        <td className="px-[10px] border-r-2">Retail Shares Offerred</td>
+      <tr className="border">
+        <td className="px-[10px] border-r">Retail Shares Offerred</td>
         <td className="px-[10px]">200</td>
       </tr>
     </table>

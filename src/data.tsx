@@ -7,40 +7,28 @@ export const ipoDetailsItems: {
     id: 'companyDetails',
   },
   {
-    text: 'IPO Details',
-    id: 'ipoDetails',
+    text: 'Data Tables',
+    id: 'dataTables',
+  },
+  {
+    text: 'GMP',
+    id: 'gmp',
+  },
+  {
+    text: 'Anchor Details',
+    id: 'anchorDetails',
   },
   {
     text: 'IPO Reservation',
     id: 'ipoReservation',
   },
   {
-    text: 'IPO Timetable',
-    id: 'ipoTimetable',
-  },
-  {
     text: 'Promoter Holdings',
     id: 'promoterHoldings',
   },
   {
-    text: 'IPO Lot Size',
-    id: 'ipoLotSize',
-  },
-  {
-    text: 'Company Financials',
-    id: 'companyFinancials',
-  },
-  {
-    text: 'Performance Indicators',
-    id: 'performanceIndicators',
-  },
-  {
     text: 'Object of Issue',
     id: 'objectOfIssue',
-  },
-  {
-    text: 'Doas Limit',
-    id: 'doasLimit',
   },
   {
     text: 'Company Contact',
@@ -51,16 +39,8 @@ export const ipoDetailsItems: {
     id: 'registrarContact',
   },
   {
-    text: 'GMP',
-    id: 'gmp',
-  },
-  {
-    text: 'Subscriptions Table',
-    id: 'subscriptionsTable',
-  },
-  {
-    text: 'Anchor Details',
-    id: 'anchorDetails',
+    text: 'Documents',
+    id: 'documents',
   },
   {
     text: 'Our Review',
