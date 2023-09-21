@@ -22,7 +22,8 @@ const config: Config = {
       colors: {
         base: '#FFFFFF',
         baseTwo: '#D9D9D9',
-        primary: '#012C7A',
+        // primary: '#012C7A',
+        primary: '#305dbf',
         secondary: '#00BE9D',
         primaryShade: '#C0DDF9',
         panelDark: '#213555',

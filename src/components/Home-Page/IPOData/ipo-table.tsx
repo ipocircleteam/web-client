@@ -7,7 +7,8 @@ export function IpoTable(props: TableDataType) {
   const data: RowDataType[] = props.type === 'main' ? mainipodata : smeipodata
 
   return (
-    <div className="custom-shadow-table w-[90vw] sm:w-[90vw] md:w-[85vw] lg:w-[60vw] lgx:w-[40vw] mx-auto mt-2 rounded-md border overflow-hidden">
+    // Ad class custom-shadow-table to add shadow around table
+    <div className="w-[90vw] sm:w-[90vw] md:w-[85vw] lg:w-[60vw] lgx:w-[40vw] mx-auto mt-2 rounded-md border overflow-hidden">
       <table className="text-center w-[100%]">
         {/* TABLE HEADING */}
         <tr className="w-[100%] p-4 text-[13px] lg:text-[15px] font-semibold text-grey-500 custom-tablerow">
@@ -28,7 +29,7 @@ export function IpoTable(props: TableDataType) {
             enddate: item.enddate,
             status: item.status,
           }
-          return <TableRow key={item.sno} data={data} scaling={true} />
+          return <TableRow key={item.sno} data={data} scaling={false} />
         })}
       </table>
     </div>

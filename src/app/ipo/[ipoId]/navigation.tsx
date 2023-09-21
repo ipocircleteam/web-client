@@ -4,27 +4,34 @@ export default function Navigation() {
   return (
     <>
       <label className="text-gray-400">Items on this page</label>
-      <NavigationItem text="Company Details" />
-      <NavigationItem text="IPO Details" />
-      <NavigationItem text="IPO Reservation" />
-      <NavigationItem text="IPO Timetable" />
-      <NavigationItem text="Promoter Holdings" />
-      <NavigationItem text="IPO Lot Size" />
-      <NavigationItem text="Company Financials" />
-      <NavigationItem text="Performance Indicators" />
-      <NavigationItem text="Object of Issue" />
-      <NavigationItem text="DOas Limit" />
-      <NavigationItem text="Company COntact" />
-      <NavigationItem text="Registrar Contact" />
-      <NavigationItem text="GMP" />
-      <NavigationItem text="Subscriptions Table" />
-      <NavigationItem text="Anchor Details" />
-      <NavigationItem text="Our Review" />
-      <NavigationItem text="Discussions" />
+      <NavigationItem text="Company Details" id="#companyDetails" />
+      <NavigationItem text="IPO Details" id="#ipoDetails" />
+      <NavigationItem text="IPO Reservation" id="#ipoReservation" />
+      <NavigationItem text="IPO Timetable" id="#ipoTimetable" />
+      <NavigationItem text="Promoter Holdings" id="#promoterHoldings" />
+      <NavigationItem text="IPO Lot Size" id="#ipoLotSize" />
+      <NavigationItem text="Company Financials" id="#companyFinancials" />
+      <NavigationItem
+        text="Performance Indicators"
+        id="#performanceIndicators"
+      />
+      <NavigationItem text="Object of Issue" id="#objectOfIssue" />
+      <NavigationItem text="DOas Limit" id="#doasLimit" />
+      <NavigationItem text="Company COntact" id="#companyContact" />
+      <NavigationItem text="Registrar Contact" id="#registrarContact" />
+      <NavigationItem text="GMP" id="#gmp" />
+      <NavigationItem text="Subscriptions Table" id="#subscriptionsTable" />
+      <NavigationItem text="Anchor Details" id="#anchorDetails" />
+      <NavigationItem text="Our Review" id="#ourReview" />
+      <NavigationItem text="Discussions" id="#discussions" />
     </>
   )
 }
 
-function NavigationItem(props: { text: string }) {
-  return <label className="my-[3px] cursor-pointer">{props.text}</label>
+function NavigationItem(props: { text: string; id: string }) {
+  return (
+    <a href={props.id}>
+      <label className="my-[3px] cursor-pointer">{props.text}</label>
+    </a>
+  )
 }
