@@ -8,9 +8,9 @@ export default function ArticlePage() {
 
   return (
     <>
-      <Menu />
+      {/* <Menu />
       <h1>ID for selected blog is -: {path}</h1>
-      <Footer />
+      <Footer /> */}
     </>
   )
 }
