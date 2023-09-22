@@ -6,6 +6,7 @@ import $ from 'jquery'
 import React, { useState } from 'react'
 import Menu from '@/components/Menu/menu'
 import { trackerData } from '@/dummydata'
+import Footer from '@/components/Footer/footer'
 
 export default function IpoTracker() {
   const [isDark, setIsDark] = useState(false)
@@ -35,8 +36,6 @@ export default function IpoTracker() {
   }
 
   const filter = async (sector: string, year: number, price: number) => {
-    console.log(sector + ',' + year + ',' + price)
-
     if (sector === 'All' && year === 0 && price === 0) {
       setTableData(trackerData)
       return
@@ -44,23 +43,31 @@ export default function IpoTracker() {
 
     const filteredData = trackerData.filter((item) => {
       // Check conditions based on the arguments
-      let sectorCondition = false
-      let listingCondition = false
-      let yearCondition = false
+      let sectorCondition = true
+      let listingCondition = true
+      let yearCondition = true
 
-      if (sector !== 'All' && sector !== undefined) {
+      if (String(sector) !== 'All' && String(sector) !== undefined) {
         sectorCondition = item.sector === String(sector)
       }
 
-      if (price !== 0 && price !== undefined) {
+      if (Number(price) > 0 && Number(price) !== undefined) {
         listingCondition = item.listing === Number(price)
       }
 
-      if (year !== 0 && price !== undefined) {
+      if (Number(year) > 0 && Number(price) !== undefined) {
         yearCondition = item.year === Number(year)
       }
 
       return sectorCondition && listingCondition && yearCondition
+    })
+
+    setTableData(filteredData)
+  }
+
+  const searchCompany = (name: string) => {
+    const filteredData = trackerData.filter((item) => {
+      return item.company.includes(String(name))
     })
 
     setTableData(filteredData)
@@ -109,6 +116,7 @@ export default function IpoTracker() {
             darkMode={isDark}
             toggleFilters={toggleFilters}
             filter={filter}
+            search={searchCompany}
           />
         </section>
         <div className="flex justify-around items-start flex-wrap mx-[auto] w-[100vw] md:w-[95vw]">
@@ -120,10 +128,12 @@ export default function IpoTracker() {
               darkMode={isDark}
               toggleFilters={toggleFilters}
               filter={filter}
+              search={searchCompany}
             />
           </section>
         </div>
       </div>
+      <Footer />
     </>
   )
 }

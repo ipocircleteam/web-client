@@ -8,7 +8,7 @@ export default function BtnBar(props: {
 }) {
   return (
     <section className="p-2">
-      <SearchBar darkMode={props.darkMode} />
+      {/* <SearchBar darkMode={props.darkMode} /> */}
 
       {/* <TrackerBtn
         text="Filters"
