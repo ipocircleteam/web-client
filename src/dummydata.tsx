@@ -253,8 +253,9 @@ export const articlesData: ArticleDataType[] = [
 // IPO TRACKER DUMMY DATA
 export const trackerData: TrackerDataType[] = [
   {
+    id: 1,
     company: 'IPOCIRCLE',
-    listing: 5000,
+    listing: 4000,
     current: 4000,
     dayend: 3000,
     issue: 2000,
@@ -262,6 +263,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2023,
   },
   {
+    id: 2,
     company: 'IPOCIRCLE',
     listing: 1000,
     current: 4000,
@@ -271,6 +273,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2023,
   },
   {
+    id: 3,
     company: 'IPOCIRCLE',
     listing: 1000,
     current: 10000,
@@ -280,6 +283,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2022,
   },
   {
+    id: 4,
     company: 'IPOCIRCLE',
     listing: 5000,
     current: 4000,
@@ -289,6 +293,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2022,
   },
   {
+    id: 5,
     company: 'IPOCIRCLE',
     listing: 1000,
     current: 4000,
@@ -298,6 +303,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2021,
   },
   {
+    id: 6,
     company: 'IPOCIRCLE',
     listing: 1000,
     current: 10000,
@@ -307,6 +313,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2021,
   },
   {
+    id: 7,
     company: 'IPOCIRCLE',
     listing: 5000,
     current: 4000,
@@ -316,6 +323,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2021,
   },
   {
+    id: 8,
     company: 'IPOCIRCLE',
     listing: 1000,
     current: 4000,
@@ -325,6 +333,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2020,
   },
   {
+    id: 9,
     company: 'IPOCIRCLE',
     listing: 1000,
     current: 10000,
@@ -334,6 +343,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2019,
   },
   {
+    id: 10,
     company: 'IPOCIRCLE',
     listing: 5000,
     current: 4000,
@@ -343,6 +353,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2018,
   },
   {
+    id: 11,
     company: 'IPOCIRCLE',
     listing: 1000,
     current: 4000,
@@ -352,6 +363,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2017,
   },
   {
+    id: 12,
     company: 'IPOCIRCLE',
     listing: 1000,
     current: 10000,
@@ -361,6 +373,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2016,
   },
   {
+    id: 13,
     company: 'IPOCIRCLE',
     listing: 5000,
     current: 4000,
@@ -370,6 +383,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2015,
   },
   {
+    id: 14,
     company: 'IPOCIRCLE',
     listing: 1000,
     current: 4000,
@@ -379,6 +393,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2014,
   },
   {
+    id: 15,
     company: 'IPOCIRCLE',
     listing: 1000,
     current: 10000,
@@ -388,6 +403,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2013,
   },
   {
+    id: 16,
     company: 'IPOCIRCLE',
     listing: 5000,
     current: 4000,
@@ -397,6 +413,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2012,
   },
   {
+    id: 17,
     company: 'IPOCIRCLE',
     listing: 1000,
     current: 4000,
@@ -406,6 +423,7 @@ export const trackerData: TrackerDataType[] = [
     year: 2011,
   },
   {
+    id: 18,
     company: 'IPOCIRCLE',
     listing: 1000,
     current: 10000,

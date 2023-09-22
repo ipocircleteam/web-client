@@ -7,17 +7,17 @@ export default function BtnBar(props: {
   toggleFilters: () => void
 }) {
   return (
-    <section className="p-2 flex justify-end items-center">
+    <section className="p-2">
       <SearchBar darkMode={props.darkMode} />
 
-      <TrackerBtn
+      {/* <TrackerBtn
         text="Filters"
         contentType="text"
         darkMode={props.darkMode}
         callback={props.toggleFilters}
       >
         <p className="uppercase">Filters</p>
-      </TrackerBtn>
+      </TrackerBtn> */}
     </section>
   )
 }
