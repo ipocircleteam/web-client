@@ -1,4 +1,5 @@
 export type TrackerDataType = {
+  id: number
   company: string
   listing: number
   dayend: number

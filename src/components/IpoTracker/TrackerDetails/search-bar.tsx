@@ -12,7 +12,7 @@ export default function SearchBar(props: { darkMode: boolean }) {
   }
 
   return (
-    <div className="flex justify-center items-center w-[100%]">
+    <div className="flex justify-center items-center w-[100%] my-[10px]">
       <input
         type="text"
         placeholder="Search company"

@@ -3,14 +3,12 @@ import FilterHeader from './filter-header'
 import FilterBody from './filter-body'
 import FilterFooter from './filter-footer'
 
-export default function Filter() {
+export default function Filter(props: {
+  filter: (sector: string, year: number, price: number) => void
+}) {
   return (
-    <div
-      id="filter"
-      className="fixed z-50 custom-filter-panel hidden h-[100vh] bg-white shadow-lg border border-r-0 right-0"
-    >
-      <FilterHeader />
-      <FilterBody />
+    <div id="filter" className=" bg-white border overflow-hidden">
+      <FilterBody filter={props.filter} />
     </div>
   )
 }

@@ -24,7 +24,10 @@ export default function TrackerMenu(props: TrackerMenuType) {
   }
 
   return (
-    <div className="flex flex-wrap justify-between items-center px-4 py-2">
+    <div
+      className="flex flex-wrap justify-between items-center px-4 py-2"
+      id="tracker"
+    >
       <section className="flex justify-start items-center">
         <h1
           className={

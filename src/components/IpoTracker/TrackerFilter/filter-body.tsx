@@ -6,10 +6,13 @@ import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Slider from '@mui/material/Slider'
 
-export default function FilterBody() {
+export default function FilterBody(props: {
+  filter: (sector: string, year: number, price: number) => void
+}) {
   const [form, setForm] = useState({
     sector: '',
     year: 0,
+    listing: 0,
     listingPrice: 0,
     currentPrice: 0,
     dayendPrice: 0,
@@ -47,11 +50,20 @@ export default function FilterBody() {
   return (
     <>
       <div className="w-[100%] flex flex-col justify-center items-start p-2 px-4">
-        <div className="flex justify-between items-center w-[90%] mx-auto my-2">
-          <label className=" h-[30px] flex items-center text-[1.1rem]">
+        <div className="flex justify-between items-center w-[100%] mx-auto my-2">
+          <label className=" h-[40px] flex items-center text-[1.1rem]">
             Sector
           </label>
-          <select className="w-[70%] h-[30px] p-1 outline-none border border-gray-600 rounded-md">
+          <select
+            name="sector"
+            onChange={(e) => {
+              setForm({
+                ...form,
+                [e.target.name]: e.target.value,
+              })
+            }}
+            className="w-[65%] h-[40px] p-1 outline-none border border-gray-600 rounded-md"
+          >
             <option>All</option>
             <option>Pharma</option>
             <option>IT</option>
@@ -60,39 +72,53 @@ export default function FilterBody() {
           </select>
         </div>
 
-        <div className="flex justify-between items-center w-[90%] mx-auto my-2">
-          <label className=" h-[30px] flex items-center text-[1.1rem]">
+        <div className="flex justify-between items-center w-[100%] mx-auto my-2">
+          <label className=" h-[40px] flex items-center text-[1.1rem]">
             Year
           </label>
           <input
-            className="w-[70%] h-[30px] p-1 outline-none border border-gray-600 rounded-lg"
+            className="w-[65%] h-[40px] p-1 outline-none border border-gray-600 rounded-lg"
             type="number"
+            name="year"
             max={new Date().getFullYear()}
-            value={new Date().getFullYear()}
+            value={form.year}
+            onChange={(e) => {
+              setForm({
+                ...form,
+                [e.target.name]: e.target.value,
+              })
+            }}
           />
         </div>
 
-        <div className="flex justify-between items-center w-[90%] mx-auto my-2">
-          <label className=" h-[30px] flex items-center text-[1.1rem]">
+        <div className="flex justify-between items-center w-[100%] mx-auto my-2">
+          <label className=" h-[40px] flex items-center text-[1.1rem]">
             Listing Price
           </label>
           <input
-            placeholder="0"
-            className="w-[70%] h-[30px] p-1 outline-none border border-gray-600 rounded-lg"
+            className="w-[65%] h-[40px] p-1 outline-none border border-gray-600 rounded-lg"
             type="number"
+            name="listing"
+            value={form.listing}
+            onChange={(e) => {
+              setForm({
+                ...form,
+                [e.target.name]: e.target.value,
+              })
+            }}
           />
         </div>
 
-        <div className="w-[100%] mx-auto mt-[30px] border-t-2">
-          <label className=" h-[30px] flex items-center text-[1.1rem]">
+        <div className="w-[100%] mx-auto my-[20px] border-t-2 px-1">
+          <label className="mt-[10px] h-[40px] flex items-center text-[1rem]">
             Adjust parameters for graphical comparison
           </label>
 
           <div className="m-2">
-            <label className="mr-[30px]">
+            <label className="mr-[30p]">
               Listing price ({form.listingPrice})
             </label>
-            <Box sx={{ width: 500 }}>
+            <Box sx={{}}>
               <Stack
                 spacing={2}
                 direction="row"
@@ -110,7 +136,7 @@ export default function FilterBody() {
 
           <div className="m-2">
             <label>Current price ({form.currentPrice})</label>
-            <Box sx={{ width: 500 }}>
+            <Box sx={{}}>
               <Stack
                 spacing={2}
                 direction="row"
@@ -128,7 +154,7 @@ export default function FilterBody() {
 
           <div className="m-2">
             <label>Dayend price ({form.dayendPrice})</label>
-            <Box sx={{ width: 500 }}>
+            <Box sx={{}}>
               <Stack
                 spacing={2}
                 direction="row"
@@ -144,9 +170,9 @@ export default function FilterBody() {
             </Box>
           </div>
 
-          <div className="m-2">
+          <div className="mx-2">
             <label>Issue price ({form.issuePrice})</label>
-            <Box sx={{ width: 500 }}>
+            <Box sx={{}}>
               <Stack
                 spacing={2}
                 direction="row"
@@ -163,29 +189,14 @@ export default function FilterBody() {
           </div>
         </div>
       </div>
-      <FilterFooter />
+      <FilterFooter
+        applyFlter={() => {
+          props.filter(form.sector, form.year, form.listing)
+        }}
+        resetFilter={() => {
+          props.filter('All', 0, 0)
+        }}
+      />
     </>
   )
-}
-
-{
-  /* <section className="flex justify-between items-start">
-            <select className="w-[30%] h-[50px]  p-2 outline-none border border-gray-600 rounded-lg">
-              <option>Listing Price</option>
-              <option>Current Price</option>
-              <option>Dayend Price</option>
-              <option>Issue Price</option>
-            </select>
-            <select className="w-[30%] h-[50px]  p-2 outline-none border border-gray-600 rounded-lg">
-              <option>More than</option>
-              <option>Equal to</option>
-              <option>Less than</option>
-            </select>
-            <select className="w-[30%] h-[50px]  p-2 outline-none border border-gray-600 rounded-lg">
-              <option>Current Price</option>
-              <option>Listing Price</option>
-              <option>Dayend Price</option>
-              <option>Issue Price</option>
-            </select>
-          </section> */
 }
