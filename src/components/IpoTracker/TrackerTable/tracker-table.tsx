@@ -4,12 +4,12 @@ import RowTemplate from './row-template'
 import TableHead from './table-head'
 
 export default function TrackerTable(props: { darkMode: boolean }) {
-  const theme = props.darkMode ? 'text-[#FFFFFF]' : 'text-primary'
+  const theme = props.darkMode ? 'text-[#FFFFFF]' : 'text-slate-600'
   return (
     <div
       className={
-        (props.darkMode ? 'bg-panelDark' : 'bg-gray-300') +
-        ' mx-auto custom-shadow-panel overflow-hidden flex justify-center items-center flex-wrap h-[auto] my-[20px] rounded-lg p-2'
+        (props.darkMode ? 'bg-panelDark' : 'bg-white') +
+        ' mx-auto overflow-hidden flex justify-center items-center flex-wrap h-[auto] my-[20px] rounded-lg p-2'
       }
     >
       <table className="w-[100%]">

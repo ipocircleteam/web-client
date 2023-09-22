@@ -15,7 +15,7 @@ export default function PieCard(props: {
 
   return (
     <div className="m-2 flex flex-col justify-center">
-      <span className="flex justify-between items-center">
+      <span className="text-center">
         <label
           className={
             (props.darkMode ? 'text-white' : 'text-primary') +
@@ -24,21 +24,12 @@ export default function PieCard(props: {
         >
           {props.label}
         </label>
-        <button className="border border-gray-600 rounded-full overflow-hidden w-[30px] h-[30px]">
-          <Image
-            className={(props.darkMode ? 'invert' : '') + ' mx-auto'}
-            width={12}
-            height={12}
-            src={Pin}
-            alt="Pin"
-          />
-        </button>
       </span>
 
       <span onClick={zoomIn}>
         <PieChartComponent
-          width={250}
-          height={220}
+          width={200}
+          height={180}
           innerRadius={30}
           outerRadius={90}
           data={props.data}

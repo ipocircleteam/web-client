@@ -4,8 +4,8 @@ export default function TableHead(props: { darkMode: boolean }) {
   return (
     <tr
       className={
-        (props.darkMode ? 'text-baseTwo' : 'text-primary') +
-        ' flex justify-around items-center h-[40px] border border-b border-gray-800'
+        (props.darkMode ? '' : '') +
+        ' text-slate-600 flex justify-around items-center h-[40px] border'
       }
     >
       <td>S.No</td>

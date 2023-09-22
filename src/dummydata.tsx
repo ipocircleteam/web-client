@@ -259,6 +259,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 3000,
     issue: 2000,
     sector: 'Pharma',
+    year: 2023,
   },
   {
     company: 'IPOCIRCLE',
@@ -267,6 +268,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 9000,
     issue: 2000,
     sector: 'Fintech',
+    year: 2023,
   },
   {
     company: 'IPOCIRCLE',
@@ -275,6 +277,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 9000,
     issue: 5000,
     sector: 'Hospitality',
+    year: 2022,
   },
   {
     company: 'IPOCIRCLE',
@@ -283,6 +286,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 3000,
     issue: 2000,
     sector: 'Pharma',
+    year: 2022,
   },
   {
     company: 'IPOCIRCLE',
@@ -291,6 +295,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 9000,
     issue: 2000,
     sector: 'Fintech',
+    year: 2021,
   },
   {
     company: 'IPOCIRCLE',
@@ -299,6 +304,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 9000,
     issue: 5000,
     sector: 'Hospitality',
+    year: 2021,
   },
   {
     company: 'IPOCIRCLE',
@@ -307,6 +313,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 3000,
     issue: 2000,
     sector: 'Pharma',
+    year: 2021,
   },
   {
     company: 'IPOCIRCLE',
@@ -315,6 +322,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 9000,
     issue: 2000,
     sector: 'Fintech',
+    year: 2020,
   },
   {
     company: 'IPOCIRCLE',
@@ -323,6 +331,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 9000,
     issue: 5000,
     sector: 'Hospitality',
+    year: 2019,
   },
   {
     company: 'IPOCIRCLE',
@@ -331,6 +340,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 3000,
     issue: 2000,
     sector: 'Pharma',
+    year: 2018,
   },
   {
     company: 'IPOCIRCLE',
@@ -339,6 +349,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 9000,
     issue: 2000,
     sector: 'Fintech',
+    year: 2017,
   },
   {
     company: 'IPOCIRCLE',
@@ -347,6 +358,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 9000,
     issue: 5000,
     sector: 'Hospitality',
+    year: 2016,
   },
   {
     company: 'IPOCIRCLE',
@@ -355,6 +367,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 3000,
     issue: 2000,
     sector: 'Pharma',
+    year: 2015,
   },
   {
     company: 'IPOCIRCLE',
@@ -363,6 +376,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 9000,
     issue: 2000,
     sector: 'Fintech',
+    year: 2014,
   },
   {
     company: 'IPOCIRCLE',
@@ -371,6 +385,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 9000,
     issue: 5000,
     sector: 'Hospitality',
+    year: 2013,
   },
   {
     company: 'IPOCIRCLE',
@@ -379,6 +394,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 3000,
     issue: 2000,
     sector: 'Pharma',
+    year: 2012,
   },
   {
     company: 'IPOCIRCLE',
@@ -387,6 +403,7 @@ export const trackerData: TrackerDataType[] = [
     dayend: 9000,
     issue: 2000,
     sector: 'Fintech',
+    year: 2011,
   },
   {
     company: 'IPOCIRCLE',
@@ -395,5 +412,6 @@ export const trackerData: TrackerDataType[] = [
     dayend: 9000,
     issue: 5000,
     sector: 'Hospitality',
+    year: 2010,
   },
 ]

@@ -7,7 +7,7 @@ export default function BtnBar(props: {
   toggleFilters: () => void
 }) {
   return (
-    <section className="border-t-[1px] border-gray-600 p-2 flex justify-end items-center">
+    <section className="p-2 flex justify-end items-center">
       <SearchBar darkMode={props.darkMode} />
 
       <TrackerBtn

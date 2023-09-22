@@ -5,6 +5,7 @@ export type TrackerDataType = {
   issue: number
   current: number
   sector: string
+  year: number
 }
 
 export type RowTemplateType = {
