@@ -3,8 +3,10 @@ import React from 'react'
 
 export default function ObjectIssue() {
   return (
-    <div id="objectOfIssue">
-      <NameDivider text="Object of the issue" width={80} />
+    <div id="objectOfIssue" className="my-[20px] mb-[50px]">
+      <label className="text-primary text-[1.2rem] font-bold">
+        Object of the issue
+      </label>
       <p className="w-[90%] mx-auto">
         Maecenas a lacus libero. Praesent convallis pellentesque turpis, vitae
         semper erat pharetra id. Nunc non justo quis ante dictum blandit.

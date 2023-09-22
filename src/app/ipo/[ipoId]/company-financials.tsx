@@ -3,8 +3,11 @@ import React from 'react'
 
 export default function CompanyFinancials() {
   return (
-    <div id="companyFinancials">
-      <table className="w-[80%] mt-[20px] mx-auto border text-slate-600 ">
+    <div
+      id="companyFinancials"
+      className="overflow-x-scroll overflow-y-hidden w-[800px] mx-auto"
+    >
+      <table className="w-[100%] md:w-[80%] lg:mt-[20px] mx-auto border text-slate-600 ">
         <tr className="border">
           <td className="pl-[10px] border-r">Period Ended</td>
           <td className="pl-[10px] text-center">31 March 2019</td>

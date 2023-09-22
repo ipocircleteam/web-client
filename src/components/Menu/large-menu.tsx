@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Logo } from '../../../public/logo'
-import { LargeNavigationLinks } from './navigation-links'
+import { LargeNavigation } from './navigation-links'
 
 export default function LargeMenu() {
   return (
@@ -22,7 +22,7 @@ export default function LargeMenu() {
         </div>
       </Link>
 
-      <LargeNavigationLinks />
+      <LargeNavigation />
     </div>
   )
 }

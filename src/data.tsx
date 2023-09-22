@@ -46,8 +46,8 @@ export const ipoDetailsItems: {
     text: 'Our Review',
     id: 'ourReview',
   },
-  {
-    text: 'Discussions',
-    id: 'discussions',
-  },
+  // {
+  //   text: 'Discussions',
+  //   id: 'discussions',
+  // },
 ]

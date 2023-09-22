@@ -12,6 +12,17 @@ export default function Navigation() {
           <NavigationItem text={item.text} id={item.id} key={'item-' + index} />
         )
       })}
+      <div className="block lg:hidden">
+        <NavigationItem text="Ipo details" id="ipoDetails" />
+        <NavigationItem text="Ipo Timetable" id="ipoTimetable" />
+        <NavigationItem text="Lot Size" id="lotSize" />
+        <NavigationItem
+          text="Performance Indicators"
+          id="performanceIndicators"
+        />
+        <NavigationItem text="Company Financials" id="companFinancials" />
+        <NavigationItem text="Subscriptions" id="subscriptionsTable" />
+      </div>
     </>
   )
 }
@@ -40,8 +51,7 @@ function NavigationItem(props: { text: string; id: string }) {
     })
 
     let id = '#link-' + props.id
-    $(id).removeClass('hover:bg-blue-100 hover:text-blue-500 hover:font-bold')
-    $(id).addClass('bg-primary ')
+    $(id).addClass('bg-red-900')
   }
 
   return (

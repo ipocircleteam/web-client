@@ -6,6 +6,7 @@ import Menu from '@/components/Menu/menu'
 import Navigation from './navigation'
 import Content from './content'
 import $ from 'jquery'
+import Footer from '@/components/Footer/footer'
 
 export default function IPODetailsPage() {
   const path = usePathname()
@@ -21,7 +22,7 @@ export default function IPODetailsPage() {
       <div className="mt-[70px] flex items-start overflow-hidden">
         <div className="mdlg:w-[75vw] lg:w-[80vw] left-0">
           <div className="w-[100%] overflow-hidden">
-            <div className="mdlg:hidden px-[20px]">
+            <div className="lg:hidden px-[20px]">
               <label
                 className=" text-[1rem] cursor-pointer underline"
                 onClick={showContents}

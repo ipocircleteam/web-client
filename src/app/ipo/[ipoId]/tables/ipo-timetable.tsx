@@ -4,7 +4,7 @@ export default function IpoTimeTable() {
   return (
     <table
       id="ipoTimetable"
-      className="w-[50%] mt-[20px] mx-auto border text-slate-600 border-primary"
+      className="w-[100%] md:w-[50%] mt-[20px] mx-auto border text-slate-600 border-primary"
     >
       <tr className="border">
         <td className="px-[10px] border-r">Open Date</td>
