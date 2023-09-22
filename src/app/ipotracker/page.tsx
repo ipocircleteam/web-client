@@ -6,9 +6,10 @@ import TrackerTable from '@/components/IpoTracker/TrackerTable/tracker-table'
 import Filter from '@/components/IpoTracker/TrackerFilter/filter'
 import $ from 'jquery'
 import React, { useState } from 'react'
+import Menu from '@/components/Menu/menu'
 
 export default function IpoTracker() {
-  const [isDark, setIsDark] = useState(true)
+  const [isDark, setIsDark] = useState(false)
 
   const toggleMode = () => {
     setIsDark(!isDark)
@@ -21,10 +22,11 @@ export default function IpoTracker() {
   return (
     <>
       <Filter />
+      <Menu />
       <div
         className={
-          (isDark ? 'bg-[#0c1a3b]' : 'bg-baseTwo') +
-          ' min-h-[100vh] overflow-hidden'
+          (isDark ? 'bg-[#0c1a3b]' : 'bg-white') +
+          ' min-h-[100vh] overflow-hidden mt-[50px]'
         }
       >
         <TrackerMenu darkMode={isDark} toggleMode={toggleMode} />

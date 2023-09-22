@@ -9,8 +9,8 @@ export default function TrackerDetails(props: {
   toggleFilters: () => void
 }) {
   return (
-    <div className="w-[100%] p-2 rounded-lg bg-panelDark">
-      <CurrentParams darkMode={props.darkMode} />
+    <div className="w-[100%] p-2 rounded-lg border">
+      {/* <CurrentParams darkMode={props.darkMode} /> */}
       <BtnBar darkMode={props.darkMode} toggleFilters={props.toggleFilters} />
     </div>
   )

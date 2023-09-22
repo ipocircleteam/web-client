@@ -5,7 +5,7 @@ import $ from 'jquery'
 
 export default function FilterHeader() {
   return (
-    <div className="w-[100%] flex justify-start items-center invert p-2 px-4">
+    <div className="w-[100%] flex justify-start items-center p-2 px-4">
       <Image
         className="cursor-pointer"
         onClick={() => {

@@ -24,34 +24,17 @@ export default function TrackerMenu(props: TrackerMenuType) {
   }
 
   return (
-    <div className="flex flex-wrap justify-between items-center px-4 py-4">
+    <div className="flex flex-wrap justify-between items-center px-4 py-2">
       <section className="flex justify-start items-center">
-        <span className="overflow-hidden w-[60px] mr-2">
-          <Link href="/">
-            <Image
-              src={GreenLogoIcon}
-              className="bg-white"
-              width={60}
-              alt="IPO"
-            />
-          </Link>
-        </span>
         <h1
           className={
             (props.darkMode ? 'text-[#FFFFFF]' : 'text-primary') +
-            ' text-[1.9rem] space-x-2 uppercase font-semibold leading-loose'
+            ' text-[1.5rem] space-x-2 uppercase font-semibold leading-loose'
           }
         >
-          Tracker
+          IPO Tracker
         </h1>
       </section>
-
-      <NavButtons
-        isFullScreen={isFullScreen}
-        darkMode={props.darkMode}
-        toggleMode={props.toggleMode}
-        toggleFullScreen={toggleFullScreen}
-      />
     </div>
   )
 }

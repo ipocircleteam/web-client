@@ -15,10 +15,8 @@ export default function TrackerBtn(props: {
       onClick={props.callback}
       className={
         (props.contentType === 'text' ? 'w-[100px] ' : 'w-[40px] ') +
-        (props.darkMode
-          ? 'bg-primary hover:bg-blue-600 text-base '
-          : 'bg-secondary hover:bg-green-600 text-primary ') +
-        ' h-[40px] custom-btn-transition m-2 md:m-0 overflow-hidden  border-primary flex justify-center items-center md:mx-2 rounded-md'
+        (props.darkMode ? ' ' : ' ') +
+        ' bg-primary hover:bg-blue-600 text-white h-[40px] custom-btn-transition m-2 md:m-0 overflow-hidden  border-primary flex justify-center items-center md:mx-2 rounded-md'
       }
     >
       {props.children}
