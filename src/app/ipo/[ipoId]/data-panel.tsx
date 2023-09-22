@@ -8,7 +8,6 @@ import IpoDetails from './tables/ipo-details'
 import IpoTimeTable from './tables/ipo-timetable'
 import LotSize from './tables/lot-size'
 import PerformanceIndicators from './tables/performance'
-import IpoReservation from './tables/ipo-reservation'
 import CompanyFinancials from './company-financials'
 import Subscriptions from './tables/subscriptions'
 
@@ -26,7 +25,10 @@ export default function DataPanel() {
   }
 
   return (
-    <div id="dataTables">
+    <div id="dataTables" className="hidden lg:block">
+      <label className="text-primary text-[1.2rem] font-bold">
+        Data Tables
+      </label>
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs

@@ -5,8 +5,8 @@ import NameDivider from '@/components/Global/name-divider'
 
 export default function OurReview() {
   return (
-    <div id="ourReview">
-      <NameDivider text="Our Review" width={70} />
+    <div id="ourReview" className="my-[30px]">
+      <label className="text-primary text-[1.2rem] font-bold">Our Review</label>
       <div className="w-[95%] mx-auto my-[10px]">
         <p>
           Maecenas a lacus libero. Praesent convallis pellentesque turpis, vitae

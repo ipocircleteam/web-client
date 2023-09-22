@@ -4,7 +4,7 @@ import React from 'react'
 export default function Subscriptions() {
   return (
     <div id="subscriptionsTable">
-      <table className="w-[40%] mt-[20px] mx-auto border text-slate-600 ">
+      <table className="w-[100%] md:w-[40%] mt-[20px] mx-auto border text-slate-600 ">
         <tr className="border">
           <td className="pl-[10px] border-r">QIB</td>
           <td className="pl-[10px]">text hu ji</td>

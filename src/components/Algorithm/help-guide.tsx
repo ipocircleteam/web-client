@@ -2,11 +2,8 @@ import React from 'react'
 
 export default function HelpGuide() {
   return (
-    <div id="helpGuide" className="text-center my-[20px]">
+    <div id="helpGuide" className="text-center mt-[30px]">
       <h1 className="text-primary text-[2rem] font-bold">How it works?</h1>
-      <label className="text-[1.1rem] leading-tight">
-        Please follow this step by step guide
-      </label>
 
       <div className="flex flex-wrap justify-center items-start mt-[15px]">
         <div className="w-[320px] mdlg:w-[400px]">

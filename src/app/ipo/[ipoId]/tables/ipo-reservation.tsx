@@ -4,7 +4,7 @@ export default function IpoReservation() {
   return (
     <table
       id="ipoReservation"
-      className="w-[80%] mt-[20px] mx-auto border text-slate-600 border-primary"
+      className="w-[100%] md:w-[80%] mt-[20px] mx-auto border text-slate-600 border-primary"
     >
       <tr className="border">
         <td className="px-[10px] border-r">QIB SHares Offerred</td>

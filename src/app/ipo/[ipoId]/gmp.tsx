@@ -58,14 +58,16 @@ const data = [
 
 export default function GMP() {
   return (
-    <div id="gmp" className="mt-[20px]">
-      <NameDivider text="GMP" width={90} />
+    <div id="gmp" className="my-[40px] mt-[50px]">
+      <label className="text-primary text-[1.2rem] font-bold">
+        Grey Market Premium
+      </label>
       <div className="w-[100%] text-center my-0">
         <label className="mx-auto text-primary">
-          Grey Market Premium(Rs): <b className="text-green-500">69</b>
+          GMP(Rs): <b className="text-green-500">69</b>
         </label>
       </div>
-      <div>
+      <div className="w-[100%] flex justify-center overflow-x-scroll">
         <LineChart width={1000} height={300} data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />

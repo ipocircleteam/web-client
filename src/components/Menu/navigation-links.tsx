@@ -1,32 +1,38 @@
 import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { Cross } from '../../../public/icons'
 import CTAbutton from '../Buttons/cta-btn'
 
-export function LargeNavigationLinks() {
+export function LargeNavigation() {
   return (
     <div className="m-0 flex justify-end items-center px-2">
-      <Link
+      <a
         href="/gmp"
         className="mx-4 text-primary hover:text-secondary font-semibold"
       >
         GMP
-      </Link>
+      </a>
 
-      <Link
+      <a
         href="/ipo"
         className="mx-4 text-primary hover:text-secondary font-semibold"
       >
         IPOs
-      </Link>
+      </a>
 
-      <Link
+      <a
         href="/ipotracker"
         className="mx-4 text-primary hover:text-secondary font-semibold"
       >
-        Analyse
-      </Link>
+        IPO Tracker
+      </a>
+
+      <a
+        href="/markeanalyser"
+        className="mx-4 text-primary hover:text-secondary font-semibold"
+      >
+        Market Analyser
+      </a>
 
       <CTAbutton
         text="Algorithm"
@@ -75,7 +81,16 @@ export function SmallNavigationLinks(props: { callback: () => void }) {
           href="/ipotracker"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
-          Analyser
+          IPO Tracker
+        </a>
+      </div>
+
+      <div className="m-2 text-[20px]">
+        <a
+          href="/marketanalyser"
+          className="mx-4 text-primary hover:text-secondary font-semibold"
+        >
+          Market analyser
         </a>
       </div>
 

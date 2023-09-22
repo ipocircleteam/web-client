@@ -4,7 +4,9 @@ import React from 'react'
 export default function Discussion() {
   return (
     <div id="discussion">
-      <NameDivider text="Discussion" width={90} />
+      <label className="text-primary text-[1.2rem] font-bold">
+        Discusion Forum
+      </label>
     </div>
   )
 }

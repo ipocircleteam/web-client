@@ -4,16 +4,20 @@ import { LogoIcon } from '../../../../public/logo'
 
 export default function CompanyDetails() {
   return (
-    <div id="companyDetails">
+    <div id="companyDetails" className="mt-[20px]">
       <div className="w-[100%]">
-        <div className="flex justify-between items-center">
+        <div className="mdlg:flex justify-between items-center">
           <section className="flex justify-start items-center">
             <Image height={60} src={LogoIcon} alt={'IPO Circle'} />
             <h2 className="mx-2 text-primary text-[40px] font-semibold">
               {'IPO Circle'}
             </h2>
           </section>
-          <section className="flex justify-center items-center">
+
+          <section
+            className="flex-col mdlg:flex-row my-[10px] mdlg:my-[0px] 
+          flex justify-center items-start mdlg:items-center"
+          >
             <label className="mx-2">
               Opening Date:{' '}
               <b className="text-blue-500 text-[1.1rem]">30 September 2023</b>
