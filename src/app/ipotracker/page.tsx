@@ -188,6 +188,7 @@ export default function IpoTracker() {
             search={searchCompany}
           />
         </section>
+        <label className="mdlg:hidden">Swipe to view complete table</label>
         <div className="flex justify-around items-start flex-wrap mx-[auto] w-[100vw] md:w-[95vw]">
           <section className="w-[100vw] lg:w-[65vw] overflow-y-hidden overflow-x-scroll">
             <TrackerTable darkMode={isDark} trackerData={tableData} />
