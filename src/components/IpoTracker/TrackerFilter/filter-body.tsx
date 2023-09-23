@@ -14,7 +14,7 @@ export default function FilterBody(props: {
   ) => void
 }) {
   const [form, setForm] = useState({
-    sector: '',
+    sector: 'All',
     year: 0,
     listing: 0,
     parameter1: 'Select parameter 1',

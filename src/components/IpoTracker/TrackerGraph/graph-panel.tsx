@@ -1,170 +1,23 @@
 import React from 'react'
 import PieCard from './pie-card'
 
-export default function GraphPanel(props: { darkMode: boolean }) {
-  const data1 = [
-    { name: 'Gain', value: 1900 },
-    { name: 'Loss', value: 300 },
-  ]
-
-  const data2 = [
-    { name: 'Gain', value: 400 },
-    { name: 'Loss', value: 300 },
-  ]
-
-  const data3 = [
-    { name: 'Gain', value: 200 },
-    { name: 'Loss', value: 300 },
-  ]
-
+export default function GraphPanel(props: {
+  darkMode: boolean
+  data1: { name: string; value: number }[]
+}) {
   const COLORS = ['#00C49F', '#FF0000']
 
   return (
     <div
       className={
-        (props.darkMode ? 'bg-panelDark ' : 'bg-white ') +
-        'custom-shadow-panel border overflow-hidden flex justify-center items-center flex-wrap h-[auto] rounded-lg p-2'
+        (props.darkMode ? ' ' : ' ') +
+        ' border overflow-hidden w-[100%] flex justify-center items-center flex-wrap h-[auto] rounded-lg p-2'
       }
     >
       <PieCard
         width={300}
         height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Issue Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Current Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Issue Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Issue Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Issue Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Current Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Issue Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Issue Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Issue Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Current Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Issue Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Issue Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Issue Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Current Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
-        colors={COLORS}
-        darkMode={props.darkMode}
-        label="Listing Price vs Issue Price"
-      />
-
-      <PieCard
-        width={300}
-        height={270}
-        data={data1}
+        data={props.data1}
         colors={COLORS}
         darkMode={props.darkMode}
         label="Listing Price vs Issue Price"

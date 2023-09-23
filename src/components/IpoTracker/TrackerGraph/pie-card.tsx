@@ -18,8 +18,8 @@ export default function PieCard(props: {
       <span className="text-center">
         <label
           className={
-            (props.darkMode ? 'text-white' : 'text-primary') +
-            ' font-semibold text-center'
+            (props.darkMode ? '' : '') +
+            ' font-semibold text-center text-primary '
           }
         >
           {props.label}

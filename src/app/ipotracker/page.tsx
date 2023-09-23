@@ -51,7 +51,7 @@ export default function IpoTracker() {
     year: number,
     price: number,
   ) => {
-    if (sector === 'All' && year === 0 && price === 0) {
+    if (String(sector) === 'All' && Number(year) === 0 && Number(price) === 0) {
       return trackerData
     } else {
       const filteredData = trackerData.filter((item) => {
@@ -128,6 +128,7 @@ export default function IpoTracker() {
     op: String,
   ) => {
     const filterData = await getFilteredData(sector, year, price)
+
     const comparedData = await getComparedData(filterData, p1, p2, op)
 
     setTableData(comparedData)
