@@ -15,7 +15,7 @@ export default function Hero() {
       </span>
 
       <p
-        className="my-4 md:my-2 text-[1rem] md:text-[1.5rem] leading-tight text-primary 
+        className="my-4 md:my-2 text-[1rem] md:text-[1.5rem] leading-tight text- 
       w-[90vw] sm:w-[95vw] mx-auto"
       >
         Uniting Tools, Data, and Research at your fingertips
