@@ -146,16 +146,19 @@ export const blogData: BlogDataType[] = [
 // HOME PAGE PRODUCTS
 export const ProductsData: ProductDataType[] = [
   {
-    title: 'Nexus',
-    link: '/',
+    title: 'IPO Tracker',
+    link: '/ipotracker',
+    desc: 'Know past and current performing IPOs',
   },
   {
-    title: 'Gamma',
-    link: '/',
+    title: 'Market Analyser',
+    link: '/marketanalyser',
+    desc: 'Sector based primary market ananlysis',
   },
   {
-    title: 'Insiduous',
-    link: '/',
+    title: 'Ask Jarvis',
+    link: '/algorithm',
+    desc: 'Algorithm driven IPO investing strategies',
   },
 ]
 

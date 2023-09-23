@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { usePathname } from 'next/navigation'
 import Menu from '@/components/Menu/menu'
@@ -8,9 +9,11 @@ export default function ArticlePage() {
 
   return (
     <>
-      {/* <Menu />
-      <h1>ID for selected blog is -: {path}</h1>
-      <Footer /> */}
+      <Menu />
+      <div className="mt-[60px]">
+        <h1>ID for selected blog is -: {path}</h1>
+      </div>
+      <Footer />
     </>
   )
 }

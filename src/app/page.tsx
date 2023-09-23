@@ -12,6 +12,7 @@ import Products from '@/components/Home-Page/Products/products'
 import Head from 'next/head'
 import { Provider } from 'react-redux'
 import { store } from '../store/store'
+import IpoStudy from '@/components/Home-Page/IpoStudy/ipostudy'
 
 export default function Home() {
   return (
@@ -34,8 +35,9 @@ export default function Home() {
         <HomeBanner />
         <Products />
         <Features />
+        <IpoStudy />
         <Articles />
-        <Keto />
+        {/* <Keto /> */}
         <Footer />
       </Provider>
     </>
