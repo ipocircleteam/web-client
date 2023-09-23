@@ -6,6 +6,8 @@ import $ from 'jquery'
 import React, { useState } from 'react'
 import Menu from '@/components/Menu/menu'
 import { trackerData } from '@/dummydata'
+import Footer from '@/components/Footer/footer'
+import { TrackerDataType } from '@/components/IpoTracker/TrackerTable/table.types'
 
 export default function IpoTracker() {
   const [isDark, setIsDark] = useState(false)
@@ -34,33 +36,107 @@ export default function IpoTracker() {
     }
   }
 
-  const filter = async (sector: string, year: number, price: number) => {
-    console.log(sector + ',' + year + ',' + price)
+  const accessPriceType = (
+    name: String,
+  ): 'listing' | 'current' | 'dayend' | 'issue' => {
+    if (name === 'Listing Price') return 'listing'
+    else if (name === 'Current Price') return 'current'
+    else if (name === 'Dayend Price') return 'dayend'
+    else name === 'Issue Price'
+    return 'issue'
+  }
 
-    if (sector === 'All' && year === 0 && price === 0) {
-      setTableData(trackerData)
-      return
+  const getFilteredData = async (
+    sector: string,
+    year: number,
+    price: number,
+  ) => {
+    if (String(sector) === 'All' && Number(year) === 0 && Number(price) === 0) {
+      return trackerData
+    } else {
+      const filteredData = trackerData.filter((item) => {
+        // Check conditions based on the arguments
+        let sectorCondition = true
+        let listingCondition = true
+        let yearCondition = true
+
+        if (String(sector) !== 'All' && String(sector) !== undefined) {
+          sectorCondition = item.sector === String(sector)
+        }
+
+        if (Number(price) !== 0 && Number(price) !== undefined) {
+          listingCondition = item.listing === Number(price)
+        }
+
+        if (Number(year) !== 0 && Number(price) !== undefined) {
+          yearCondition = item.year === Number(year)
+        }
+
+        return sectorCondition && listingCondition && yearCondition
+      })
+      return filteredData
     }
+  }
 
+  const getComparedData = async (
+    filteredData: TrackerDataType[],
+    p1: String,
+    p2: String,
+    op: String,
+  ) => {
+    if (
+      String(p1) === 'Select parameter 1' ||
+      String(p2) === 'Select parameter 2' ||
+      String(op) === 'Select comparator'
+    ) {
+      return filteredData
+    } else {
+      const compareData = filteredData.filter((item) => {
+        let compareCondition = true
+
+        let param1: 'listing' | 'current' | 'dayend' | 'issue' =
+          accessPriceType(p1)
+        let param2: 'listing' | 'current' | 'dayend' | 'issue' =
+          accessPriceType(p2)
+        console.log(Number(item[param1]) + ',' + Number(item[param2]))
+
+        if (op === 'More than') {
+          compareCondition = Number(item[param1]) > Number(item[param2])
+        }
+
+        if (op === 'Less than') {
+          compareCondition = Number(item[param1]) < Number(item[param2])
+        }
+
+        if (op === 'Same as') {
+          compareCondition = Number(item[param1]) === Number(item[param2])
+        }
+
+        return compareCondition
+      })
+
+      return compareData
+    }
+  }
+
+  const filter = async (
+    sector: string,
+    year: number,
+    price: number,
+    p1: String,
+    p2: String,
+    op: String,
+  ) => {
+    const filterData = await getFilteredData(sector, year, price)
+
+    const comparedData = await getComparedData(filterData, p1, p2, op)
+
+    setTableData(comparedData)
+  }
+
+  const searchCompany = (name: string) => {
     const filteredData = trackerData.filter((item) => {
-      // Check conditions based on the arguments
-      let sectorCondition = false
-      let listingCondition = false
-      let yearCondition = false
-
-      if (sector !== 'All' && sector !== undefined) {
-        sectorCondition = item.sector === String(sector)
-      }
-
-      if (price !== 0 && price !== undefined) {
-        listingCondition = item.listing === Number(price)
-      }
-
-      if (year !== 0 && price !== undefined) {
-        yearCondition = item.year === Number(year)
-      }
-
-      return sectorCondition && listingCondition && yearCondition
+      return item.company.includes(String(name))
     })
 
     setTableData(filteredData)
@@ -109,6 +185,7 @@ export default function IpoTracker() {
             darkMode={isDark}
             toggleFilters={toggleFilters}
             filter={filter}
+            search={searchCompany}
           />
         </section>
         <div className="flex justify-around items-start flex-wrap mx-[auto] w-[100vw] md:w-[95vw]">
@@ -120,10 +197,12 @@ export default function IpoTracker() {
               darkMode={isDark}
               toggleFilters={toggleFilters}
               filter={filter}
+              search={searchCompany}
             />
           </section>
         </div>
       </div>
+      <Footer />
     </>
   )
 }

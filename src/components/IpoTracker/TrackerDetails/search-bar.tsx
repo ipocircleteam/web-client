@@ -4,11 +4,14 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { Search } from '../../../../public/icons'
 
-export default function SearchBar(props: { darkMode: boolean }) {
+export default function SearchBar(props: {
+  darkMode: boolean
+  search: (name: string) => void
+}) {
   const [searchQuery, setSearchQuery] = useState('')
 
   const searchCompany = () => {
-    alert('clicked')
+    props.search(searchQuery)
   }
 
   return (

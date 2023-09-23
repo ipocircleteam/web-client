@@ -12,27 +12,35 @@ export default function TrackerTable(props: {
 }) {
   const theme = props.darkMode ? 'text-[#FFFFFF]' : 'text-slate-600'
   const [start, setStart] = useState(0)
-  const [end, setEnd] = useState(15)
+  const [end, setEnd] = useState(10)
   const viewData = props.trackerData.slice(start, end)
 
   const handlePrevButton = () => {
-    if (start - 15 >= 0) {
-      setStart(start - 15)
-      setEnd(end - 15)
+    if (start - 10 >= 0) {
+      setStart(start - 10)
+      setEnd(end - 10)
     } else {
       setStart(0)
-      setEnd(15)
+      setEnd(10)
     }
   }
 
   const handleNextButton = () => {
-    if (end + 15 <= props.trackerData.length) {
-      setStart(start + 15)
-      setEnd(end + 15)
+    if (end + 10 <= props.trackerData.length) {
+      setStart(start + 10)
+      setEnd(end + 10)
     } else {
       setEnd(props.trackerData.length)
-      setStart(props.trackerData.length - 15)
+      setStart(props.trackerData.length - 10)
     }
+  }
+
+  const getTotalPrice = (type: 'listing' | 'current' | 'dayend' | 'issue') => {
+    let sum = 0
+    props.trackerData.forEach((element) => {
+      sum = sum + element[type]
+    })
+    return sum
   }
 
   return (
@@ -64,7 +72,7 @@ export default function TrackerTable(props: {
             Prev
           </button>
           <label className="mx-2">
-            ({start} - {end})
+            ({start} - {end} / {props.trackerData.length})
           </label>
           <button
             onClick={handleNextButton}
@@ -75,7 +83,13 @@ export default function TrackerTable(props: {
         </div>
       </table>
 
-      {/* <GraphPanel /> */}
+      <GraphPanel
+        darkMode
+        data1={[
+          { name: 'Listing', value: getTotalPrice('listing') },
+          { name: 'Current', value: getTotalPrice('current') },
+        ]}
+      />
     </div>
   )
 }

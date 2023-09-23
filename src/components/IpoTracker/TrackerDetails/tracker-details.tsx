@@ -8,11 +8,19 @@ import Filter from '../TrackerFilter/filter'
 export default function TrackerDetails(props: {
   darkMode: boolean
   toggleFilters: () => void
-  filter: (sector: string, year: number, price: number) => void
+  filter: (
+    sector: string,
+    year: number,
+    price: number,
+    p1: String,
+    p2: String,
+    op: String,
+  ) => void
+  search: (name: string) => void
 }) {
   return (
     <div className="w-[100%] lg:w-[90%] mx-auto overflow-hidden p-2">
-      <SearchBar darkMode={props.darkMode} />
+      <SearchBar darkMode={props.darkMode} search={props.search} />
       <Filter filter={props.filter} />
     </div>
   )
