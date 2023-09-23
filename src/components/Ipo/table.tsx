@@ -1,11 +1,8 @@
-import { mainipodata } from '@/dummydata'
 import React from 'react'
 import TableRow from '../Home-Page/IPOData/row-template'
 import { RowDataType } from '../Home-Page/IPOData/ipodata.types'
 
-export default function Table() {
-  const data: RowDataType[] = mainipodata
-
+export default function Table(props: { data: RowDataType[] }) {
   return (
     <table className="text-center w-[100%]">
       <tr className="w-[100%] p-4 text-[13px] lg:text-[15px] font-semibold text-grey-500 custom-tablerow">
@@ -17,7 +14,7 @@ export default function Table() {
         <td className="w-[5%]"></td>
       </tr>
 
-      {data.map((item) => {
+      {props.data.map((item) => {
         const data = {
           sno: item.sno,
           ipoID: item.ipoID,
@@ -28,7 +25,7 @@ export default function Table() {
         }
         return <TableRow key={item.sno} data={data} scaling={false} />
       })}
-      {data.map((item) => {
+      {props.data.map((item) => {
         const data = {
           sno: item.sno,
           ipoID: item.ipoID,
@@ -39,7 +36,7 @@ export default function Table() {
         }
         return <TableRow key={item.sno} data={data} scaling={false} />
       })}
-      {data.map((item) => {
+      {props.data.map((item) => {
         const data = {
           sno: item.sno,
           ipoID: item.ipoID,
@@ -50,7 +47,7 @@ export default function Table() {
         }
         return <TableRow key={item.sno} data={data} scaling={false} />
       })}
-      {data.map((item) => {
+      {props.data.map((item) => {
         const data = {
           sno: item.sno,
           ipoID: item.ipoID,

@@ -28,14 +28,14 @@ export function LargeNavigation() {
       </a>
 
       <a
-        href="/markeanalyser"
+        href="/marketanalyser"
         className="mx-4 text-primary hover:text-secondary font-semibold"
       >
         Market Analyser
       </a>
 
       <CTAbutton
-        text="Algorithm"
+        text="Ask Jarvis"
         function={() => {
           window.location.replace('/algorithm')
         }}
@@ -99,7 +99,7 @@ export function SmallNavigationLinks(props: { callback: () => void }) {
           href="/algorithm"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
-          Algorithm
+          Ask Jarvis
         </a>
       </div>
     </>
