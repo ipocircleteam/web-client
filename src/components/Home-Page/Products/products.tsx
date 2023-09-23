@@ -4,7 +4,7 @@ import ProductCard from './productCard'
 
 export default function Products() {
   return (
-    <div className="my-[50px] w-[100vw] overflow-x-hidden">
+    <div className="my-[50px] w-[100vw] overflow-x-hidden" id="features">
       <h1 className="text-primary text-[2rem] font-bold text-center my-[20px]">
         Explore our tools
       </h1>
