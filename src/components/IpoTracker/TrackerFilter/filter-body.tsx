@@ -2,50 +2,25 @@
 
 import React, { useState } from 'react'
 import FilterFooter from './filter-footer'
-import Box from '@mui/material/Box'
-import Stack from '@mui/material/Stack'
-import Slider from '@mui/material/Slider'
 
 export default function FilterBody(props: {
-  filter: (sector: string, year: number, price: number) => void
+  filter: (
+    sector: string,
+    year: number,
+    price: number,
+    p1: String,
+    p2: String,
+    op: String,
+  ) => void
 }) {
   const [form, setForm] = useState({
     sector: '',
     year: 0,
     listing: 0,
-    listingPrice: 0,
-    currentPrice: 0,
-    dayendPrice: 0,
-    issuePrice: 0,
+    parameter1: 'Select parameter 1',
+    parameter2: 'Select parameter 2',
+    operator: 'Select comparator',
   })
-
-  const handleListingChange = (event: Event, newValue: number | number[]) => {
-    setForm({
-      ...form,
-      listingPrice: newValue as number,
-    })
-  }
-
-  const handleCurrentChange = (event: Event, newValue: number | number[]) => {
-    setForm({
-      ...form,
-      currentPrice: newValue as number,
-    })
-  }
-
-  const handleDayendChange = (event: Event, newValue: number | number[]) => {
-    setForm({
-      ...form,
-      dayendPrice: newValue as number,
-    })
-  }
-
-  const handleIssueChange = (event: Event, newValue: number | number[]) => {
-    setForm({
-      ...form,
-      issuePrice: newValue as number,
-    })
-  }
 
   return (
     <>
@@ -111,10 +86,81 @@ export default function FilterBody(props: {
 
         <div className="w-[100%] mx-auto my-[20px] border-t-2 px-1">
           <label className="mt-[10px] h-[40px] flex items-center text-[1rem]">
-            Adjust parameters for graphical comparison
+            Adjust parameters for comparative results
           </label>
 
-          <div className="m-2">
+          <select
+            name="parameter1"
+            onChange={(e) => {
+              setForm({
+                ...form,
+                [e.target.name]: e.target.value,
+              })
+            }}
+            className="w-[100%] h-[40px] my-[10px] p-1 outline-none border border-gray-600 rounded-md"
+          >
+            <option>Select parameter 1</option>
+            <option>Listing Price</option>
+            <option>Current Price</option>
+            <option>Dayend Price</option>
+            <option>Issue Price</option>
+          </select>
+
+          <select
+            name="operator"
+            onChange={(e) => {
+              setForm({
+                ...form,
+                [e.target.name]: e.target.value,
+              })
+            }}
+            className="w-[100%] h-[40px] my-[10px] p-1 outline-none border border-gray-600 rounded-md"
+          >
+            <option>Select comparator</option>
+            <option>More than</option>
+            <option>Same as</option>
+            <option>Less than</option>
+          </select>
+
+          <select
+            name="parameter2"
+            onChange={(e) => {
+              setForm({
+                ...form,
+                [e.target.name]: e.target.value,
+              })
+            }}
+            className="w-[100%] h-[40px] my-[10px] p-1 outline-none border border-gray-600 rounded-md"
+          >
+            <option>Select parameter 2</option>
+            <option>Current Price</option>
+            <option>Dayend Price</option>
+            <option>Listing Price</option>
+            <option>Issue Price</option>
+          </select>
+        </div>
+      </div>
+      <FilterFooter
+        applyFlter={() => {
+          props.filter(
+            form.sector,
+            form.year,
+            form.listing,
+            form.parameter1,
+            form.parameter2,
+            form.operator,
+          )
+        }}
+        resetFilter={() => {
+          props.filter('All', 0, 0, '', '', '')
+        }}
+      />
+    </>
+  )
+}
+
+{
+  /* <div className="m-2">
             <label className="mr-[30p]">
               Listing price ({form.listingPrice})
             </label>
@@ -186,17 +232,5 @@ export default function FilterBody(props: {
                 />
               </Stack>
             </Box>
-          </div>
-        </div>
-      </div>
-      <FilterFooter
-        applyFlter={() => {
-          props.filter(form.sector, form.year, form.listing)
-        }}
-        resetFilter={() => {
-          props.filter('All', 0, 0)
-        }}
-      />
-    </>
-  )
+          </div> */
 }

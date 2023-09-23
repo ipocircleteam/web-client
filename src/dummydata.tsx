@@ -285,7 +285,7 @@ export const trackerData: TrackerDataType[] = [
   {
     id: 4,
     company: 'IPOCIRCLE',
-    listing: 5000,
+    listing: 2000,
     current: 4000,
     dayend: 3000,
     issue: 2000,

@@ -8,7 +8,14 @@ import Filter from '../TrackerFilter/filter'
 export default function TrackerDetails(props: {
   darkMode: boolean
   toggleFilters: () => void
-  filter: (sector: string, year: number, price: number) => void
+  filter: (
+    sector: string,
+    year: number,
+    price: number,
+    p1: String,
+    p2: String,
+    op: String,
+  ) => void
   search: (name: string) => void
 }) {
   return (
