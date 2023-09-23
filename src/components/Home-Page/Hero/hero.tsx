@@ -21,12 +21,13 @@ export default function Hero() {
         Uniting Tools, Data, and Research at your fingertips
       </p>
       <div className="my-4">
-        <LargeCTAbutton
-          text="Get Started For Free"
-          function={() => {
-            window.location.replace('/consultation')
-          }}
-        />
+        <a
+          href="#features"
+          className="mx-4 text-[1.6rem] md:text-[1.1rem] bg-secondary py-2 px-4 font-semibold rounded-lg border border-secondary
+          hover:bg-base hover:border-secondary custom-btn-transition text-base hover:text-primary"
+        >
+          Get Started For Free
+        </a>
       </div>
     </div>
   )
