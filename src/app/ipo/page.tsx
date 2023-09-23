@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer/footer'
 import { IpoData } from '@/components/Home-Page/IPOData/ipo-data'
 import IpoDatabase from '@/components/Ipo/ipo-database'
 import Menu from '@/components/Menu/menu'
@@ -8,6 +9,7 @@ export default function IPO() {
     <div className="mt-[80px]">
       <Menu />
       <IpoDatabase />
+      <Footer />
     </div>
   )
 }
