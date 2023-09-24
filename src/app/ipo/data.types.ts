@@ -125,3 +125,23 @@ export type GmpDataType = {
   instant: string
   gmp: number
 }
+
+export type ContentType = {
+  CompanyDetailsData: CompanyDetailsType
+  IpoDetailsData: IpoDetailsType
+  IpoTimetableData: IpoTimetableType
+  LotSizeData: LotSizeType
+  PerformanceData: PerformanceIndicatorsType
+  CompanyFinancialsData: CompanyFinancialsType
+  SubscriptionsData: SubscriptionsType
+  DataPanelData: DataPanelType
+  AnchorDetailsData: AnchorDetailsType
+  IppoReservationData: IpoReservationType
+  PromoterHoldingsData: PromoterHoldingsType
+  ObjectIssueData: ObjectIssueType
+  CompanyContactData: Company_RegistrarContactType
+  RegistrarContactData: Company_RegistrarContactType
+  DocumentsData: DocumentsDataType
+  ReviewData: ReviewType
+  GmpData: GmpDataType[]
+}
