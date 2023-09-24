@@ -4,6 +4,9 @@ import React, { useEffect, useState } from 'react'
 import { Provider } from 'react-redux'
 import { store } from '../store/store'
 import axios from 'axios'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 import Articles from '@/components/Home-Page/Articles/article-preview'
 import HomeBanner from '@/components/Home-Page/Banner/home-banner'
@@ -22,15 +25,28 @@ export default function Home() {
   const [smeIpoData, setSmeIpoData] = useState(smeipodata)
   const [loading, setLoading] = useState(true)
 
+  const config = {
+    headers: {
+      Authorization: 'edb6f4ab-999d-4901-adc3-3e3376b7918b',
+    },
+  }
+
+  // console.log(`${process.env.NEXT_API_BASE_URL}/ipo/details/filter?concise=true`);
+  // console.log(process.env.NEXT_API_KEY);
+
   useEffect(() => {
-    const requests = [axios.post('/'), axios.post('/')]
+    const requests = [
+      axios.get(
+        `https://api.ipocircle.com/api/v0/ipo/details/filter?concise=true`,
+        config,
+      ),
+    ]
     Promise.all(requests)
       .then((responses) => {
         console.log(responses[0].data)
-        console.log(responses[1].data)
 
-        setMainIpoData(responses[0].data)
-        setSmeIpoData(responses[1].data)
+        // setMainIpoData(responses[0].data)
+        // setSmeIpoData(responses[1].data)
         setLoading(false)
       })
       .catch((error) => {
