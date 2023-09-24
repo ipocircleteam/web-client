@@ -62,6 +62,7 @@ export default function Consultation() {
       .catch((error) => {
         console.log('error running algorithm, ', error)
         setResult('Sorry! Some Error Occurred')
+        setLoading(false)
       })
     scrollToDiv('algoResult')
   }

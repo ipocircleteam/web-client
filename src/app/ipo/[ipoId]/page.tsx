@@ -1,6 +1,7 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import { usePathname } from 'next/navigation'
 import Menu from '@/components/Menu/menu'
 import Navigation from './navigation'
@@ -26,14 +27,53 @@ import {
   ReviewData,
   SubscriptionsData,
 } from '../initial.data'
+import { ContentType } from '../data.types'
 
 export default function IPODetailsPage() {
   const path = usePathname()
-  const [text, setText] = React.useState('Show Contents')
+  const [text, setText] = useState('Show Contents')
   const showContents = () => {
     $('#toggleContents').toggleClass('hidden')
     setText(text === 'Show Contents' ? 'Hide Contents' : 'Show Contents')
   }
+
+  const [loading, setLoading] = useState<boolean>(true)
+  const [statusText, setStatus] = useState<string>('')
+
+  const [content, setContent] = useState<ContentType>({
+    CompanyDetailsData: CompanyDetailsData,
+    IpoDetailsData: IpoDetailsData,
+    IpoTimetableData: IpoTimetableData,
+    LotSizeData: LotSizeData,
+    PerformanceData: PerformanceData,
+    CompanyFinancialsData: CompanyFinancialData,
+    SubscriptionsData: SubscriptionsData,
+    DataPanelData: DataPanelData,
+    AnchorDetailsData: AnchorDetailsData,
+    IppoReservationData: IpoReservationData,
+    PromoterHoldingsData: PromoterHoldingsData,
+    ObjectIssueData: ObjectIssueData,
+    CompanyContactData: CompanyContactData,
+    RegistrarContactData: RegistrarContactData,
+    DocumentsData: DocumentsData,
+    ReviewData: ReviewData,
+    GmpData: GmpData,
+  })
+
+  useEffect(() => {
+    axios
+      .post('/', {
+        ipoId: path?.substring(5),
+      })
+      .then((response) => {
+        //setContent(response.data)
+        setLoading(false)
+      })
+      .catch((error) => {
+        setLoading(false)
+        setStatus('Error Fetching Data')
+      })
+  }, [])
 
   return (
     <>
@@ -59,25 +99,11 @@ export default function IPODetailsPage() {
                 <Navigation />
               </div>
             </div>
-            <Content
-              CompanyDetailsData={CompanyDetailsData}
-              IpoDetailsData={IpoDetailsData}
-              IpoTimetableData={IpoTimetableData}
-              LotSizeData={LotSizeData}
-              PerformanceData={PerformanceData}
-              CompanyFinancialsData={CompanyFinancialData}
-              SubscriptionsData={SubscriptionsData}
-              DataPanelData={DataPanelData}
-              AnchorDetailsData={AnchorDetailsData}
-              IppoReservationData={IpoReservationData}
-              PromoterHoldingsData={PromoterHoldingsData}
-              ObjectIssueData={ObjectIssueData}
-              CompanyContactData={CompanyContactData}
-              RegistrarContactData={RegistrarContactData}
-              DocumentsData={DocumentsData}
-              ReviewData={ReviewData}
-              GmpData={GmpData}
-            />
+            <p className="text-secondary text-center text-[18px] mt-[30px] font-bold">
+              {loading ? 'Loading Data ...' : ''}
+            </p>
+            <p className="text-primary text-[1rem]">{statusText}</p>
+            <Content data={content} />
           </div>
         </div>
       </div>
