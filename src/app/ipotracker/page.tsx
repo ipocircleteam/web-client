@@ -3,7 +3,8 @@ import TrackerDetails from '@/components/IpoTracker/TrackerDetails/tracker-detai
 import TrackerMenu from '@/components/IpoTracker/TrackerMenu/tracker-menu'
 import TrackerTable from '@/components/IpoTracker/TrackerTable/tracker-table'
 import $ from 'jquery'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import Menu from '@/components/Menu/menu'
 import { trackerData } from '@/dummydata'
 import Footer from '@/components/Footer/footer'
@@ -12,6 +13,20 @@ import { TrackerDataType } from '@/components/IpoTracker/TrackerTable/table.type
 export default function IpoTracker() {
   const [isDark, setIsDark] = useState(false)
   const [tableData, setTableData] = useState(trackerData)
+  const [loading, setLoading] = useState<boolean>(true)
+
+  useEffect(() => {
+    axios
+      .post('')
+      .then((response) => {
+        // setTableData(response.data)
+        setLoading(false)
+      })
+      .catch((error) => {
+        console.log('error fetching data, ' + error)
+        setLoading(false)
+      })
+  }, [])
 
   const toggleMode = () => {
     setIsDark(!isDark)
@@ -179,7 +194,11 @@ export default function IpoTracker() {
             </span>
           </span>
         </div>
-        <TrackerMenu darkMode={isDark} toggleMode={toggleMode} />
+        <TrackerMenu
+          darkMode={isDark}
+          toggleMode={toggleMode}
+          loading={loading}
+        />
         <section className="w-[100vw] md:w-[95vw] mx-auto overflow-hidden block lg:hidden">
           <TrackerDetails
             darkMode={isDark}

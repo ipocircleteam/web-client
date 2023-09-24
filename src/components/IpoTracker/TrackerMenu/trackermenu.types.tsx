@@ -1,5 +1,6 @@
 export type TrackerMenuType = {
   darkMode: boolean
+  loading: boolean
   toggleMode: () => void
 }
 

@@ -36,6 +36,9 @@ export default function TrackerMenu(props: TrackerMenuType) {
           }
         >
           IPO Tracker
+          <label className="w-[150px] mx-[10px] text-slate-500 font-normal text-[14px]">
+            {props.loading ? '(Loading data ...)' : ''}
+          </label>
         </h1>
       </section>
     </div>

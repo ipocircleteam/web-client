@@ -3,6 +3,8 @@ import TableRow from '../Home-Page/IPOData/row-template'
 import { RowDataType } from '../Home-Page/IPOData/ipodata.types'
 
 export default function Table(props: { data: RowDataType[] }) {
+  console.log(typeof props.data)
+
   return (
     <table className="text-center w-[100%]">
       <tr className="w-[100%] p-4 text-[13px] lg:text-[15px] font-semibold text-grey-500 custom-tablerow">
@@ -14,39 +16,6 @@ export default function Table(props: { data: RowDataType[] }) {
         <td className="w-[5%]"></td>
       </tr>
 
-      {props.data.map((item) => {
-        const data = {
-          sno: item.sno,
-          ipoID: item.ipoID,
-          name: item.name,
-          opendate: item.opendate,
-          enddate: item.enddate,
-          status: item.status,
-        }
-        return <TableRow key={item.sno} data={data} scaling={false} />
-      })}
-      {props.data.map((item) => {
-        const data = {
-          sno: item.sno,
-          ipoID: item.ipoID,
-          name: item.name,
-          opendate: item.opendate,
-          enddate: item.enddate,
-          status: item.status,
-        }
-        return <TableRow key={item.sno} data={data} scaling={false} />
-      })}
-      {props.data.map((item) => {
-        const data = {
-          sno: item.sno,
-          ipoID: item.ipoID,
-          name: item.name,
-          opendate: item.opendate,
-          enddate: item.enddate,
-          status: item.status,
-        }
-        return <TableRow key={item.sno} data={data} scaling={false} />
-      })}
       {props.data.map((item) => {
         const data = {
           sno: item.sno,

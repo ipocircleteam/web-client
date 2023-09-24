@@ -1,6 +1,9 @@
 import React from 'react'
+import { PerformanceIndicatorsType } from '../../data.types'
 
-export default function PerformanceIndicators() {
+export default function PerformanceIndicators(props: {
+  data: PerformanceIndicatorsType
+}) {
   return (
     <table
       id="performanceIndicators"
@@ -8,27 +11,27 @@ export default function PerformanceIndicators() {
     >
       <tr className="border">
         <td className="px-[10px] border-r">Market Cap (EG)</td>
-        <td className="px-[10px]">000000</td>
+        <td className="px-[10px]">{props.data.market_cap}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">ROE</td>
-        <td className="px-[10px]">100%</td>
+        <td className="px-[10px]">{props.data.roe}%</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">ROCE</td>
-        <td className="px-[10px]">300%</td>
+        <td className="px-[10px]">{props.data.roce}%</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Debt</td>
-        <td className="px-[10px]">150%</td>
+        <td className="px-[10px]">{props.data.debt}%</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">EPS</td>
-        <td className="px-[10px]">120%</td>
+        <td className="px-[10px]">{props.data.eps}%</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">RoNW</td>
-        <td className="px-[10px]">90%</td>
+        <td className="px-[10px]">{props.data.ronw}%</td>
       </tr>
     </table>
   )

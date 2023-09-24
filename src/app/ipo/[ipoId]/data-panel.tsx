@@ -11,13 +11,15 @@ import PerformanceIndicators from './tables/performance'
 import CompanyFinancials from './company-financials'
 import Subscriptions from './tables/subscriptions'
 
+import { DataPanelType } from '../data.types'
+
 interface TabPanelProps {
   children?: React.ReactNode
   index: number
   value: number
 }
 
-export default function DataPanel() {
+export default function DataPanel(props: { data: DataPanelType }) {
   const [value, setValue] = React.useState(0)
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -46,22 +48,22 @@ export default function DataPanel() {
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
-          <IpoDetails />
+          <IpoDetails data={props.data.IpoDetailsData} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          <IpoTimeTable />
+          <IpoTimeTable data={props.data.IpoTimetableData} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          <LotSize />
+          <LotSize data={props.data.LotSizeData} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={3}>
-          <PerformanceIndicators />
+          <PerformanceIndicators data={props.data.PerformanceData} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={4}>
-          <Subscriptions />
+          <Subscriptions data={props.data.SubscriptionsData} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={5}>
-          <CompanyFinancials />
+          <CompanyFinancials data={props.data.CompanyFinancialsData} />
         </CustomTabPanel>
       </Box>
     </div>

@@ -2,8 +2,13 @@ import React from 'react'
 import TableRow from './row-template'
 import { mainipodata, smeipodata } from '@/dummydata'
 import { RowDataType, TableDataType } from './ipodata.types'
+import { type } from 'os'
 
-export function IpoTable(props: TableDataType) {
+export function IpoTable(props: {
+  mainData: RowDataType[]
+  smeData: RowDataType[]
+  type: string
+}) {
   const data: RowDataType[] = props.type === 'main' ? mainipodata : smeipodata
 
   return (
