@@ -1,6 +1,7 @@
 import React from 'react'
+import { IpoTimetableType } from '../../data.types'
 
-export default function IpoTimeTable() {
+export default function IpoTimeTable(props: { data: IpoTimetableType }) {
   return (
     <table
       id="ipoTimetable"
@@ -8,35 +9,35 @@ export default function IpoTimeTable() {
     >
       <tr className="border">
         <td className="px-[10px] border-r">Open Date</td>
-        <td className="px-[10px]">30 September 2023</td>
+        <td className="px-[10px]">{props.data.open_date}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Close Date</td>
-        <td className="px-[10px]">5 October 2023</td>
+        <td className="px-[10px]">{props.data.close_date}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Allotment Date</td>
-        <td className="px-[10px]">8 October 2023</td>
+        <td className="px-[10px]">{props.data.allotment_date}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Initiation of refunds</td>
-        <td className="px-[10px]">8 October 2023</td>
+        <td className="px-[10px]">{props.data.initiation_of_refunds}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Credit of ...</td>
-        <td className="px-[10px]">nhi bataunga</td>
+        <td className="px-[10px]">{props.data.credit_of}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Listing Date</td>
-        <td className="px-[10px]">8 October 2023</td>
+        <td className="px-[10px]">{props.data.listing_date}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Cutoff</td>
-        <td className="px-[10px]">---</td>
+        <td className="px-[10px]">{props.data.cutoff}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Time UPF</td>
-        <td className="px-[10px]">---</td>
+        <td className="px-[10px]">{props.data.time_upf}</td>
       </tr>
     </table>
   )

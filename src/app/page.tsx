@@ -1,20 +1,44 @@
 'use client'
 
+import React, { useEffect, useState } from 'react'
+import { Provider } from 'react-redux'
+import { store } from '../store/store'
+import axios from 'axios'
+
 import Articles from '@/components/Home-Page/Articles/article-preview'
 import HomeBanner from '@/components/Home-Page/Banner/home-banner'
 import Features from '@/components/Home-Page/Features/features'
 import Footer from '@/components/Footer/footer'
 import Hero from '@/components/Home-Page/Hero/hero'
 import { IpoData } from '@/components/Home-Page/IPOData/ipo-data'
-import Keto from '@/components/Home-Page/Keto/keto'
 import Menu from '@/components/Menu/menu'
 import Products from '@/components/Home-Page/Products/products'
 import Head from 'next/head'
-import { Provider } from 'react-redux'
-import { store } from '../store/store'
 import IpoStudy from '@/components/Home-Page/IpoStudy/ipostudy'
+import { mainipodata, smeipodata } from '@/dummydata'
 
 export default function Home() {
+  const [mainIpoData, setMainIpoData] = useState(mainipodata)
+  const [smeIpoData, setSmeIpoData] = useState(smeipodata)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const requests = [axios.post('/'), axios.post('/')]
+    Promise.all(requests)
+      .then((responses) => {
+        console.log(responses[0].data)
+        console.log(responses[1].data)
+
+        setMainIpoData(responses[0].data)
+        setSmeIpoData(responses[1].data)
+        setLoading(false)
+      })
+      .catch((error) => {
+        console.log('error fetching data ', error)
+        setLoading(false)
+      })
+  }, [])
+
   return (
     <>
       <Provider store={store}>
@@ -31,7 +55,11 @@ export default function Home() {
         </Head>
         <Menu />
         <Hero />
-        <IpoData />
+        <IpoData
+          mainData={mainIpoData}
+          smeData={smeIpoData}
+          loading={loading}
+        />
         <HomeBanner />
         <Products />
         <Features />

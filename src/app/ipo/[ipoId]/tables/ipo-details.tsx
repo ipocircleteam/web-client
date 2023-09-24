@@ -1,6 +1,7 @@
 import React from 'react'
+import { IpoDetailsType } from '../../data.types'
 
-export default function IpoDetails() {
+export default function IpoDetails(props: { data: IpoDetailsType }) {
   return (
     <table
       id="ipoDetails"
@@ -8,39 +9,39 @@ export default function IpoDetails() {
     >
       <tr className="border">
         <td className="px-[10px] border">IPO Date</td>
-        <td className="px-[10px]">8 October 2023</td>
+        <td className="px-[10px]">{props.data.ipo_date}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border">Face Value</td>
-        <td className="px-[10px]">Rs 15000</td>
+        <td className="px-[10px]">Rs {props.data.face_value}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border">Price Band</td>
-        <td className="px-[10px]">Rs 15000</td>
+        <td className="px-[10px]">Rs {props.data.price_band}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Lot Size (retails)</td>
-        <td className="px-[10px]">200</td>
+        <td className="px-[10px]">{props.data.lot_size_retails}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Total Size</td>
-        <td className="px-[10px]">200</td>
+        <td className="px-[10px]">{props.data.total_size}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Fresh Issue</td>
-        <td className="px-[10px]">200</td>
+        <td className="px-[10px]">{props.data.fresh_issue}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">OFS</td>
-        <td className="px-[10px]">200</td>
+        <td className="px-[10px]">{props.data.ofs}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Issue Type</td>
-        <td className="px-[10px]">HNI</td>
+        <td className="px-[10px]">{props.data.issue_type}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Listing At</td>
-        <td className="px-[10px]">Rs 20000</td>
+        <td className="px-[10px]">Rs {props.data.listing_at}</td>
       </tr>
     </table>
   )

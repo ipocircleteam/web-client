@@ -5,24 +5,31 @@ import { IpoTable } from './ipo-table'
 import Link from 'next/link'
 import IpoCategory from './ipo-category'
 import useWindowWidth from '@/hooks/useWindowWidth'
+import { RowDataType } from './ipodata.types'
 
-export function IpoData() {
+export function IpoData(props: {
+  mainData: RowDataType[]
+  smeData: RowDataType[]
+  loading: boolean
+}) {
   const [type, setType] = useState('main')
 
   const toggleView = (name: string) => {
     setType(() => name)
   }
 
-  const width = useWindowWidth()
-
   return (
-    <section className="mt-[3rem]">
+    <section className="mt-[3rem] text-center">
       <IpoCategory callback={toggleView} />
-      <IpoTable type={type} />
+      <IpoTable type={type} mainData={props.mainData} smeData={props.smeData} />
+
       <div
         className="text-secondary my-2 text-center w-[100%] mx-auto text-[18px] 
             hover:text-primary cursor-pointer"
       >
+        <label className="w-[100px] mx-[10px] text-slate-500">
+          {props.loading ? 'Loading data ...' : ''}
+        </label>
         <Link href="/ipo">See All</Link>
       </div>
     </section>

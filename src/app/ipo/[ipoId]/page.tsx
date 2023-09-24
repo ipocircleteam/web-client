@@ -7,6 +7,25 @@ import Navigation from './navigation'
 import Content from './content'
 import $ from 'jquery'
 import Footer from '@/components/Footer/footer'
+import {
+  AnchorDetailsData,
+  CompanyContactData,
+  CompanyDetailsData,
+  CompanyFinancialData,
+  DataPanelData,
+  DocumentsData,
+  GmpData,
+  IpoDetailsData,
+  IpoReservationData,
+  IpoTimetableData,
+  LotSizeData,
+  ObjectIssueData,
+  PerformanceData,
+  PromoterHoldingsData,
+  RegistrarContactData,
+  ReviewData,
+  SubscriptionsData,
+} from '../initial.data'
 
 export default function IPODetailsPage() {
   const path = usePathname()
@@ -20,7 +39,14 @@ export default function IPODetailsPage() {
     <>
       <Menu />
       <div className="mt-[70px] flex items-start overflow-hidden">
-        <div className="mdlg:w-[75vw] lg:w-[80vw] left-0">
+        <div
+          className="mdlg:w-[25vw] lg:w-[15vw] h-[100%] p-2 px-4 fixed left-0 z-20 border-r hidden mdlg:flex flex-col justify-start 
+        items-start bg-white overflow-hidden"
+        >
+          <Navigation />
+        </div>
+
+        <div className="mdlg:w-[75vw] lg:w-[85vw] m:ml-[20vw] mdlg:ml-[25vw] lg:ml-[15vw]">
           <div className="w-[100%] overflow-hidden">
             <div className="lg:hidden px-[20px]">
               <label
@@ -29,19 +55,30 @@ export default function IPODetailsPage() {
               >
                 {text}
               </label>
-              <div className="hidden" id="toggleContents">
+              <div className="hidden overflow-hidden" id="toggleContents">
                 <Navigation />
               </div>
             </div>
-            <Content />
+            <Content
+              CompanyDetailsData={CompanyDetailsData}
+              IpoDetailsData={IpoDetailsData}
+              IpoTimetableData={IpoTimetableData}
+              LotSizeData={LotSizeData}
+              PerformanceData={PerformanceData}
+              CompanyFinancialsData={CompanyFinancialData}
+              SubscriptionsData={SubscriptionsData}
+              DataPanelData={DataPanelData}
+              AnchorDetailsData={AnchorDetailsData}
+              IppoReservationData={IpoReservationData}
+              PromoterHoldingsData={PromoterHoldingsData}
+              ObjectIssueData={ObjectIssueData}
+              CompanyContactData={CompanyContactData}
+              RegistrarContactData={RegistrarContactData}
+              DocumentsData={DocumentsData}
+              ReviewData={ReviewData}
+              GmpData={GmpData}
+            />
           </div>
-        </div>
-
-        <div
-          className="mdlg:w-[25vw] lg:w-[20vw] h-[100%] p-2 px-4 fixed right-0 border-l hidden mdlg:flex flex-col justify-start 
-        items-start bg-white"
-        >
-          <Navigation />
         </div>
       </div>
     </>

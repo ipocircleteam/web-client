@@ -1,7 +1,8 @@
 'use client'
 
 import Menu from '@/components/Menu/menu'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Slider from '@mui/material/Slider'
@@ -14,20 +15,15 @@ export default function Consultation() {
     amount: 0,
     dematAccounts: 0,
     riskProfile: 0,
-    profitProb: 0,
   })
+
+  const [result, setResult] = useState<string>('')
+  const [loading, setLoading] = useState<boolean>(false)
 
   const handleRiskChange = (event: Event, newValue: number | number[]) => {
     setForm({
       ...form,
       riskProfile: newValue as number,
-    })
-  }
-
-  const handleProfitChange = (event: Event, newValue: number | number[]) => {
-    setForm({
-      ...form,
-      profitProb: newValue as number,
     })
   }
 
@@ -51,6 +47,23 @@ export default function Consultation() {
     } else {
       console.error(`Element with ID "${targetId}" not found.`)
     }
+  }
+
+  const runAlgorithm = () => {
+    setLoading(true)
+    axios
+      .post('/', {
+        data: form,
+      })
+      .then((response) => {
+        //setResult(response.data)
+        setLoading(false)
+      })
+      .catch((error) => {
+        console.log('error running algorithm, ', error)
+        setResult('Sorry! Some Error Occurred')
+      })
+    scrollToDiv('algoResult')
   }
 
   return (
@@ -137,40 +150,17 @@ export default function Consultation() {
                   </Stack>
                 </Box>
               </>
-              <br />
-
-              <label className="text-left">
-                Select your profit probability: {form.profitProb}%
-              </label>
-              <>
-                <Box sx={{}}>
-                  <Stack
-                    spacing={2}
-                    direction="row"
-                    sx={{ mb: 2 }}
-                    alignItems="center"
-                  >
-                    <Slider
-                      aria-label="Volume"
-                      value={form.profitProb}
-                      onChange={handleProfitChange}
-                    />
-                  </Stack>
-                </Box>
-              </>
             </span>
           </div>
           <button
-            onClick={() => {
-              scrollToDiv('algoResult')
-            }}
+            onClick={runAlgorithm}
             className="border bg-primary hover:bg-blue-500 text-white font-bold w-[100px] p-2 rounded-lg my-[20px]"
           >
             RUN
           </button>
         </div>
 
-        <Result />
+        <Result result={result} loading={loading} />
         <HelpGuide />
       </div>
       <Footer />

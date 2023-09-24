@@ -48,17 +48,19 @@ function NavigationItem(props: { text: string; id: string }) {
     ipoDetailsItems.forEach((element) => {
       let id = '#link-' + element.id
       $(id).removeClass('border bg-primary text-white font-bold')
+      $(id).addClass('hover:bg-blue-100 hover:text-blue-500 hover:font-bold')
     })
 
     let id = '#link-' + props.id
-    $(id).addClass('bg-red-900')
+    $(id).addClass('bg-primary text-white')
+    $(id).removeClass('hover:bg-blue-100 hover:text-blue-500 hover:font-bold')
   }
 
   return (
     <div
       id={'link-' + props.id}
       onClick={highlightSection}
-      className="hover:bg-blue-100 hover:text-blue-500 hover:font-bold border-primary rounded-lg p-[5px] w-[220px] my-[1px] h-40px]"
+      className="hover:bg-blue-100 hover:text-blue-500 hover:font-bold border-primary rounded-lg p-[5px] w-[100%] my-[1px] h-40px]"
     >
       <label className="my-[3px] cursor-pointer">{props.text}</label>
     </div>

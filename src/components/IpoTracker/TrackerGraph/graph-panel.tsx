@@ -5,7 +5,7 @@ export default function GraphPanel(props: {
   darkMode: boolean
   data1: { name: string; value: number }[]
 }) {
-  const COLORS = ['#00C49F', '#FF0000']
+  const COLORS = ['#00C49F', '#3051bf']
 
   return (
     <div

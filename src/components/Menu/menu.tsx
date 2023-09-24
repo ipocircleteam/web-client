@@ -10,7 +10,7 @@ export default function Menu() {
 
   return (
     <div className="fixed top-0 z-50 bg-white">
-      {width && width > 600 ? <LargeMenu /> : <SmallMenu />}
+      {width && width > 800 ? <LargeMenu /> : <SmallMenu />}
     </div>
   )
 }

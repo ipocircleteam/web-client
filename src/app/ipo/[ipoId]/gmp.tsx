@@ -10,53 +10,9 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts'
+import { GmpDataType } from '../data.types'
 
-const data = [
-  {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-]
-
-export default function GMP() {
+export default function GMP(props: { data: GmpDataType[] }) {
   return (
     <div id="gmp" className="my-[40px] mt-[50px]">
       <label className="text-primary text-[1.2rem] font-bold">
@@ -64,11 +20,14 @@ export default function GMP() {
       </label>
       <div className="w-[100%] text-center my-0">
         <label className="mx-auto text-primary">
-          GMP(Rs): <b className="text-green-500">69</b>
+          GMP(Rs):{' '}
+          <b className="text-green-500">
+            {props.data[props.data.length - 1].gmp}
+          </b>
         </label>
       </div>
       <div className="w-[100%] flex justify-center overflow-x-scroll">
-        <LineChart width={1000} height={300} data={data}>
+        <LineChart width={1000} height={300} data={props.data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
