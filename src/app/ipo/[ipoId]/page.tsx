@@ -102,7 +102,9 @@ export default function IPODetailsPage() {
             <p className="text-secondary text-center text-[18px] mt-[30px] font-bold">
               {loading ? 'Loading Data ...' : ''}
             </p>
-            <p className="text-primary text-[1rem]">{statusText}</p>
+            <p className="text-primary text-center font-bold text-[1rem]">
+              {statusText}
+            </p>
             <Content data={content} />
           </div>
         </div>
