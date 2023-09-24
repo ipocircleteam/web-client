@@ -35,7 +35,7 @@ export default function GMP(props: { data: GmpDataType[] }) {
           <Legend />
           <Line
             type="monotone"
-            dataKey="pv"
+            dataKey=""
             stroke="#8884d8"
             activeDot={{ r: 8 }}
           />

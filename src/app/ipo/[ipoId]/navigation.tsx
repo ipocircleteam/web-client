@@ -52,7 +52,7 @@ function NavigationItem(props: { text: string; id: string }) {
     })
 
     let id = '#link-' + props.id
-    $(id).addClass('bg-primary text-white')
+    $(id).addClass('bg-primary text-white font-bold')
     $(id).removeClass('hover:bg-blue-100 hover:text-blue-500 hover:font-bold')
   }
 
