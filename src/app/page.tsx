@@ -1,7 +1,5 @@
 'use client'
 
-//TODO shift the fetching logic to IpoTable Component and make it a server component
-
 import React, { useEffect, useState } from 'react'
 import { Provider } from 'react-redux'
 import { store } from '../store/store'
@@ -64,14 +62,8 @@ export default function Home() {
             sno: i + 1,
             ipoID: dataObject[i].id,
             name: dataObject[i].name,
-            opendate:
-              dataObject[i].opening_date === undefined
-                ? ''
-                : dataObject[i].opening_date,
-            enddate:
-              dataObject[i].closing_date === undefined
-                ? ''
-                : dataObject[i].closing_date,
+            opendate: dataObject[i].opening_date || '',
+            enddate: dataObject[i].closing_date || '',
             status: status,
           }
           arrayOfObjects.push(object)

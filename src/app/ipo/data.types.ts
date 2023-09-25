@@ -15,7 +15,7 @@ export type IpoDetailsType = {
   fresh_issue: number
   ofs: number
   issue_type: string
-  listing_at: number
+  listing_at: string[]
 }
 
 export type IpoTimetableType = {
@@ -25,8 +25,8 @@ export type IpoTimetableType = {
   initiation_of_refunds: string
   credit_of: string
   listing_date: string
-  cutoff: number
-  time_upf: number
+  cutoff: string
+  time_upf: string
 }
 
 export type LotSizeType = {

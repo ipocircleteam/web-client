@@ -14,7 +14,7 @@ export default function CompanyDetails(props: { data: CompanyDetailsType }) {
               src={props.data.company_logo_url}
               alt={'IPO Circle'}
             />
-            <h2 className="mx-2 text-primary text-[40px] font-semibold">
+            <h2 className="mx-2 text-primary text-[1.2rem] font-semibold">
               {props.data.company_name}
             </h2>
           </section>
@@ -26,13 +26,13 @@ export default function CompanyDetails(props: { data: CompanyDetailsType }) {
             <label className="mx-2">
               Opening Date:
               <b className="text-blue-500 text-[1.1rem]">
-                {props.data.opening_date}
+                {props.data.opening_date.substring(0, 10)}
               </b>
             </label>
             <label className="mx-2">
               Closing Date:
               <b className="text-red-500 text-[1.1rem]">
-                {props.data.closing_date}
+                {props.data.closing_date.substring(0, 10)}
               </b>
             </label>
           </section>
