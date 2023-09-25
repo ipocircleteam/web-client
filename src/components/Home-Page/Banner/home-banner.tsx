@@ -7,7 +7,7 @@ import { DataBoard } from '../../../../public/vectors'
 
 export default function HomeBanner() {
   return (
-    <section className="md:mt-[40px] py-[40px] w-[90vw] mx-auto flex flex-col mdlg:flex-row justify-center items-center p-4 px-6">
+    <section className="md:mt-[10px] py-[40px] w-[90vw] mx-auto flex flex-col mdlg:flex-row justify-center items-center p-4 px-6">
       <div className="w-[95%] mdlg:w-[45%] hidden md:block">
         <div className="w-[100%] mdlg:w-[80%]">
           <Image src={DataBoard} alt="" />
