@@ -21,6 +21,12 @@ export default function IpoDatabase() {
     setType(() => name)
   }
 
+  const config = {
+    headers: {
+      Authorization: 'edb6f4ab-999d-4901-adc3-3e3376b7918b',
+    },
+  }
+
   useEffect(() => {
     if (type === 'main') {
       setViewData(mainData)
@@ -30,11 +36,51 @@ export default function IpoDatabase() {
   }, [type])
 
   useEffect(() => {
-    const requests = [axios.post('/'), axios.post('/')]
+    setViewData(mainData)
+  }, [mainData])
+
+  useEffect(() => {
+    const requests = [
+      axios.get(
+        'https://api.ipocircle.com/api/v0/ipo/details/filter?concise=true',
+        config,
+      ),
+    ]
+
     Promise.all(requests)
       .then((responses) => {
-        //setMainData
+        const arrayOfObjects = []
+        const dataObject = responses[0].data
+
+        for (let i = 0; i < Object.keys(dataObject).length; i++) {
+          const openDate = new Date(dataObject[i].opening_date)
+          const closeDate = new Date(dataObject[i].closing_date)
+          const currentDate = new Date()
+          let status = 'Closed'
+          if (openDate < currentDate && closeDate > currentDate) status = 'Live'
+          else if (openDate > currentDate && closeDate > currentDate)
+            status = 'Upcoming'
+
+          const object = {
+            sno: i + 1,
+            ipoID: dataObject[i].id,
+            name: dataObject[i].name,
+            opendate:
+              dataObject[i].opening_date === undefined
+                ? ''
+                : dataObject[i].opening_date,
+            enddate:
+              dataObject[i].closing_date === undefined
+                ? ''
+                : dataObject[i].closing_date,
+            status: status,
+          }
+          arrayOfObjects.push(object)
+        }
+
+        setMainData(arrayOfObjects)
         //setSmeData
+
         setLoading(false)
       })
       .catch((error) => {
@@ -51,7 +97,7 @@ export default function IpoDatabase() {
   }
 
   const reset = () => {
-    setViewData(type === 'main' ? mainipodata : smeipodata)
+    setViewData(mainData)
   }
 
   return (
@@ -72,6 +118,7 @@ export default function IpoDatabase() {
       <IpoCategory callback={toggleView} />
 
       <div className="w-[100%] border">
+        {/* {viewData[0].name} */}
         <Table data={viewData} />
       </div>
     </div>

@@ -3,8 +3,6 @@ import TableRow from '../Home-Page/IPOData/row-template'
 import { RowDataType } from '../Home-Page/IPOData/ipodata.types'
 
 export default function Table(props: { data: RowDataType[] }) {
-  console.log(typeof props.data)
-
   return (
     <table className="text-center w-[100%]">
       <tr className="w-[100%] p-4 text-[13px] lg:text-[15px] font-semibold text-grey-500 custom-tablerow">

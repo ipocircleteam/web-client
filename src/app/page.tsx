@@ -1,10 +1,13 @@
 'use client'
 
+//TODO shift the fetching logic to IpoTable Component and make it a server component
+
 import React, { useEffect, useState } from 'react'
 import { Provider } from 'react-redux'
 import { store } from '../store/store'
 import axios from 'axios'
 import dotenv from 'dotenv'
+import { RowDataType } from '@/components/Home-Page/IPOData/ipodata.types'
 
 dotenv.config()
 
@@ -21,8 +24,9 @@ import IpoStudy from '@/components/Home-Page/IpoStudy/ipostudy'
 import { mainipodata, smeipodata } from '@/dummydata'
 
 export default function Home() {
-  const [mainIpoData, setMainIpoData] = useState(mainipodata)
-  const [smeIpoData, setSmeIpoData] = useState(smeipodata)
+  const [mainData, setMainData] = useState<RowDataType[]>([])
+  const [smeData, setSmeData] = useState<RowDataType[]>(smeipodata)
+  const [viewData, setViewData] = useState<RowDataType[]>([])
   const [loading, setLoading] = useState(true)
 
   const config = {
@@ -31,8 +35,9 @@ export default function Home() {
     },
   }
 
-  // console.log(`${process.env.NEXT_API_BASE_URL}/ipo/details/filter?concise=true`);
-  // console.log(process.env.NEXT_API_KEY);
+  useEffect(() => {
+    setViewData(mainData)
+  }, [mainData])
 
   useEffect(() => {
     const requests = [
@@ -43,10 +48,38 @@ export default function Home() {
     ]
     Promise.all(requests)
       .then((responses) => {
-        console.log(responses[0].data)
+        const arrayOfObjects = []
+        const dataObject = responses[0].data
 
-        // setMainIpoData(responses[0].data)
-        // setSmeIpoData(responses[1].data)
+        for (let i = 0; i < 7; i++) {
+          const openDate = new Date(dataObject[i].opening_date)
+          const closeDate = new Date(dataObject[i].closing_date)
+          const currentDate = new Date()
+          let status = 'Closed'
+          if (openDate < currentDate && closeDate > currentDate) status = 'Live'
+          else if (openDate > currentDate && closeDate > currentDate)
+            status = 'Upcoming'
+
+          const object = {
+            sno: i + 1,
+            ipoID: dataObject[i].id,
+            name: dataObject[i].name,
+            opendate:
+              dataObject[i].opening_date === undefined
+                ? ''
+                : dataObject[i].opening_date,
+            enddate:
+              dataObject[i].closing_date === undefined
+                ? ''
+                : dataObject[i].closing_date,
+            status: status,
+          }
+          arrayOfObjects.push(object)
+        }
+        console.log(arrayOfObjects)
+        setMainData(arrayOfObjects)
+        //setSmeData
+
         setLoading(false)
       })
       .catch((error) => {
@@ -71,11 +104,7 @@ export default function Home() {
         </Head>
         <Menu />
         <Hero />
-        <IpoData
-          mainData={mainIpoData}
-          smeData={smeIpoData}
-          loading={loading}
-        />
+        <IpoData mainData={mainData} smeData={viewData} loading={loading} />
         <HomeBanner />
         <Products />
         <Features />

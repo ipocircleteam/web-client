@@ -43,7 +43,7 @@ export default function TableRow(props: {
       <td className="w-[10%]">{props.data.sno}</td>
 
       <td title="See details" className="w-[30%] text-left cursor-pointer">
-        <div className="m-0 p-0 flex flex-wrap justify-start items-center">
+        <div className="m-0 p-0 flex justify-start items-center">
           <a className="w-[100%]" href={'/ipo/' + props.data.ipoID}>
             {props.data.name.substring(0, 12) + ''}
           </a>
@@ -56,9 +56,9 @@ export default function TableRow(props: {
         </div>
       </td>
 
-      <td className="w-[12.5%]">{props.data.opendate.substring(0, 6)}</td>
+      <td className="w-[12.5%]">{props.data.opendate.substring(0, 10)}</td>
 
-      <td className="w-[12.5%]">{props.data.enddate.substring(0, 6)}</td>
+      <td className="w-[12.5%]">{props.data.enddate.substring(0, 10)}</td>
 
       <td className={statusClass + ' w-[10%] '}>
         <div className="m-0 p-0 flex justify-center items-center">
@@ -103,7 +103,7 @@ function Closetag(props: { width: number | undefined }) {
   return (
     <div className="flex items-center justify-center rounded-lg">
       {props.width && props.width > 600 ? (
-        <label className="text-center text-[12px] border border-red-500 text-red-500 ml-2 px-[3px] rounded-lg">
+        <label className="text-center w-[100px] text-[12px] border border-red-500 text-red-500 ml-2 px-[3px] rounded-lg">
           Closing Today
         </label>
       ) : (
