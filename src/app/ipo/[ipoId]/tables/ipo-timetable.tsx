@@ -9,19 +9,23 @@ export default function IpoTimeTable(props: { data: IpoTimetableType }) {
     >
       <tr className="border">
         <td className="px-[10px] border-r">Open Date</td>
-        <td className="px-[10px]">{props.data.open_date}</td>
+        <td className="px-[10px]">{props.data.open_date.substring(0, 10)}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Close Date</td>
-        <td className="px-[10px]">{props.data.close_date}</td>
+        <td className="px-[10px]">{props.data.close_date.substring(0, 10)}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Allotment Date</td>
-        <td className="px-[10px]">{props.data.allotment_date}</td>
+        <td className="px-[10px]">
+          {props.data.allotment_date.substring(0, 10)}
+        </td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Initiation of refunds</td>
-        <td className="px-[10px]">{props.data.initiation_of_refunds}</td>
+        <td className="px-[10px]">
+          {props.data.initiation_of_refunds.substring(0, 10)}
+        </td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Credit of ...</td>
@@ -29,7 +33,9 @@ export default function IpoTimeTable(props: { data: IpoTimetableType }) {
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Listing Date</td>
-        <td className="px-[10px]">{props.data.listing_date}</td>
+        <td className="px-[10px]">
+          {props.data.listing_date.substring(0, 10)}
+        </td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Cutoff</td>

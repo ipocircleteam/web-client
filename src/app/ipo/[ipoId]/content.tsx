@@ -57,7 +57,7 @@ export default function Content(props: { data: ContentType }) {
       <div className="w-[100%] flex flex-wrap justify-around items-start">
         <div className="w-[300px]" id="companyContact">
           <label className="text-slate-400">Company Contact Details</label>
-          <div className="border p-2 h-[140px]">
+          <div className="border p-2">
             <label className="font-bold">
               {props.data.CompanyContactData.name}
             </label>
@@ -70,7 +70,7 @@ export default function Content(props: { data: ContentType }) {
 
         <div className="w-[300px]" id="registrarContact">
           <label className="text-slate-400">Registrar Contact Details</label>
-          <div className="border p-2 h-[140px]">
+          <div className="border p-2">
             <label className="font-bold">
               {props.data.RegistrarContactData.name}
             </label>
@@ -83,7 +83,7 @@ export default function Content(props: { data: ContentType }) {
 
         <div className="w-[300px]" id="documents">
           <label className="text-slate-400">Documents</label>
-          <div className="border p-2 underline h-[80px] lg:-[140px]">
+          <div className="border p-2 underline h-[80px] lg:h-[140px]">
             <a href={props.data.DocumentsData.rhp}>RHP</a>
             <br />
             <a href={props.data.DocumentsData.drhp}>DRHP</a>

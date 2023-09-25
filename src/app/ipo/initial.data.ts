@@ -34,7 +34,7 @@ export const IpoDetailsData: IpoDetailsType = {
   fresh_issue: 0,
   ofs: 0,
   issue_type: '',
-  listing_at: 0,
+  listing_at: [],
 }
 
 export const IpoTimetableData: IpoTimetableType = {
@@ -44,8 +44,8 @@ export const IpoTimetableData: IpoTimetableType = {
   initiation_of_refunds: '',
   credit_of: '',
   listing_date: '',
-  cutoff: 0,
-  time_upf: 0,
+  cutoff: '',
+  time_upf: '',
 }
 
 export const LotSizeData: LotSizeType = {
