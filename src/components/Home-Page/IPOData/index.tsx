@@ -1,35 +1,39 @@
-'use client'
-
-import React, { useState } from 'react'
-import { IpoTable } from './ipo-table'
 import Link from 'next/link'
-import IpoCategory from './ipo-category'
-import useWindowWidth from '@/hooks/useWindowWidth'
-import { RowDataType } from './ipodata.types'
+import sanitizeData from '@/utils/prepareData'
+import DataContainer from './data-container'
+import { mainipodata, smeipodata } from '@/dummydata'
 
-export function IpoData(props: {
-  mainData: RowDataType[]
-  smeData: RowDataType[]
-  loading: boolean
-}) {
-  const [type, setType] = useState('main')
+export async function IpoData() {
+  // const smeDataResponse = await fetch(
+  //   `https://api.ipocircle.com/api/v0/ipo/details/filter?concise=true`, // replace sme url
+  //   {
+  //     method: 'POST',
+  //     headers: {
+  //       Authorization: 'edb6f4ab-999d-4901-adc3-3e3376b7918b',
+  //     },
+  //   },
+  // )
 
-  const toggleView = (name: string) => {
-    setType(() => name)
-  }
+  // const mainDataResponse = await fetch(
+  //   `https://api.ipocircle.com/api/v0/ipo/details/filter?concise=true`, // replace main url
+  //   {
+  //     method: 'POST',
+  //     headers: {
+  //       Authorization: 'edb6f4ab-999d-4901-adc3-3e3376b7918b',
+  //     },
+  //   },
+  // )
+
+  // const smeData = await sanitizeData(smeDataResponse)
+  // const mainData = await sanitizeData(mainDataResponse)
 
   return (
-    <section className="mt-[3rem] text-center">
-      <IpoCategory callback={toggleView} />
-      <IpoTable type={type} mainData={props.mainData} smeData={props.smeData} />
-
+    <section className="mt-[3rem] text-center container mx-auto">
+      <DataContainer smeData={smeipodata} mainData={mainipodata} />
       <div
         className="text-secondary my-2 text-center w-[100%] mx-auto text-[18px] 
             hover:text-primary cursor-pointer"
       >
-        <label className="w-[100px] mx-[10px] text-slate-500">
-          {props.loading ? 'Loading data ...' : ''}
-        </label>
         <Link href="/ipo">See All</Link>
       </div>
     </section>

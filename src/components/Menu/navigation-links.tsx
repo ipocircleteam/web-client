@@ -1,46 +1,45 @@
-import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Cross } from '../../../public/icons'
-import CTAbutton from '../Buttons/cta-btn'
 
 export function LargeNavigation() {
   return (
     <div className="m-0 flex justify-end items-center px-2">
-      <a
+      <Link
         href="/gmp"
         className="mx-4 text-primary hover:text-secondary font-semibold"
       >
         GMP
-      </a>
+      </Link>
 
-      <a
+      <Link
         href="/ipo"
         className="mx-4 text-primary hover:text-secondary font-semibold"
       >
         IPOs
-      </a>
+      </Link>
 
-      <a
+      <Link
         href="/ipotracker"
         className="mx-4 text-primary hover:text-secondary font-semibold"
       >
         IPO Tracker
-      </a>
+      </Link>
 
-      <a
+      <Link
         href="/marketanalyser"
         className="mx-4 text-primary hover:text-secondary font-semibold"
       >
         Market Analyser
-      </a>
+      </Link>
 
-      <a
+      <Link
         href="/algorithm"
         className="mx-4 text-[1.6rem] md:text-[1.1rem] bg-secondary p-2 px-4 font-semibold rounded-lg border border-secondary
           hover:bg-base hover:border-secondary custom-btn-transition text-base hover:text-primary"
       >
         Ask Jarvis
-      </a>
+      </Link>
     </div>
   )
 }
@@ -60,48 +59,48 @@ export function SmallNavigationLinks(props: { callback: () => void }) {
       </div>
 
       <div className="m-2 text-[20px]">
-        <a
+        <Link
           href="/gmp"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
           GMP
-        </a>
+        </Link>
       </div>
 
       <div className="m-2 text-[20px]">
-        <a
+        <Link
           href="/ipo"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
           IPOs
-        </a>
+        </Link>
       </div>
 
       <div className="m-2 text-[20px]">
-        <a
+        <Link
           href="/ipotracker"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
           IPO Tracker
-        </a>
+        </Link>
       </div>
 
       <div className="m-2 text-[20px]">
-        <a
+        <Link
           href="/marketanalyser"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
           Market analyser
-        </a>
+        </Link>
       </div>
 
       <div className="m-2 text-[20px]">
-        <a
+        <Link
           href="/algorithm"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
           Ask Jarvis
-        </a>
+        </Link>
       </div>
     </>
   )

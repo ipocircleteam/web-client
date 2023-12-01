@@ -5,7 +5,6 @@ import { RowDataType } from './ipodata.types'
 import useWindowWidth from '@/hooks/useWindowWidth'
 import Image from 'next/image'
 import { RightArrow } from '../../../../public/icons'
-import Link from 'next/link'
 
 export default function TableRow(props: {
   data: RowDataType

@@ -1,4 +1,3 @@
-import react from 'react'
 import { IpoCategoryProps } from './ipodata.types'
 import $ from 'jquery'
 

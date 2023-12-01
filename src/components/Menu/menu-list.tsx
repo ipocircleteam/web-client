@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { CallBackType } from './menu.types'
 import $ from 'jquery'

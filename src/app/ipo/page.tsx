@@ -1,5 +1,5 @@
 import Footer from '@/components/Footer/footer'
-import { IpoData } from '@/components/Home-Page/IPOData/ipo-data'
+import { IpoData } from '@/components/Home-Page/IPOData'
 import IpoDatabase from '@/components/Ipo/ipo-database'
 import Menu from '@/components/Menu/menu'
 import React from 'react'

@@ -1,7 +1,3 @@
-'use client'
-
-import React from 'react'
-import CTAbutton from '../../Buttons/cta-btn'
 import Image from 'next/image'
 import { DataBoard } from '../../../../public/vectors'
 

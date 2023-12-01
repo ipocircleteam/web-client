@@ -8,7 +8,7 @@ import { Bars } from '../../../public/icons'
 export default function Navbar(props: CallBackType) {
   return (
     <div className="flex w-[100vw] justify-between items-center border border-bottom px-1 sm:px-2 py-2">
-      <a href="/">
+      <Link href="/">
         <Image
           className=""
           alt="IPOCircle"
@@ -16,7 +16,7 @@ export default function Navbar(props: CallBackType) {
           src={Logo}
           width={150}
         />
-      </a>
+      </Link>
 
       <Image
         onClick={props.callback}

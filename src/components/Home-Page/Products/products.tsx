@@ -1,5 +1,4 @@
 import { ProductsData } from '@/dummydata'
-import React from 'react'
 import ProductCard from './productCard'
 
 export default function Products() {

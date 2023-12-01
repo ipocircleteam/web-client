@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import MenuList from './menu-list'
 import $ from 'jquery'

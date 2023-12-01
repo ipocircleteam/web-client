@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 import { Dashboard } from '../../../../public/images'
 import FeatureDesc from './feature-desc'

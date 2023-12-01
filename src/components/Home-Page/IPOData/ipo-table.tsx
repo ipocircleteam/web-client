@@ -1,22 +1,11 @@
-import React from 'react'
 import TableRow from './row-template'
-import { mainipodata, smeipodata } from '@/dummydata'
-import { RowDataType, TableDataType } from './ipodata.types'
-import { type } from 'os'
+import { RowDataType } from './ipodata.types'
 
-export function IpoTable(props: {
-  mainData: RowDataType[]
-  smeData: RowDataType[]
-  type: string
-}) {
-  const data: RowDataType[] =
-    props.type === 'main' ? props.mainData : props.smeData
-
+export function IpoTable(props: { data: RowDataType[] }) {
   return (
     // Ad class custom-shadow-table to add shadow around table
     <div className="w-[90vw] sm:w-[90vw] md:w-[85vw] lg:w-[60vw] lgx:w-[45vw] mx-auto mt-2 rounded-md border overflow-hidden">
       <table className="text-center w-[100%]">
-        {/* TABLE HEADING */}
         <tr className="w-[100%] p-4 text-[13px] lg:text-[15px] font-semibold text-grey-500 custom-tablerow">
           <td className="w-[10%]">#</td>
           <td className="w-[25%] text-left">IPO Name</td>
@@ -26,7 +15,7 @@ export function IpoTable(props: {
           <td className="w-[5%]"></td>
         </tr>
 
-        {data.map((item) => {
+        {props.data.map((item) => {
           const data = {
             sno: item.sno,
             ipoID: item.ipoID,

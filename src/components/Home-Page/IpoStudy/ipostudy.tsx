@@ -1,6 +1,4 @@
-'use client'
-
-import React from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import { Study } from '../../../../public/vectors'
 
@@ -24,9 +22,9 @@ export default function IpoStudy() {
           your comprehension of IPOs (Initial Public Offerings) and primary
           markets.
         </p>
-        <a href="" className="text-primary hover:text-black mt-[20px]">
+        <Link href="" className="text-primary hover:text-black mt-[20px]">
           Explore for free
-        </a>
+        </Link>
       </div>
 
       <div className="w-[95%] mdlg:w-[45%] block md:hidden">

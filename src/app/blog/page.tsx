@@ -9,7 +9,7 @@ export default function Blog() {
   return (
     <>
       <Menu />
-      {/* <div className="flex flex-wrap justify-around items-start my-[10px]">
+      <div className="flex flex-wrap justify-around items-start my-[10px]">
         <section className="w-[95vw] lg:w-[70vw]">
           <Articles />
         </section>
@@ -17,7 +17,7 @@ export default function Blog() {
         <section className="w-[95vw] lg:w-[25vw] h-[100vh] lg:border-l-2 my-4">
           <LatestArticles />
         </section>
-      </div> */}
+      </div>
 
       <Footer />
     </>

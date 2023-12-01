@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Logo } from '../../../public/logo'
@@ -10,8 +9,8 @@ export default function LargeMenu() {
       className="px-[10px] py-[7px] m-0 w-[100vw] flex justify-between items-center border-b"
       data-testid="large-menu"
     >
-      <a href="/">
-        <div className="flex justify-center items-center text-[1.5rem] font-bold">
+      <div className="flex justify-center items-center text-[1.5rem] font-bold">
+        <Link href="/">
           <Image
             className="ml-5 m-0 p-0"
             alt="IPOCircle"
@@ -19,8 +18,8 @@ export default function LargeMenu() {
             src={Logo}
             width={120}
           />
-        </div>
-      </a>
+        </Link>
+      </div>
 
       <LargeNavigation />
     </div>
