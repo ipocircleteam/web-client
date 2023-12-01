@@ -1,12 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import NavButtons from './nav-buttons'
-import Link from 'next/link'
-import Image from 'next/image'
-import { GreenLogoIcon } from '../../../../public/logo'
-import Filter from '../TrackerFilter/filter'
-import $ from 'jquery'
 import { TrackerMenuType } from './trackermenu.types'
 
 export default function TrackerMenu(props: TrackerMenuType) {
@@ -36,9 +30,6 @@ export default function TrackerMenu(props: TrackerMenuType) {
           }
         >
           IPO Tracker
-          <label className="w-[150px] mx-[10px] text-slate-500 font-normal text-[14px]">
-            {props.loading ? '(Loading data ...)' : ''}
-          </label>
         </h1>
       </section>
     </div>

@@ -9,8 +9,8 @@ export default function LargeMenu() {
       className="px-[10px] py-[7px] m-0 border-b w-[100vw] flex justify-between items-center container mx-auto"
       data-testid="large-menu"
     >
-      <div className="flex justify-center items-center text-[1.5rem] font-bold">
-        <Link href="/">
+      <Link href="/">
+        <div className="flex justify-center items-center text-[1.5rem] font-bold">
           <Image
             className="ml-5 m-0 p-0"
             alt="IPOCircle"
@@ -18,8 +18,8 @@ export default function LargeMenu() {
             src={Logo}
             width={120}
           />
-        </Link>
-      </div>
+        </div>
+      </Link>
 
       <LargeNavigation />
     </div>

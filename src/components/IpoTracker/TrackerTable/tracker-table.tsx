@@ -44,45 +44,46 @@ export default function TrackerTable(props: {
   }
 
   return (
-    <div
-      className={
-        (props.darkMode ? 'bg-panelDark' : 'bg-white') +
-        ' x-auto w-[700px] md:w-[900px] lg:w-[65vw] flex justify-center items-center flex-wrap h-[auto] rounded-lg p-1'
-      }
-    >
-      <table className="w-[100%]">
-        <TableHead darkMode={props.darkMode} />
+    <>
+      <div
+        className={
+          (props.darkMode ? 'bg-panelDark' : 'bg-white') +
+          ' x-auto w-[700px] md:w-[900px] lg:w-[95%] flex justify-center items-center flex-wrap h-[auto] rounded-lg p-1'
+        }
+      >
+        <table className="w-[100%]">
+          <TableHead darkMode={props.darkMode} />
 
-        {viewData.map((item, index) => {
-          return (
-            <RowTemplate
-              key={'row-' + index}
-              data={item}
-              index={index}
-              darkMode={props.darkMode}
-            />
-          )
-        })}
+          {viewData.map((item, index) => {
+            return (
+              <RowTemplate
+                key={'row-' + index}
+                data={item}
+                index={index}
+                darkMode={props.darkMode}
+              />
+            )
+          })}
 
-        <div className="mx-auto flex justify-start lg:justify-center my-[20px]">
-          <button
-            onClick={handlePrevButton}
-            className="text-primary cursor-pointer underline"
-          >
-            Prev
-          </button>
-          <label className="mx-2">
-            ({start} - {end} / {props.trackerData.length})
-          </label>
-          <button
-            onClick={handleNextButton}
-            className="text-primary cursor-pointer underline"
-          >
-            Next
-          </button>
-        </div>
-      </table>
-
+          <div className="mx-auto flex justify-start lg:justify-center my-[20px]">
+            <button
+              onClick={handlePrevButton}
+              className="text-primary cursor-pointer underline"
+            >
+              Prev
+            </button>
+            <label className="mx-2">
+              ({start} - {end} / {props.trackerData.length})
+            </label>
+            <button
+              onClick={handleNextButton}
+              className="text-primary cursor-pointer underline"
+            >
+              Next
+            </button>
+          </div>
+        </table>
+      </div>
       <GraphPanel
         darkMode
         data1={[
@@ -90,6 +91,6 @@ export default function TrackerTable(props: {
           { name: 'Current', value: getTotalPrice('current') },
         ]}
       />
-    </div>
+    </>
   )
 }

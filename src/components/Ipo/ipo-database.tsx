@@ -1,7 +1,7 @@
 import { mainipodata, smeipodata } from '@/dummydata'
 import DataContainer from './data-container'
 
-export default function IpoDatabase() {
+export default async function IpoDatabase() {
   // const smeDataResponse = await fetch(
   //   `https://api.ipocircle.com/api/v0/ipo/details/filter?concise=true`, // replace sme url
   //   {
