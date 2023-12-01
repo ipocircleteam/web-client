@@ -69,8 +69,7 @@ export default function Consultation() {
 
   return (
     <>
-      <Menu />
-      <div className="mt-[50px]">
+      <div className="mx-auto container max-w-9xl">
         <div className="bg-primary p-3 text-white h-[400px] flex justify-center items-center">
           <span className="text-center">
             <h1 className="font-bold text-[2.5rem] md:text-[3rem]">
@@ -164,7 +163,6 @@ export default function Consultation() {
         <Result result={result} loading={loading} />
         <HelpGuide />
       </div>
-      <Footer />
     </>
   )
 }

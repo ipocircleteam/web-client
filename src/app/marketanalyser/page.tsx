@@ -20,42 +20,33 @@ export default function MarketAnalyser() {
   }
 
   return (
-    <>
-      <Menu />
-      <div className="my-[60px]">
-        {/* HERO SECTION */}
-        <div className="bg-primary p-3 text-white h-[400px] flex justify-center items-center">
-          <span className="text-center">
-            <h1 className="font-bold text-[2.5rem] md:text-[3rem]">
-              Market Analyser
-            </h1>
-            <p className="font-semibold text-[1.2rem] md:text-[1.5rem]">
-              This is the small description about market analyser
-            </p>
-            <span>
-              <button
-                onClick={() => {
-                  scrollToDiv('trackerGuide')
-                }}
-                className="p-2 border m-2 rounded-md hover:text-primary hover:bg-white font-bold w-[150px]"
-              >
-                How it works?
-              </button>
-              <button
-                onClick={() => {
-                  scrollToDiv('tracker')
-                }}
-                className="p-2 border m-2 rounded-md hover:text-primary hover:bg-white font-bold w-[150px]"
-              >
-                Let&apos;s go
-              </button>
-            </span>
-          </span>
-        </div>
-
-        {/* TOOLS */}
-      </div>
-      <Footer />
-    </>
+    <div className="bg-primary p-3 text-white h-[400px] flex justify-center items-center mx-auto container max-w-9xl">
+      <span className="text-center">
+        <h1 className="font-bold text-[2.5rem] md:text-[3rem]">
+          Market Analyser
+        </h1>
+        <p className="font-semibold text-[1.2rem] md:text-[1.5rem]">
+          This is the small description about market analyser
+        </p>
+        <span>
+          <button
+            onClick={() => {
+              scrollToDiv('trackerGuide')
+            }}
+            className="p-2 border m-2 rounded-md hover:text-primary hover:bg-white font-bold w-[150px]"
+          >
+            How it works?
+          </button>
+          <button
+            onClick={() => {
+              scrollToDiv('tracker')
+            }}
+            className="p-2 border m-2 rounded-md hover:text-primary hover:bg-white font-bold w-[150px]"
+          >
+            Let&apos;s go
+          </button>
+        </span>
+      </span>
+    </div>
   )
 }
