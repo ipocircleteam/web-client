@@ -17,7 +17,10 @@ export default function SmallMenu() {
   }
 
   return (
-    <div data-testid="small-menu">
+    <div
+      data-testid="small-menu"
+      className="w-[100vw] mx-auto container max-w-9l "
+    >
       <Navbar callback={openMenu} />
       <MenuList callback={closeMenu} />
     </div>

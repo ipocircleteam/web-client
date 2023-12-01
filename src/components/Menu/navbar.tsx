@@ -7,7 +7,7 @@ import { Bars } from '../../../public/icons'
 
 export default function Navbar(props: CallBackType) {
   return (
-    <div className="flex w-[100vw] justify-between items-center border border-bottom px-1 sm:px-2 py-2">
+    <div className="flex w-[100%] justify-between items-center border border-bottom px-1 sm:px-2 py-2">
       <Link href="/">
         <Image
           className=""

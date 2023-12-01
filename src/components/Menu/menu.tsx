@@ -3,11 +3,11 @@ import SmallMenu from './small.menu'
 
 export default function Menu() {
   return (
-    <div className="fixed top-0 z-50 bg-white">
-      <div className="hidden md:block">
+    <div className="top-0 z-50 bg-white w-[100vw] container mx-auto max-w-9l">
+      <div className="hidden lg:block">
         <LargeMenu />
       </div>
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <SmallMenu />
       </div>
     </div>

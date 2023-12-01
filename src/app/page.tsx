@@ -14,17 +14,13 @@ import IpoStudy from '@/components/Home-Page/IpoStudy/ipostudy'
 
 export default async function Home() {
   return (
-    <div className="overflow-hidden">
-      <Menu />
+    <>
       <Hero />
       <IpoData />
       <HomeBanner />
       <Products />
       <Features />
       <IpoStudy />
-      {/* <Articles /> */}
-      {/* <Keto /> */}
-      <Footer />
-    </div>
+    </>
   )
 }

@@ -8,7 +8,7 @@ export default function MenuList(props: CallBackType) {
     <div className="">
       <div
         id="menu-overlay"
-        className="fixed hidden z-10 top-0 w-[100vw] h-[100vh]"
+        className="fixed hidden z-10 top-0 w-[100%] h-[100vh]"
         onClick={() => {
           $('#Menulist').toggleClass('custom-menu-pos')
           $('#menu-overlay').addClass('hidden')
@@ -17,7 +17,7 @@ export default function MenuList(props: CallBackType) {
 
       <div
         id="Menulist"
-        className="custom-menu-transition shadow-lg bg-base fixed z-50 top-0 w-[70vw] sm:w-[60vw] h-[100vh] p-2 text-left"
+        className="custom-menu-transition shadow-lg bg-base fixed z-50 top-0 w-[70%] sm:w-[60%] h-[100vh] p-2 text-left"
       >
         <SmallNavigationLinks callback={props.callback} />
       </div>

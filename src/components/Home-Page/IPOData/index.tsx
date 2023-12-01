@@ -28,7 +28,7 @@ export async function IpoData() {
   // const mainData = await sanitizeData(mainDataResponse)
 
   return (
-    <section className="mt-[3rem] text-center container mx-auto">
+    <div className="mt-[3rem] text-center container mx-auto max-w-9xl ">
       <DataContainer smeData={smeipodata} mainData={mainipodata} />
       <div
         className="text-secondary my-2 text-center w-[100%] mx-auto text-[18px] 
@@ -36,7 +36,7 @@ export async function IpoData() {
       >
         <Link href="/ipo">See All</Link>
       </div>
-    </section>
+    </div>
   )
 }
 
