@@ -1,13 +1,11 @@
-FROM node:16-alpine AS deps
+FROM node:18
+ADD package*.json /tmp/
+RUN cd /tmp && npm install --unsafe-perm
+RUN mkdir -p /usr/src/app && cp -a /tmp/node_modules /usr/src/app/
 
-WORKDIR /app
-
-COPY package.json package-lock.json ./
-
-RUN npm install
-
-COPY . .
-
+WORKDIR /usr/src/app
+ADD . /usr/src/app
+RUN rm -rf logs && mkdir logs
 RUN npm run build
-
-CMD ["npm", "run", "dev"]
+EXPOSE 3000
+CMD ["npm", "run", "start"]

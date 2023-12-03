@@ -4,15 +4,17 @@ import DataContainer from './data-container'
 import { mainipodata, smeipodata } from '@/dummydata'
 
 export async function IpoData() {
-  // const smeDataResponse = await fetch(
-  //   `https://api.ipocircle.com/api/v0/ipo/details/filter?concise=true`, // replace sme url
-  //   {
-  //     method: 'POST',
-  //     headers: {
-  //       Authorization: 'edb6f4ab-999d-4901-adc3-3e3376b7918b',
-  //     },
-  //   },
-  // )
+  const smeDataResponse = await fetch(
+    `https://api-phase1-sepia.vercel.app/api/v1/ipo/details/filter?concise=true`, // replace sme url
+    {
+      method: 'POST',
+      headers: {
+        Authorization: 'edb6f4ab-999d-4901-adc3-3e3376b7918b',
+      },
+    },
+  )
+
+  console.log(smeDataResponse)
 
   // const mainDataResponse = await fetch(
   //   `https://api.ipocircle.com/api/v0/ipo/details/filter?concise=true`, // replace main url
@@ -24,7 +26,7 @@ export async function IpoData() {
   //   },
   // )
 
-  // const smeData = await sanitizeData(smeDataResponse)
+  const smeData = await sanitizeData(smeDataResponse)
   // const mainData = await sanitizeData(mainDataResponse)
 
   return (
