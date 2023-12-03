@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function FeatureDesc() {
   return (
     <div className="w-[100%] lg:w-[40%]">

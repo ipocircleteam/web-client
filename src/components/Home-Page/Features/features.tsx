@@ -1,11 +1,10 @@
-import React from 'react'
 import Image from 'next/image'
 import { Dashboard } from '../../../../public/images'
 import FeatureDesc from './feature-desc'
 
 export default function Features() {
   return (
-    <div className="my-[20px] mt-[2rem] lg:mt-[5rem] w-[80vw] mx-auto mb-[110px]">
+    <div className="my-[20px] mt-[2rem] lg:mt-[5rem] w-[80%] mb-[110px] container mx-auto max-w-9xl">
       <div className="text-center text-primary font-bold leading-tight text-[2rem] lg:mb-[50px]">
         <h1>Why you should trust us?</h1>
       </div>

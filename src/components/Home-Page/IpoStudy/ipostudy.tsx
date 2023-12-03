@@ -1,14 +1,12 @@
-'use client'
-
-import React from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import { Study } from '../../../../public/vectors'
 
 export default function IpoStudy() {
   return (
     <section
-      className="md:mt-[0px] py-[0px] w-[90vw] mx-auto flex flex-col mdlg:flex-row 
-    justify-center items-center p-4 px-6"
+      className="md:mt-[0px] py-[0px] w-[90%] flex flex-col mdlg:flex-row 
+    justify-center items-center p-4 px-6 container mx-auto max-w-9xl"
     >
       <div className="w-[95%] mdlg:w-[45%] hidden md:block">
         <div className="w-[100%] mdlg:w-[70%]">
@@ -24,9 +22,9 @@ export default function IpoStudy() {
           your comprehension of IPOs (Initial Public Offerings) and primary
           markets.
         </p>
-        <a href="" className="text-primary hover:text-black mt-[20px]">
+        <Link href="" className="text-primary hover:text-black mt-[20px]">
           Explore for free
-        </a>
+        </Link>
       </div>
 
       <div className="w-[95%] mdlg:w-[45%] block md:hidden">

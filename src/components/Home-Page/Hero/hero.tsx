@@ -1,22 +1,16 @@
-'use client'
-
-import React from 'react'
-import CTAbutton from '../../Buttons/cta-btn'
-import LargeCTAbutton from '../../Buttons/large-cta-btn'
-
 export default function Hero() {
   return (
-    <div className="mt-[100px] md:my-[50px] md:mt-[8rem] md:mb-0 text-center ">
-      <span className="flex justify-center items-center w-[85vw] sm:w-[95vw] mx-auto">
+    <div className="mt-[100px] md:my-[50px] md:mt-[5rem] md:mb-0 text-center container mx-auto max-w-9xl">
+      <div className="flex justify-center items-center w-[85%] sm:w-[95%] mx-auto">
         <h1 className="text-[2rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[1] ">
           <label className="text-primary">Unlock </label>
           <label className="text-secondary">Your IPO Advantage</label>
         </h1>
-      </span>
+      </div>
 
       <p
         className="my-4 md:my-2 text-[1rem] md:text-[1.5rem] leading-tight text- 
-      w-[90vw] sm:w-[95vw] mx-auto"
+      w-[90%] sm:w-[95%] mx-auto"
       >
         Uniting Tools, Data, and Research at your fingertips
       </p>

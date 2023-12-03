@@ -2,6 +2,8 @@ import './globals.css'
 import { Raleway } from 'next/font/google'
 import type { Metadata } from 'next'
 import React from 'react'
+import Menu from '@/components/Menu/menu'
+import Footer from '@/components/Footer/footer'
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -18,12 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1"
-        />
+        <link rel="icon" type="image/png" href="../../public/logo/logo5.png" />
       </head>
-      <body className={raleway.className}>{children}</body>
+      <body className={raleway.className}>
+        <Menu />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

@@ -1,16 +1,15 @@
-'use client'
-
-import React from 'react'
-import useWindowWidth from '@/hooks/useWindowWidth'
 import LargeMenu from './large-menu'
 import SmallMenu from './small.menu'
 
 export default function Menu() {
-  const width = useWindowWidth()
-
   return (
-    <div className="fixed top-0 z-50 bg-white">
-      {width && width > 800 ? <LargeMenu /> : <SmallMenu />}
+    <div className="top-0 z-50 bg-white w-[100vw] container mx-auto max-w-9l">
+      <div className="hidden lg:block">
+        <LargeMenu />
+      </div>
+      <div className="block lg:hidden">
+        <SmallMenu />
+      </div>
     </div>
   )
 }
