@@ -8,7 +8,6 @@ export default async function sanitizeData(data: any, length: number) {
       const closeDate = new Date(dataObject[i].closing_date)
       const currentDate = new Date()
       var status
-      console.log(dataObject[1])
 
       if (
         dataObject[i].opening_date === null &&
