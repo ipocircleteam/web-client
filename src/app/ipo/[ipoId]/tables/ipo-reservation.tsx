@@ -1,11 +1,10 @@
-import React from 'react'
 import { IpoReservationType } from '../../data.types'
 
 export default function IpoReservation(props: { data: IpoReservationType }) {
   return (
     <table
       id="ipoReservation"
-      className="w-[100%] md:w-[80%] mt-[20px] mx-auto border text-slate-600 border-primary"
+      className="w-[95%] lg:w-[50%] mt-[20px] mx-auto border text-slate-600 border-primary"
     >
       <tr className="border">
         <td className="px-[10px] border-r">QIB Shares Offerred</td>

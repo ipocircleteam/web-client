@@ -1,11 +1,10 @@
-import React from 'react'
 import { IpoDetailsType } from '../../data.types'
 
 export default function IpoDetails(props: { data: IpoDetailsType }) {
   return (
     <table
       id="ipoDetails"
-      className="w-[100%] md:w-[50%] mx-auto mt-[20px] border text-slate-600 font-normal border-primary"
+      className="w-[95%] lg:w-[50%] mx-auto mt-[20px] border text-slate-600 font-normal border-primary"
     >
       <tr className="border">
         <td className="px-[10px] border">IPO Date</td>

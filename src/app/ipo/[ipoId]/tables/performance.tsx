@@ -1,4 +1,3 @@
-import React from 'react'
 import { PerformanceIndicatorsType } from '../../data.types'
 
 export default function PerformanceIndicators(props: {
@@ -7,7 +6,7 @@ export default function PerformanceIndicators(props: {
   return (
     <table
       id="performanceIndicators"
-      className="w-[100%] md:w-[40%] mt-[20px] mx-auto border text-slate-600 border-primary"
+      className="w-[95%] lg:w-[40%] mt-[20px] mx-auto border text-slate-600 border-primary"
     >
       <tr className="border">
         <td className="px-[10px] border-r">Market Cap (EG)</td>

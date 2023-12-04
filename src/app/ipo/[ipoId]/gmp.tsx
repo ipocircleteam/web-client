@@ -1,5 +1,3 @@
-import NameDivider from '@/components/Global/name-divider'
-import React from 'react'
 import {
   LineChart,
   Line,

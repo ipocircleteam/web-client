@@ -1,11 +1,10 @@
-import React from 'react'
 import { LotSizeType } from '../../data.types'
 
 export default function LotSize(props: { data: LotSizeType }) {
   return (
     <table
       id="ipoLotSize"
-      className="w-[100%] md:w-[50%] mt-[20px] mx-auto border text-slate-600 border-primary"
+      className="w-[95%] lg:w-[50%] mt-[20px] mx-auto border text-slate-600 border-primary"
     >
       <tr className="border">
         <td className="px-[10px] border-r">Retail (min)</td>

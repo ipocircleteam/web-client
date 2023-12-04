@@ -1,10 +1,9 @@
-import React from 'react'
 import { AnchorDetailsType } from '../../data.types'
 
 export default function AnchorDetails(props: { data: AnchorDetailsType }) {
   return (
     <div id="anchorDetails">
-      <table className="w-[80%] mx-auto border text-slate-600 ">
+      <table className="w-[95%] lg:w-[50%] mx-auto border text-slate-600 mt-[20px]">
         <tr className="border">
           <td className="pl-[10px] border-r">Bid Date</td>
           <td className="pl-[10px]">{props.data.bid_date}</td>

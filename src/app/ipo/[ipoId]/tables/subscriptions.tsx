@@ -1,10 +1,9 @@
-import React from 'react'
 import { SubscriptionsType } from '../../data.types'
 
 export default function Subscriptions(props: { data: SubscriptionsType }) {
   return (
     <div id="subscriptionsTable">
-      <table className="w-[100%] md:w-[40%] mt-[20px] mx-auto border text-slate-600 ">
+      <table className="w-[95%] lg:w-[40%] mt-[20px] mx-auto border text-slate-600 ">
         <tr className="border">
           <td className="pl-[10px] border-r">QIB</td>
           <td className="pl-[10px]">{props.data.qib}</td>
