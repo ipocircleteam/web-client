@@ -8,6 +8,9 @@ export default async function IpoDatabase() {
     `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=sme&start=0&end=19`, // replace sme url
     {
       method: 'GET',
+      headers: {
+        'Content-Type': 'text/html',
+      },
     },
   )
   const sme = await smeDataResponse.json()
@@ -16,6 +19,9 @@ export default async function IpoDatabase() {
     `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=eq&start=0&end=19`, // replace main url
     {
       method: 'GET',
+      headers: {
+        'Content-Type': 'text/html',
+      },
     },
   )
   const main = await mainDataResponse.json()

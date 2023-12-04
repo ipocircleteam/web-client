@@ -11,7 +11,7 @@ export async function IpoData() {
     {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/html',
       },
     },
   )
@@ -21,6 +21,9 @@ export async function IpoData() {
     `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=eq&count=7`, // replace main url
     {
       method: 'GET',
+      headers: {
+        'Content-Type': 'text/html',
+      },
     },
   )
   const main = await mainDataResponse.json()

@@ -10,7 +10,7 @@ export default async function IpoTracker() {
     {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/html',
       },
     },
   )
