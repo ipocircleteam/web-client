@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="mt-[100px] md:my-[50px] md:mt-[5rem] md:mb-0 text-center container mx-auto max-w-9xl">
+    <div className="mt-[45px] md:my-[50px] md:mt-[5rem] md:mb-0 text-center container mx-auto max-w-9xl">
       <div className="flex justify-center items-center w-[85%] sm:w-[95%] mx-auto">
         <h1 className="text-[2rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[1] ">
           <label className="text-primary">Unlock </label>
