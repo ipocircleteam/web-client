@@ -25,7 +25,7 @@ export default function IPODetailsPage() {
         const formattedData = await sanitizeIpoDetailsData(res.data)
         setData(formattedData)
       })
-  }, [])
+  }, [ipoId])
 
   return (
     <>
