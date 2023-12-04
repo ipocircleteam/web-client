@@ -1,0 +1,9 @@
+{
+  "/page": "/",
+  "/algorithm/page": "/algorithm",
+  "/gmp/page": "/gmp",
+  "/ipo/page": "/ipo",
+  "/ipotracker/page": "/ipotracker",
+  "/marketanalyser/page": "/marketanalyser",
+  "/ipo/[ipoId]/page": "/ipo/[ipoId]"
+}

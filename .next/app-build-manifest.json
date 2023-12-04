@@ -1,0 +1,94 @@
+{
+  "pages": {
+    "/page": [
+      "static/chunks/webpack-1d04c49ab4aa557b.js",
+      "static/chunks/fd9d1056-5a12cbcfe39dc09a.js",
+      "static/chunks/596-006437c2c5200f77.js",
+      "static/chunks/main-app-8ef8a30c2b3d91ee.js",
+      "static/chunks/7ce798d6-e16e1adcc736568e.js",
+      "static/chunks/986-6d13a0977199ac07.js",
+      "static/chunks/396-523f144c44630d2e.js",
+      "static/chunks/app/page-fec8c18b8fe75b74.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-1d04c49ab4aa557b.js",
+      "static/chunks/fd9d1056-5a12cbcfe39dc09a.js",
+      "static/chunks/596-006437c2c5200f77.js",
+      "static/chunks/main-app-8ef8a30c2b3d91ee.js",
+      "static/chunks/7ce798d6-e16e1adcc736568e.js",
+      "static/chunks/986-6d13a0977199ac07.js",
+      "static/chunks/396-523f144c44630d2e.js",
+      "static/css/53c62cc12c589a81.css",
+      "static/chunks/app/layout-6c585a2ab7f64651.js"
+    ],
+    "/algorithm/page": [
+      "static/chunks/webpack-1d04c49ab4aa557b.js",
+      "static/chunks/fd9d1056-5a12cbcfe39dc09a.js",
+      "static/chunks/596-006437c2c5200f77.js",
+      "static/chunks/main-app-8ef8a30c2b3d91ee.js",
+      "static/chunks/263-49a9b04960f3e208.js",
+      "static/chunks/638-bfeb01c05d0f2c3e.js",
+      "static/chunks/239-a8868ae304e8826f.js",
+      "static/chunks/app/algorithm/page-ee98f39cf8ccd431.js"
+    ],
+    "/gmp/page": [
+      "static/chunks/webpack-1d04c49ab4aa557b.js",
+      "static/chunks/fd9d1056-5a12cbcfe39dc09a.js",
+      "static/chunks/596-006437c2c5200f77.js",
+      "static/chunks/main-app-8ef8a30c2b3d91ee.js",
+      "static/chunks/app/gmp/page-be7a6e980524920d.js"
+    ],
+    "/ipo/page": [
+      "static/chunks/webpack-1d04c49ab4aa557b.js",
+      "static/chunks/fd9d1056-5a12cbcfe39dc09a.js",
+      "static/chunks/596-006437c2c5200f77.js",
+      "static/chunks/main-app-8ef8a30c2b3d91ee.js",
+      "static/chunks/7ce798d6-e16e1adcc736568e.js",
+      "static/chunks/aaea2bcf-272d3b96e9d3d071.js",
+      "static/chunks/986-6d13a0977199ac07.js",
+      "static/chunks/396-523f144c44630d2e.js",
+      "static/chunks/263-49a9b04960f3e208.js",
+      "static/chunks/381-be8294059f8d853a.js",
+      "static/css/431944509084d071.css",
+      "static/chunks/app/ipo/page-15aeb0b0d205b531.js"
+    ],
+    "/ipotracker/page": [
+      "static/chunks/webpack-1d04c49ab4aa557b.js",
+      "static/chunks/fd9d1056-5a12cbcfe39dc09a.js",
+      "static/chunks/596-006437c2c5200f77.js",
+      "static/chunks/main-app-8ef8a30c2b3d91ee.js",
+      "static/chunks/7ce798d6-e16e1adcc736568e.js",
+      "static/chunks/986-6d13a0977199ac07.js",
+      "static/chunks/169-2150a8645b10b3a6.js",
+      "static/chunks/app/ipotracker/page-1a68146abcb1bf58.js"
+    ],
+    "/marketanalyser/page": [
+      "static/chunks/webpack-1d04c49ab4aa557b.js",
+      "static/chunks/fd9d1056-5a12cbcfe39dc09a.js",
+      "static/chunks/596-006437c2c5200f77.js",
+      "static/chunks/main-app-8ef8a30c2b3d91ee.js",
+      "static/chunks/app/marketanalyser/page-41933e2eade45d3d.js"
+    ],
+    "/ipo/[ipoId]/page": [
+      "static/chunks/webpack-1d04c49ab4aa557b.js",
+      "static/chunks/fd9d1056-5a12cbcfe39dc09a.js",
+      "static/chunks/596-006437c2c5200f77.js",
+      "static/chunks/main-app-8ef8a30c2b3d91ee.js",
+      "static/chunks/7ce798d6-e16e1adcc736568e.js",
+      "static/chunks/aaea2bcf-272d3b96e9d3d071.js",
+      "static/chunks/986-6d13a0977199ac07.js",
+      "static/chunks/263-49a9b04960f3e208.js",
+      "static/chunks/638-bfeb01c05d0f2c3e.js",
+      "static/chunks/381-be8294059f8d853a.js",
+      "static/chunks/767-ad93e2c012109de5.js",
+      "static/chunks/app/ipo/[ipoId]/page-f3b7c25b4d2f5447.js"
+    ],
+    "/ipo/[ipoId]/layout": [
+      "static/chunks/webpack-1d04c49ab4aa557b.js",
+      "static/chunks/fd9d1056-5a12cbcfe39dc09a.js",
+      "static/chunks/596-006437c2c5200f77.js",
+      "static/chunks/main-app-8ef8a30c2b3d91ee.js",
+      "static/chunks/app/ipo/[ipoId]/layout-e520313bb7118f23.js"
+    ]
+  }
+}
