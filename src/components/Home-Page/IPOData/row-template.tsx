@@ -44,7 +44,7 @@ export default function TableRow(props: {
       <td title="See details" className="w-[30%] text-left cursor-pointer">
         <div className="m-0 p-0 flex justify-start items-center">
           <a className="w-[100%]" href={'/ipo/' + props.data.ipoID}>
-            {props.data.name.substring(0, 12) + ''}
+            {props.data.name + ''}
           </a>
           {Number(props.data.enddate.substring(0, 2)) ===
           new Date().getDate() ? (

@@ -13,7 +13,7 @@ export default async function Home() {
       <HomeBanner />
       <Products />
       <Features />
-      <IpoStudy />
+      {/* <IpoStudy /> */}
     </>
   )
 }

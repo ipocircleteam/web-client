@@ -5,7 +5,7 @@ import { Instagram, Linkedin, Twitter } from '../../../public/icons'
 
 export default function SocialLinks() {
   return (
-    <div className="flex justify-start items-center py-1">
+    <div className="flex justify-start items-center">
       <Link
         title="Linkedin"
         href="/linkedin"
