@@ -8,7 +8,6 @@ import Content from './content'
 import sanitizeIpoDetailsData from '@/utils/sanitizeDetailsData'
 import Navigation from './navigation'
 import { InitialDetailsData } from '../initial.data'
-import { useRouter } from 'next/router'
 import axios from 'axios'
 import { usePathname } from 'next/navigation'
 

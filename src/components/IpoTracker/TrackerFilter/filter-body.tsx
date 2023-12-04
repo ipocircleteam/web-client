@@ -47,7 +47,7 @@ export default function FilterBody(props: {
           </select>
         </div>
 
-        <div className="flex justify-between items-center w-[100%] mx-auto my-2">
+        {/* <div className="flex justify-between items-center w-[100%] mx-auto my-2">
           <label className=" h-[40px] flex items-center text-[1.1rem]">
             Year
           </label>
@@ -64,7 +64,7 @@ export default function FilterBody(props: {
               })
             }}
           />
-        </div>
+        </div> */}
 
         <div className="flex justify-between items-center w-[100%] mx-auto my-2">
           <label className=" h-[40px] flex items-center text-[1.1rem]">
@@ -84,7 +84,7 @@ export default function FilterBody(props: {
           />
         </div>
 
-        <div className="w-[100%] mx-auto my-[20px] border-t-2 px-1">
+        {/* <div className="w-[100%] mx-auto my-[20px] border-t-2 px-1">
           <label className="mt-[10px] h-[40px] flex items-center text-[1rem]">
             Adjust parameters for comparative results
           </label>
@@ -138,7 +138,7 @@ export default function FilterBody(props: {
             <option>Listing Price</option>
             <option>Issue Price</option>
           </select>
-        </div>
+        </div> */}
       </div>
       <FilterFooter
         applyFlter={() => {

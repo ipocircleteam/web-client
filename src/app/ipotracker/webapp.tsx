@@ -36,12 +36,12 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
 
   const accessPriceType = (
     name: String,
-  ): 'listing' | 'current' | 'dayend' | 'issue' => {
-    if (name === 'Listing Price') return 'listing'
-    else if (name === 'Current Price') return 'current'
-    else if (name === 'Dayend Price') return 'dayend'
+  ): 'listing_price' | 'current_price' | 'dayend_price' | 'issue_price' => {
+    if (name === 'Listing Price') return 'listing_price'
+    else if (name === 'Current Price') return 'current_price'
+    else if (name === 'Dayend Price') return 'dayend_price'
     else name === 'Issue Price'
-    return 'issue'
+    return 'issue_price'
   }
 
   const getFilteredData = async (
@@ -63,7 +63,7 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
         }
 
         if (Number(price) !== 0 && Number(price) !== undefined) {
-          listingCondition = item.listing === Number(price)
+          listingCondition = item.listing_price === Number(price)
         }
 
         if (Number(year) !== 0 && Number(price) !== undefined) {
@@ -92,10 +92,16 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
       const compareData = filteredData.filter((item) => {
         let compareCondition = true
 
-        let param1: 'listing' | 'current' | 'dayend' | 'issue' =
-          accessPriceType(p1)
-        let param2: 'listing' | 'current' | 'dayend' | 'issue' =
-          accessPriceType(p2)
+        let param1:
+          | 'listing_price'
+          | 'current_price'
+          | 'dayend_price'
+          | 'issue_price' = accessPriceType(p1)
+        let param2:
+          | 'listing_price'
+          | 'current_price'
+          | 'dayend_price'
+          | 'issue_price' = accessPriceType(p2)
         console.log(Number(item[param1]) + ',' + Number(item[param2]))
 
         if (op === 'More than') {
@@ -134,7 +140,7 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
 
   const searchCompany = (name: string) => {
     const filteredData = trackerData.filter((item) => {
-      return item.company.includes(String(name))
+      return item.company_name.includes(String(name))
     })
 
     setTableData(filteredData)
@@ -147,7 +153,7 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
         ' overflow-hidden container mx-auto max-w-9xl w-[100vw]'
       }
     >
-      <div className="bg-primary p-3 text-white h-[400px] flex justify-center items-center">
+      {/* <div className="bg-primary p-3 text-white h-[300px] flex justify-center items-center">
         <span className="text-center">
           <h1 className="font-bold text-[2.5rem] md:text-[3rem]">
             IPO Tracker
@@ -174,7 +180,7 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
             </button>
           </span>
         </span>
-      </div>
+      </div> */}
       <TrackerMenu darkMode={isDark} toggleMode={toggleMode} />
       <section className="w-[100%] md:w-[95%] mx-auto overflow-hidden block lg:hidden">
         <TrackerDetails
@@ -182,11 +188,12 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
           toggleFilters={toggleFilters}
           filter={filter}
           search={searchCompany}
+          trackerData={tableData}
         />
       </section>
-      <label className="mdlg:hidden">Swipe to view complete table</label>
+      {/* <label className="mdlg:hidden">Swipe to view complete table</label> */}
       <div className="flex justify-around items-start flex-wrap mx-[auto] w-[100%] md:w-[95%]">
-        <section className="w-[100%] lg:w-[65%] overflow-y-hidden overflow-x-scroll">
+        <section className="w-[100%] lg:w-[65%] overflow-y-hidden overflow-x-hidden">
           <TrackerTable darkMode={isDark} trackerData={tableData} />
         </section>
         <section className="w-[30%] overflow-hidden hidden lg:block">
@@ -195,6 +202,7 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
             toggleFilters={toggleFilters}
             filter={filter}
             search={searchCompany}
+            trackerData={tableData}
           />
         </section>
       </div>
