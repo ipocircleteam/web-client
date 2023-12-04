@@ -1,36 +1,57 @@
 import Link from 'next/link'
 import DataContainer from './data-container'
 import sanitizeData from '@/utils/prepareData'
+import axios from 'axios'
 
 import dotenv from 'dotenv'
 dotenv.config()
 
 export async function IpoData() {
-  const smeDataResponse = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=sme&count=7`, // replace sme url
-    {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'text/html',
-      },
-    },
-  )
-  const sme = await smeDataResponse.json()
+  var sme
+  // const smeDataResponse = await fetch(
+  //   `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=sme&count=7`, // replace sme url
+  //   {
+  //     method: 'GET',
+  //     headers: {
+  //       'Content-Type':
+  //         'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+  //     },
+  //   },
+  // )
+  // console.log(smeDataResponse)
+  var main
+  await axios
+    .get(
+      `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=sme&count=7`,
+    )
+    .then(async (res) => {
+      sme = res.data.data
+    })
 
-  const mainDataResponse = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=eq&count=7`, // replace main url
-    {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'text/html',
-      },
-    },
-  )
-  const main = await mainDataResponse.json()
+  // const sme = await smeDataResponse.json()
+
+  // const mainDataResponse = await fetch(
+  //   `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=eq&count=7`, // replace main url
+  //   {
+  //     method: 'GET',
+  //     headers: {
+  //       'Content-Type': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+  //     },
+  //   },
+  // )
+  // const main = await mainDataResponse.json()
+  var main
+  await axios
+    .get(
+      `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=eq&count=7`,
+    )
+    .then(async (res) => {
+      main = res.data.data
+    })
 
   // formatting response
-  const smeData = await sanitizeData(sme.data, 7)
-  const mainData = await sanitizeData(main.data, 7)
+  const smeData = await sanitizeData(sme, 7)
+  const mainData = await sanitizeData(main, 7)
 
   return (
     <div className="mt-[3rem] text-center container mx-auto max-w-9xl ">

@@ -1,9 +1,3 @@
 {
-  "/page": "app/page.js",
-  "/algorithm/page": "app/algorithm/page.js",
-  "/gmp/page": "app/gmp/page.js",
-  "/ipo/page": "app/ipo/page.js",
-  "/ipotracker/page": "app/ipotracker/page.js",
-  "/marketanalyser/page": "app/marketanalyser/page.js",
-  "/ipo/[ipoId]/page": "app/ipo/[ipoId]/page.js"
+  "/page": "app/page.js"
 }

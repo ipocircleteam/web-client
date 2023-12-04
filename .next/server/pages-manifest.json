@@ -1,12 +1,5 @@
 {
-  "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
-  "/about": "pages/about.js",
-  "/careers": "pages/careers.js",
-  "/contact": "pages/contact.js",
-  "/help": "pages/help.js",
-  "/legal": "pages/legal.js",
-  "/privacy": "pages/privacy.js",
-  "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js"
 }
