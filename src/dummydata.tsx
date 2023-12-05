@@ -151,9 +151,9 @@ export const ProductsData: ProductDataType[] = [
     desc: 'Know past and current_price performing IPOs',
   },
   {
-    title: 'Market Analyser',
-    link: '/marketanalyser',
-    desc: 'Sector based primary market ananlysis',
+    title: 'GMP Analyser',
+    link: '/gmp',
+    desc: 'Analytics of upcoming and current IPOs',
   },
   {
     title: 'Ask Jarvis',

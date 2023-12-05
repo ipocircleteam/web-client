@@ -72,11 +72,9 @@ export default function Consultation() {
       <div className="mx-auto container max-w-9xl">
         <div className="bg-primary p-3 text-white h-[400px] flex justify-center items-center">
           <span className="text-center">
-            <h1 className="font-bold text-[2.5rem] md:text-[3rem]">
-              AlgorithmName
-            </h1>
+            <h1 className="font-bold text-[2.5rem] md:text-[3rem]">JARVIS</h1>
             <p className="font-semibold text-[1.2rem] md:text-[1.5rem]">
-              This is the small description about aur algorithm
+              Algorithm to guide you in your IPO investments
             </p>
             <span>
               <button
@@ -103,7 +101,8 @@ export default function Consultation() {
           id="algoTool"
           className="text-center flex flex-col justify-center items-center mt-[30px]"
         >
-          <label className="text-primary text-[1.2rem] font-bold mb-[20px]">
+          <h1 className="text-[25px] my-[20px]">COMING SOON</h1>
+          {/* <label className="text-primary text-[1.2rem] font-bold mb-[20px]">
             Please enter following details
           </label>
           <div className="flex flex-col md:flex-row justify-between items-center w-[90%] md:w-[80%]">
@@ -164,11 +163,11 @@ export default function Consultation() {
             className="border bg-primary hover:bg-blue-500 text-white font-bold w-[100px] p-2 rounded-lg my-[20px]"
           >
             RUN
-          </button>
+          </button> */}
         </div>
 
-        <Result result={result} loading={loading} />
-        <HelpGuide />
+        {/* <Result result={result} loading={loading} />
+        <HelpGuide /> */}
       </div>
     </>
   )
