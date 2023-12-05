@@ -11,9 +11,7 @@ export default function RowTemplate(props: RowTemplateType) {
         }
       >
         {/* <td className=' overflow-x-clip '>{props.data.id}</td> */}
-        <td className="overflow-x-clip">
-          {props.data.company_name?.substring(0, 19)}
-        </td>
+        <td className="overflow-x-clip">{props.data.company_name}</td>
         <td className="overflow-x-clip">{props.data.issue_price}</td>
         <td className="overflow-x-clip">{props.data.listing_price}</td>
         <td className="overflow-x-clip">{props.data.dayend_price}</td>

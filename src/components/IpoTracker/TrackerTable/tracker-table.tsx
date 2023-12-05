@@ -12,26 +12,26 @@ export default function TrackerTable(props: {
 }) {
   const theme = props.darkMode ? 'text-[#FFFFFF]' : 'text-slate-600'
   const [start, setStart] = useState(0)
-  const [end, setEnd] = useState(30)
+  const [end, setEnd] = useState(20)
   const viewData = props.trackerData.slice(start, end)
 
   const handlePrevButton = () => {
-    if (start - 10 >= 0) {
-      setStart(start - 10)
-      setEnd(end - 10)
+    if (start - 20 >= 0) {
+      setStart(start - 20)
+      setEnd(end - 20)
     } else {
       setStart(0)
-      setEnd(10)
+      setEnd(20)
     }
   }
 
   const handleNextButton = () => {
-    if (end + 10 <= props.trackerData.length) {
-      setStart(start + 10)
-      setEnd(end + 10)
+    if (end + 20 <= props.trackerData.length) {
+      setStart(start + 20)
+      setEnd(end + 20)
     } else {
       setEnd(props.trackerData.length)
-      setStart(props.trackerData.length - 10)
+      setStart(props.trackerData.length - 20)
     }
   }
 
@@ -50,9 +50,26 @@ export default function TrackerTable(props: {
       <div
         className={
           (props.darkMode ? 'bg-panelDark' : 'bg-white') +
-          ' mx-auto w-[100%] lg:w-[95%] flex justify-start lg:justify-center items-center flex-wrap h-[auto] rounded-lg p-1'
+          ' mx-auto w-[100%] lg:w-[95%] flex justify-start  lg:justify-center items-center flex-wrap h-[auto] rounded-lg p-1'
         }
       >
+        <div className="mx-auto flex justify-start lg:justify-center items-center py-[10px] border-t border-b w-[100%]">
+          <button
+            onClick={handlePrevButton}
+            className="text-primary cursor-pointer border p-1 px-2"
+          >
+            Prev
+          </button>
+          <label className="mx-2">
+            ({start} - {end} / {props.trackerData.length})
+          </label>
+          <button
+            onClick={handleNextButton}
+            className="text-primary cursor-pointer border p-1 px-2"
+          >
+            Next
+          </button>
+        </div>
         <table className="w-[100%] mx-auto">
           <TableHead darkMode={props.darkMode} />
 
@@ -66,24 +83,6 @@ export default function TrackerTable(props: {
               />
             )
           })}
-
-          {/* <div className="mx-auto flex justify-start lg:justify-center my-[20px]">
-            <button
-              onClick={handlePrevButton}
-              className="text-primary cursor-pointer underline"
-            >
-              Prev
-            </button>
-            <label className="mx-2">
-              ({start} - {end} / {props.trackerData.length})
-            </label>
-            <button
-              onClick={handleNextButton}
-              className="text-primary cursor-pointer underline"
-            >
-              Next
-            </button>
-          </div> */}
         </table>
       </div>
       {/* <GraphPanel
