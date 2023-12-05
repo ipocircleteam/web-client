@@ -10,8 +10,8 @@ export default async function sanitizeIpoDetailsData(content: any) {
       description: content.data[0].description || '',
     },
     IpoDetailsData: {
-      ipo_date: content.data[0].ipo_date || '',
-      face_value: content.data[0].facevalue || 0,
+      ipo_date: content.data[0].listing_date || '',
+      face_value: content.data[0].face_value || 0,
       price_band: content.data[0].priceband || 0,
       lot_size_retails: content.data[0].shares_in_lot || 0,
       total_size: content.data[0].total_issue || 0,
@@ -24,10 +24,10 @@ export default async function sanitizeIpoDetailsData(content: any) {
       open_date: content.data[0].opening_date || '---',
       close_date: content.data[0].closing_date || '---',
       allotment_date: content.data[0].allotment_date || '',
-      initiation_of_refunds: content.data[0].initiation_of_refunds || '',
+      initiation_of_refunds: content.data[0].init_refunds || '',
       credit_of: content.data[0].credit_of || '',
       listing_date: content.data[0].listing_date || '---',
-      cutoff: content.data[0].cut_off_mandate || '',
+      cutoff: content.data[0].cutoffmandate || '',
       time_upf: content.data[0].time_upf || '',
     },
     LotSizeData: {
@@ -39,7 +39,7 @@ export default async function sanitizeIpoDetailsData(content: any) {
       max_bhni: content.data[0].max_bhni || 0,
     },
     PerformanceData: {
-      market_cap: content.data[0].marketcap || 0,
+      market_cap: content.data[0].market_cap || 0,
       roe: content.data[0].roe || 0,
       roce: content.data[0].roce || 0,
       debt: content.data[0].debt || 0,
@@ -47,6 +47,7 @@ export default async function sanitizeIpoDetailsData(content: any) {
       ronw: content.data[0].ronw || 0,
     },
     CompanyFinancialsData: {
+      // completely missing
       period1: {
         date: content.data[0].period || '',
         assets: content.data[0].assets || 0,
@@ -101,8 +102,8 @@ export default async function sanitizeIpoDetailsData(content: any) {
     },
     DataPanelData: {
       IpoDetailsData: {
-        ipo_date: content.data[0].ipo_date || '',
-        face_value: content.data[0].facevalue || 0,
+        ipo_date: content.data[0].listing_date || '',
+        face_value: content.data[0].face_value || 0,
         price_band: content.data[0].priceband || 0,
         lot_size_retails: content.data[0].shares_in_lot || 0,
         total_size: content.data[0].total_issue || 0,
@@ -115,10 +116,10 @@ export default async function sanitizeIpoDetailsData(content: any) {
         open_date: content.data[0].opening_date || '---',
         close_date: content.data[0].closing_date || '---',
         allotment_date: content.data[0].allotment_date || '---',
-        initiation_of_refunds: content.data[0].initiation_of_refunds || '',
+        initiation_of_refunds: content.data[0].init_refunds || '',
         credit_of: content.data[0].credit_of || '',
         listing_date: content.data[0].listing_date || '---',
-        cutoff: content.data[0].cut_off || '',
+        cutoff: content.data[0].cutoffmandate || '',
         time_upf: content.data[0].time_upf || '',
       },
       LotSizeData: {
@@ -130,7 +131,7 @@ export default async function sanitizeIpoDetailsData(content: any) {
         max_bhni: content.data[0].max_bhni || 0,
       },
       PerformanceData: {
-        market_cap: content.data[0].marketcap || 0,
+        market_cap: content.data[0].market_cap || 0,
         roe: content.data[0].roe || 0,
         roce: content.data[0].roce || 0,
         debt: content.data[0].debt || 0,
@@ -193,10 +194,10 @@ export default async function sanitizeIpoDetailsData(content: any) {
     },
     AnchorDetailsData: {
       bid_date: content.data[0].anchor_bid_date || '',
-      shares_offerred: content.data[0].anchor_shares_offerres || 0,
-      portion_size: content.data[0].portion || 0,
-      anchorLockIn_50per_30days: content.data[0].anchor_lockinhalf || 0,
-      anchorLockIn_50per_90days: content.data[0].anchor_locknrest || 0,
+      shares_offerred: content.data[0].anchor_shares_offerred || 0,
+      portion_size: content.data[0].anchor_portion || 0,
+      anchorLockIn_50per_30days: content.data[0].anchor_lockin_half || 0,
+      anchorLockIn_50per_90days: content.data[0].anchor_lockin_rest || 0,
     },
     IppoReservationData: {
       qib_shares_offerred: 0,
@@ -204,12 +205,11 @@ export default async function sanitizeIpoDetailsData(content: any) {
       retail_shares_offerred: 0,
     },
     PromoterHoldingsData: {
-      preissue_share_holdings: content.data[0].promoter_holdings_preissue || 0,
-      postissue_share_holdings:
-        content.data[0].promoter_holdings_postissue || 0,
+      preissue_share_holdings: content.data[0].promoter_holding_pre || 0,
+      postissue_share_holdings: content.data[0].promoter_holding_post || 0,
     },
     ObjectIssueData: {
-      text: '',
+      text: content.data[0].objectIssueData,
     },
     CompanyContactData: {
       name: content.data[0].name || '',
@@ -232,20 +232,7 @@ export default async function sanitizeIpoDetailsData(content: any) {
     ReviewData: {
       review: '',
     },
-    GmpData: [
-      {
-        instant: 'T1',
-        gmp: 2400,
-      },
-      {
-        instant: 'T2',
-        gmp: 1398,
-      },
-      {
-        instant: 'T3',
-        gmp: 9800,
-      },
-    ],
+    GmpData: content.data[0].gmpData || [],
   }
 
   return formattedData

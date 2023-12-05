@@ -26,7 +26,7 @@ export default function FilterBody(props: {
     <>
       <div className="w-[100%] flex flex-col justify-center items-start p-2 px-4">
         <div className="flex justify-between items-center w-[100%] mx-auto my-2">
-          <label className=" h-[40px] flex items-center text-[1.1rem]">
+          <label className=" h-[40px] flex items-center text-[15px]">
             Sector
           </label>
           <select
@@ -40,10 +40,10 @@ export default function FilterBody(props: {
             className="w-[65%] h-[40px] p-1 outline-none border border-gray-600 rounded-md"
           >
             <option>All</option>
-            <option>Pharma</option>
-            <option>IT</option>
-            <option>Edtech</option>
-            <option>Fintech</option>
+            <option>Pharmaceutical</option>
+            <option>Technology</option>
+            <option>Education</option>
+            <option>Finance</option>
           </select>
         </div>
 
@@ -67,8 +67,8 @@ export default function FilterBody(props: {
         </div> */}
 
         <div className="flex justify-between items-center w-[100%] mx-auto my-2">
-          <label className=" h-[40px] flex items-center text-[1.1rem]">
-            Listing Price
+          <label className=" h-[40px] flex items-center text-[15px]">
+            Listing Gain(%)
           </label>
           <input
             className="w-[65%] h-[40px] p-1 outline-none border border-gray-600 rounded-lg"

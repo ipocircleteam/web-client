@@ -4,12 +4,12 @@ import TrackerMenu from '@/components/IpoTracker/TrackerMenu/tracker-menu'
 import TrackerTable from '@/components/IpoTracker/TrackerTable/tracker-table'
 import $ from 'jquery'
 import React, { useState, useEffect } from 'react'
-import { trackerData } from '@/dummydata'
 import { TrackerDataType } from '@/components/IpoTracker/TrackerTable/table.types'
 
 export default function WebApp(props: { data: TrackerDataType[] }) {
   const [isDark, setIsDark] = useState(false)
   const [tableData, setTableData] = useState(props.data)
+  const trackerData: TrackerDataType[] = props.data
 
   const toggleMode = () => {
     setIsDark(!isDark)
@@ -17,31 +17,6 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
 
   const toggleFilters = () => {
     $('#filter').toggleClass('hidden')
-  }
-
-  function scrollToDiv(targetId: string) {
-    const targetElement = document.getElementById(targetId)
-
-    if (targetElement) {
-      const offsetTop = targetElement.offsetTop - 50
-
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth',
-      })
-    } else {
-      console.error(`Element with ID "${targetId}" not found.`)
-    }
-  }
-
-  const accessPriceType = (
-    name: String,
-  ): 'listing_price' | 'current_price' | 'dayend_price' | 'issue_price' => {
-    if (name === 'Listing Price') return 'listing_price'
-    else if (name === 'Current Price') return 'current_price'
-    else if (name === 'Dayend Price') return 'dayend_price'
-    else name === 'Issue Price'
-    return 'issue_price'
   }
 
   const getFilteredData = async (
@@ -76,66 +51,37 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
     }
   }
 
-  const getComparedData = async (
-    filteredData: TrackerDataType[],
-    p1: String,
-    p2: String,
-    op: String,
+  const getComparedData = (
+    filterData: TrackerDataType[],
+    req_listing_gain: number,
   ) => {
-    if (
-      String(p1) === 'Select parameter 1' ||
-      String(p2) === 'Select parameter 2' ||
-      String(op) === 'Select comparator'
-    ) {
-      return filteredData
-    } else {
-      const compareData = filteredData.filter((item) => {
-        let compareCondition = true
-
-        let param1:
-          | 'listing_price'
-          | 'current_price'
-          | 'dayend_price'
-          | 'issue_price' = accessPriceType(p1)
-        let param2:
-          | 'listing_price'
-          | 'current_price'
-          | 'dayend_price'
-          | 'issue_price' = accessPriceType(p2)
-        console.log(Number(item[param1]) + ',' + Number(item[param2]))
-
-        if (op === 'More than') {
-          compareCondition = Number(item[param1]) > Number(item[param2])
-        }
-
-        if (op === 'Less than') {
-          compareCondition = Number(item[param1]) < Number(item[param2])
-        }
-
-        if (op === 'Same as') {
-          compareCondition = Number(item[param1]) === Number(item[param2])
-        }
-
-        return compareCondition
-      })
-
-      return compareData
-    }
+    const comparedData = filterData.filter((item) => {
+      const item_listing_gain =
+        ((item.listing_price - item.current_price) / item.issue_price) * 100
+      return item_listing_gain >= req_listing_gain
+    })
+    return comparedData
   }
 
   const filter = async (
     sector: string,
     year: number,
-    price: number,
+    listing_gain: number,
     p1: String,
     p2: String,
     op: String,
   ) => {
-    const filterData = await getFilteredData(sector, year, price)
-
-    const comparedData = await getComparedData(filterData, p1, p2, op)
-
-    setTableData(comparedData)
+    if (
+      String(sector) === 'All' &&
+      Number(year) === 0 &&
+      Number(listing_gain) === 0
+    ) {
+      setTableData(trackerData)
+    } else {
+      const filterData = await getFilteredData(sector, year, listing_gain)
+      const comparedData = await getComparedData(filterData, listing_gain)
+      setTableData(listing_gain === 0 ? filterData : comparedData)
+    }
   }
 
   const searchCompany = (name: string) => {
