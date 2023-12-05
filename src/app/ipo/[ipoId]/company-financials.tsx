@@ -1,5 +1,3 @@
-import NameDivider from '@/components/Global/name-divider'
-import React from 'react'
 import { CompanyFinancialsType } from '../data.types'
 
 export default function CompanyFinancials(props: {
@@ -8,9 +6,9 @@ export default function CompanyFinancials(props: {
   return (
     <div
       id="companyFinancials"
-      className="overflow-x-scroll overflow-y-hidden w-[800px] mx-auto"
+      className="overflow-x-scroll overflow-y-hidden lg:w-[800px] mx-auto"
     >
-      <table className="w-[100%] md:w-[80%] lg:mt-[20px] mx-auto border text-slate-600 ">
+      <table className="w-[95%] lg:w-[80%] lg:mt-[20px] mx-auto border text-slate-600 ">
         <tr className="border">
           <td className="pl-[10px] border-r">Period Ended</td>
           <td className="pl-[10px] text-center">{props.data.period1.date}</td>

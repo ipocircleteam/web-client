@@ -12,7 +12,7 @@ export default function TrackerTable(props: {
 }) {
   const theme = props.darkMode ? 'text-[#FFFFFF]' : 'text-slate-600'
   const [start, setStart] = useState(0)
-  const [end, setEnd] = useState(10)
+  const [end, setEnd] = useState(30)
   const viewData = props.trackerData.slice(start, end)
 
   const handlePrevButton = () => {
@@ -35,7 +35,9 @@ export default function TrackerTable(props: {
     }
   }
 
-  const getTotalPrice = (type: 'listing' | 'current' | 'dayend' | 'issue') => {
+  const getTotalPrice = (
+    type: 'listing_price' | 'current_price' | 'dayend_price' | 'issue_price',
+  ) => {
     let sum = 0
     props.trackerData.forEach((element) => {
       sum = sum + element[type]
@@ -48,10 +50,10 @@ export default function TrackerTable(props: {
       <div
         className={
           (props.darkMode ? 'bg-panelDark' : 'bg-white') +
-          ' x-auto w-[700px] md:w-[900px] lg:w-[95%] flex justify-center items-center flex-wrap h-[auto] rounded-lg p-1'
+          ' mx-auto w-[100%] lg:w-[95%] flex justify-start lg:justify-center items-center flex-wrap h-[auto] rounded-lg p-1'
         }
       >
-        <table className="w-[100%]">
+        <table className="w-[100%] mx-auto">
           <TableHead darkMode={props.darkMode} />
 
           {viewData.map((item, index) => {
@@ -65,7 +67,7 @@ export default function TrackerTable(props: {
             )
           })}
 
-          <div className="mx-auto flex justify-start lg:justify-center my-[20px]">
+          {/* <div className="mx-auto flex justify-start lg:justify-center my-[20px]">
             <button
               onClick={handlePrevButton}
               className="text-primary cursor-pointer underline"
@@ -81,16 +83,16 @@ export default function TrackerTable(props: {
             >
               Next
             </button>
-          </div>
+          </div> */}
         </table>
       </div>
-      <GraphPanel
+      {/* <GraphPanel
         darkMode
         data1={[
           { name: 'Listing', value: getTotalPrice('listing') },
           { name: 'Current', value: getTotalPrice('current') },
         ]}
-      />
+      /> */}
     </>
   )
 }

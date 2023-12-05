@@ -131,9 +131,16 @@ export default function Consultation() {
             </span>
 
             <span className="w-[95%] md:w-[45%] flex flex-col">
-              <label className="text-left">
-                Select your risk profile: {form.riskProfile}%
-              </label>
+              <div className="text-left">
+                Select your risk profile:{'  '}
+                <label className="font-bold">
+                  {form.riskProfile < 35
+                    ? 'LOW'
+                    : form.riskProfile > 35 && form.riskProfile < 85
+                    ? 'MED'
+                    : 'HIGH'}
+                </label>
+              </div>
               <>
                 <Box sx={{}}>
                   <Stack

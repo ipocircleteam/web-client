@@ -29,7 +29,7 @@ export default function TrackerMenu(props: TrackerMenuType) {
             ' text-[1.5rem] space-x-2 uppercase font-semibold leading-loose'
           }
         >
-          IPO Tracker
+          {/* IPO Tracker */}
         </h1>
       </section>
     </div>

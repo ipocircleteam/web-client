@@ -1,4 +1,3 @@
-import React from 'react'
 import { PromoterHoldingsType } from '../../data.types'
 
 export default function PromoterHoldings(props: {
@@ -7,7 +6,7 @@ export default function PromoterHoldings(props: {
   return (
     <table
       id="promoterHoldings"
-      className="w-[80%] mx-auto border text-slate-600 "
+      className="w-[95%] lg:w-[50%] mt-[20px] mx-auto border text-slate-600 "
     >
       <tr className="border">
         <td className="pl-[10px] border-r">Pre-issue share holding</td>

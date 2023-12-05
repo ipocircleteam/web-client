@@ -3,6 +3,7 @@ import {
   CompanyDetailsType,
   CompanyFinancialsType,
   Company_RegistrarContactType,
+  ContentType,
   DataPanelType,
   DocumentsDataType,
   GmpDataType,
@@ -192,3 +193,23 @@ export const GmpData: GmpDataType[] = [
     gmp: 9800,
   },
 ]
+
+export const InitialDetailsData: ContentType = {
+  CompanyDetailsData: CompanyDetailsData,
+  IpoDetailsData: IpoDetailsData,
+  IpoTimetableData: IpoTimetableData,
+  LotSizeData: LotSizeData,
+  PerformanceData: PerformanceData,
+  CompanyFinancialsData: CompanyFinancialData,
+  SubscriptionsData: SubscriptionsData,
+  DataPanelData: DataPanelData,
+  AnchorDetailsData: AnchorDetailsData,
+  IppoReservationData: IpoReservationData,
+  PromoterHoldingsData: PromoterHoldingsData,
+  ObjectIssueData: ObjectIssueData,
+  CompanyContactData: CompanyContactData,
+  RegistrarContactData: RegistrarContactData,
+  DocumentsData: DocumentsData,
+  ReviewData: ReviewData,
+  GmpData: GmpData,
+}

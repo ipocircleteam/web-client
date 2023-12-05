@@ -1,37 +1,62 @@
 import Link from 'next/link'
-import sanitizeData from '@/utils/prepareData'
 import DataContainer from './data-container'
-import { mainipodata, smeipodata } from '@/dummydata'
+import sanitizeData from '@/utils/prepareData'
+import axios from 'axios'
+
+import dotenv from 'dotenv'
+dotenv.config()
 
 export async function IpoData() {
+  // var sme
   const smeDataResponse = await fetch(
-    `https://api-phase1-sepia.vercel.app/api/v1/ipo/details/filter?concise=true`, // replace sme url
+    `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=sme&count=7`, // replace sme url
     {
-      method: 'POST',
+      method: 'GET',
       headers: {
-        Authorization: 'edb6f4ab-999d-4901-adc3-3e3376b7918b',
+        'Content-Type':
+          'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
       },
     },
   )
+  // console.log(smeDataResponse)
+  // var main
+  // await axios
+  //   .get(
+  //     `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=sme&count=7`,
+  //   )
+  //   .then(async (res) => {
+  //     sme = res.data.data
+  //   })
 
-  console.log(smeDataResponse)
+  const sme = await smeDataResponse.json()
 
-  // const mainDataResponse = await fetch(
-  //   `https://api.ipocircle.com/api/v0/ipo/details/filter?concise=true`, // replace main url
-  //   {
-  //     method: 'POST',
-  //     headers: {
-  //       Authorization: 'edb6f4ab-999d-4901-adc3-3e3376b7918b',
-  //     },
-  //   },
-  // )
+  const mainDataResponse = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=eq&count=7`, // replace main url
+    {
+      method: 'GET',
+      headers: {
+        'Content-Type':
+          'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      },
+    },
+  )
+  const main = await mainDataResponse.json()
+  // var main
+  // await axios
+  //   .get(
+  //     `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=eq&count=7`,
+  //   )
+  //   .then(async (res) => {
+  //     main = res.data.data
+  //   })
 
-  const smeData = await sanitizeData(smeDataResponse)
-  // const mainData = await sanitizeData(mainDataResponse)
+  // formatting response
+  const smeData = await sanitizeData(sme.data, 7)
+  const mainData = await sanitizeData(main.data, 7)
 
   return (
     <div className="mt-[3rem] text-center container mx-auto max-w-9xl ">
-      <DataContainer smeData={smeipodata} mainData={mainipodata} />
+      <DataContainer smeData={smeData} mainData={mainData} />
       <div
         className="text-secondary my-2 text-center w-[100%] mx-auto text-[18px] 
             hover:text-primary cursor-pointer"

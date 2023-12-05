@@ -1,20 +1,20 @@
 import Image from 'next/image'
-import React from 'react'
-import { LogoIcon } from '../../../../public/logo'
 import { CompanyDetailsType } from '../data.types'
 
 export default function CompanyDetails(props: { data: CompanyDetailsType }) {
   return (
-    <div id="companyDetails" className="mt-[20px]">
+    <div id="companyDetails" className="mt-[20px] w-[100%] pb-[40px] mb-[30px]">
       <div className="w-[100%]">
         <div className="mdlg:flex justify-between items-center">
           <section className="flex justify-start items-center">
-            <Image
-              height={60}
-              src={props.data.company_logo_url}
-              alt={'IPO Circle'}
-            />
-            <h2 className="mx-2 text-primary text-[1.2rem] font-semibold">
+            {props.data.company_logo_url.length !== 0 && (
+              <Image
+                height={60}
+                src={props.data.company_logo_url}
+                alt={'IPO Circle'}
+              />
+            )}
+            <h2 className="mx-2 text-primary text-4xl font-bold">
               {props.data.company_name}
             </h2>
           </section>
@@ -36,12 +36,6 @@ export default function CompanyDetails(props: { data: CompanyDetailsType }) {
               </b>
             </label>
           </section>
-        </div>
-
-        <div className="w-[95%] mx-auto my-[10px]">
-          <p className="text-justify mdlg:text-left">
-            {props.data.description}
-          </p>
         </div>
       </div>
     </div>

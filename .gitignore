@@ -9,7 +9,6 @@
 /coverage
 
 # next.js
-/.next/
 /out/
 
 # production
@@ -25,7 +24,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env.*
+.env
+.env.dev
+.env.prod
+.env.local
+
 
 # vercel
 .vercel
@@ -35,3 +38,6 @@ yarn-error.log*
 next-env.d.ts
 
 /.husky
+
+.next
+

@@ -1,10 +1,10 @@
 export type TrackerDataType = {
   id: number
-  company: string
-  listing: number
-  dayend: number
-  issue: number
-  current: number
+  company_name: string
+  listing_price: number
+  dayend_price: number
+  issue_price: number
+  current_price: number
   sector: string
   year: number
 }

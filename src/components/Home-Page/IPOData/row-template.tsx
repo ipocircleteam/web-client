@@ -5,6 +5,7 @@ import { RowDataType } from './ipodata.types'
 import useWindowWidth from '@/hooks/useWindowWidth'
 import Image from 'next/image'
 import { RightArrow } from '../../../../public/icons'
+import Link from 'next/link'
 
 export default function TableRow(props: {
   data: RowDataType
@@ -43,9 +44,7 @@ export default function TableRow(props: {
 
       <td title="See details" className="w-[30%] text-left cursor-pointer">
         <div className="m-0 p-0 flex justify-start items-center">
-          <a className="w-[100%]" href={'/ipo/' + props.data.ipoID}>
-            {props.data.name.substring(0, 12) + ''}
-          </a>
+          <Link href={`/ipo/${props.data.ipoID}`}>{props.data.name + ''}</Link>
           {Number(props.data.enddate.substring(0, 2)) ===
           new Date().getDate() ? (
             <Closetag width={width} />
@@ -81,7 +80,7 @@ export default function TableRow(props: {
           title="See more"
           className=" text-primary cursor-pointer flex items-center justify-center m-1 w-[30px] h-[20px] rounded-sm"
         >
-          <a className="w-[100%]" href={'/ipo/' + props.data.ipoID}>
+          <Link href={`/ipo/${props.data.ipoID}`}>
             <Image
               title="See more"
               className=" text-primary flex items-center justify-center m-1 
@@ -91,7 +90,7 @@ export default function TableRow(props: {
               height={15}
               width={15}
             />
-          </a>
+          </Link>
         </button>
       </td>
     </tr>

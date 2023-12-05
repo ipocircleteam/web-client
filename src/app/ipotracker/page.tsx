@@ -1,22 +1,27 @@
+import Banner from './banner'
+import GmpOverview from './gmpOverview'
 import WebApp from './webapp'
 import { trackerData } from '@/dummydata'
+import sanitizeData from '@/utils/prepareData'
 
 export default async function IpoTracker() {
-  //  const dataResponse = await fetch(
-  //   `https://api.ipocircle.com/api/v0/ipo/details/filter`,
-  //   {
-  //     method: 'POST',
-  //     headers: {
-  //       Authorization: 'edb6f4ab-999d-4901-adc3-3e3376b7918b',
-  //     },
-  //   },
-  //  )
+  const dataResponse = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/tracker/details?year=2023`,
+    {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'text/html',
+      },
+    },
+  )
 
-  // const data = await sanitizeData(dataResponse)
+  const res = await dataResponse.json()
 
   return (
-    <>
-      <WebApp data={trackerData} />
-    </>
+    <div className="w-[100vw] mx-auto container">
+      <Banner />
+      <GmpOverview />
+      <WebApp data={res.data} />
+    </div>
   )
 }

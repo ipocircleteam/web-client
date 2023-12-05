@@ -18,7 +18,7 @@ export default function Table(props: { data: RowDataType[] }) {
         const data = {
           sno: item.sno,
           ipoID: item.ipoID,
-          name: item.name,
+          name: item.name.substring(0, 45),
           opendate: item.opendate,
           enddate: item.enddate,
           status: item.status,

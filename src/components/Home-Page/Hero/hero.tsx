@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="mt-[100px] md:my-[50px] md:mt-[5rem] md:mb-0 text-center container mx-auto max-w-9xl">
+    <div className="mt-[45px] md:my-[50px] md:mt-[5rem] md:mb-0 text-center container mx-auto max-w-9xl">
       <div className="flex justify-center items-center w-[85%] sm:w-[95%] mx-auto">
         <h1 className="text-[2rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[1] ">
           <label className="text-primary">Unlock </label>
@@ -20,7 +20,7 @@ export default function Hero() {
           className="mx-4 text-[1.6rem] md:text-[1.1rem] bg-secondary py-2 px-4 font-semibold rounded-lg border border-secondary
           hover:bg-base hover:border-secondary custom-btn-transition text-base hover:text-primary"
         >
-          Get Started For Free
+          Start Your IPO Journey
         </a>
       </div>
     </div>

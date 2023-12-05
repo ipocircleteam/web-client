@@ -7,16 +7,18 @@ export default function RowTemplate(props: RowTemplateType) {
       <tr
         className={
           (props.darkMode ? '' : '') +
-          ' text-slate-600 grid grid-cols-7 items-center p-2 h-[40px] border overflow-hidden'
+          ' text-slate-600 grid grid-cols-6 text-right md:text-center text-[12px] md:text-[15px] items-center p-2 h-[40px border overflow-hidden'
         }
       >
-        <td>{props.data.id}</td>
-        <td>{props.data.company.substring(0, 8)}</td>
-        <td>{props.data.issue}</td>
-        <td>{props.data.listing}</td>
-        <td>{props.data.dayend}</td>
-        <td>{props.data.current}</td>
-        <td>{props.data.sector}</td>
+        {/* <td className=' overflow-x-clip '>{props.data.id}</td> */}
+        <td className="overflow-x-clip">
+          {props.data.company_name?.substring(0, 19)}
+        </td>
+        <td className="overflow-x-clip">{props.data.issue_price}</td>
+        <td className="overflow-x-clip">{props.data.listing_price}</td>
+        <td className="overflow-x-clip">{props.data.dayend_price}</td>
+        <td className="overflow-x-clip">{props.data.current_price}</td>
+        <td className="overflow-x-clip">{props.data.sector}</td>
       </tr>
     </a>
   )
