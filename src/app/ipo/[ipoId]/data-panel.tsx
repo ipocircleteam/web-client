@@ -80,8 +80,8 @@ export default function DataPanel(props: {
               <Tab label="Subscriptions" {...a11yProps(4)} />
               <Tab label="Company Financials" {...a11yProps(5)} />
               <Tab label="Anchor Details" {...a11yProps(6)} />
-              <Tab label="Promoter Holdings" {...a11yProps(7)} />
-              <Tab label="Reservations" {...a11yProps(8)} />
+              <Tab label="Reservations" {...a11yProps(7)} />
+              <Tab label="Promoter Holdings" {...a11yProps(8)} />
             </Tabs>
           </Box>
           <CustomTabPanel value={value} index={0}>
