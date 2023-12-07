@@ -23,6 +23,8 @@ export default function IPODetailsPage() {
       .get(`${process.env.NEXT_PUBLIC_API_URL}/ipo/details/id?id=${ipoId}`)
       .then(async (res) => {
         const formattedData = await sanitizeIpoDetailsData(res.data)
+        console.log(formattedData)
+
         setData(formattedData)
       })
   }, [ipoId])

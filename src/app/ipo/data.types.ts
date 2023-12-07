@@ -8,12 +8,12 @@ export type CompanyDetailsType = {
 
 export type IpoDetailsType = {
   ipo_date: string
-  face_value: number
-  price_band: number
-  lot_size_retails: number
-  total_size: number
-  fresh_issue: number
-  ofs: number
+  face_value: string
+  price_band: string
+  lot_size_retails: string
+  total_size: string
+  fresh_issue: string
+  ofs: string
   issue_type: string
   listing_at: string[]
 }
@@ -30,21 +30,33 @@ export type IpoTimetableType = {
 }
 
 export type LotSizeType = {
-  min_retail: number
-  max_retail: number
-  min_shni: number
-  max_shni: number
-  min_bhni: number
-  max_bhni: number
+  min_retail_lots: string
+  max_retail_lots: string
+  min_shni_lots: string
+  max_shni_lots: string
+  min_bhni_lots: string
+  max_bhni_lots: string
+  min_retail_shares: string
+  max_retail_shares: string
+  min_shni_shares: string
+  max_shni_shares: string
+  min_bhni_shares: string
+  max_bhni_shares: string
+  min_retail_price: string
+  max_retail_price: string
+  min_shni_price: string
+  max_shni_price: string
+  min_bhni_price: string
+  max_bhni_price: string
 }
 
 export type PerformanceIndicatorsType = {
-  market_cap: number
-  roe: number
-  roce: number
-  debt: number
-  eps: number
-  ronw: number
+  market_cap: string
+  roe: string
+  roce: string
+  debt: string
+  eps: string
+  ronw: string
 }
 
 type FinancialParametersType = {
@@ -67,9 +79,9 @@ export type CompanyFinancialsType = {
 
 export type SubscriptionsType = {
   qib: string
-  nii_snii: number
-  nii_bnii: number
-  retail: number
+  nii_snii: string
+  nii_bnii: string
+  retail: string
 }
 
 export type DataPanelType = {
@@ -83,21 +95,21 @@ export type DataPanelType = {
 
 export type AnchorDetailsType = {
   bid_date: string
-  shares_offerred: number
-  portion_size: number
-  anchorLockIn_50per_30days: number
-  anchorLockIn_50per_90days: number
+  shares_offerred: string
+  portion_size: string
+  anchorLockIn_50per_30days: string
+  anchorLockIn_50per_90days: string
 }
 
 export type IpoReservationType = {
-  qib_shares_offerred: number
-  nil_shares_offerred: number
-  retail_shares_offerred: number
+  qib_shares_offerred: string
+  nil_shares_offerred: string
+  retail_shares_offerred: string
 }
 
 export type PromoterHoldingsType = {
-  preissue_share_holdings: number
-  postissue_share_holdings: number
+  preissue_share_holdings: string
+  postissue_share_holdings: string
 }
 
 export type ObjectIssueType = {
