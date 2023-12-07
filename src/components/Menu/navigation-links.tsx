@@ -5,12 +5,12 @@ import { Cross } from '../../../public/icons'
 export function LargeNavigation() {
   return (
     <div className="m-0 flex justify-end items-center px-2">
-      {/* <Link
+      <Link
         href="/gmp"
         className="mx-4 text-primary hover:text-secondary font-semibold"
       >
         GMP
-      </Link> */}
+      </Link>
 
       <Link
         href="/ipo"
@@ -26,12 +26,12 @@ export function LargeNavigation() {
         IPO Tracker
       </Link>
 
-      {/* <Link
-        href="/marketanalyser"
+      <Link
+        href="/optiorder"
         className="mx-4 text-primary hover:text-secondary font-semibold"
       >
-        Market Analyser
-      </Link> */}
+        IPO Pulse
+      </Link>
 
       <Link
         href="/algorithm"
@@ -58,14 +58,14 @@ export function SmallNavigationLinks(props: { callback: () => void }) {
         />
       </div>
 
-      {/* <div className="m-2 text-[20px]">
+      <div className="m-2 text-[20px]">
         <Link
           href="/gmp"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
           GMP
         </Link>
-      </div> */}
+      </div>
 
       <div className="m-2 text-[20px]">
         <Link
@@ -85,14 +85,14 @@ export function SmallNavigationLinks(props: { callback: () => void }) {
         </Link>
       </div>
 
-      {/* <div className="m-2 text-[20px]">
+      <div className="m-2 text-[20px]">
         <Link
-          href="/marketanalyser"
+          href="/optiorder"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
-          Market analyser
+          IPO Pulse
         </Link>
-      </div> */}
+      </div>
 
       <div className="m-2 text-[20px]">
         <Link
