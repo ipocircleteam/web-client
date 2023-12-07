@@ -6,10 +6,22 @@ import $ from 'jquery'
 import React, { useState, useEffect } from 'react'
 import { TrackerDataType } from '@/components/IpoTracker/TrackerTable/table.types'
 
-export default function WebApp(props: { data: TrackerDataType[] }) {
+export default function WebApp(props: {
+  data: TrackerDataType[]
+  main: TrackerDataType[]
+  sme: TrackerDataType[]
+}) {
   const [isDark, setIsDark] = useState(false)
   const [tableData, setTableData] = useState(props.data)
+  const [refData, setRefData] = useState(props.data)
   const trackerData: TrackerDataType[] = props.data
+  const [query, setQuery] = useState('')
+  const [refMainData, setRefMainData] = useState(props.main)
+  const [refSmeData, setRefSmeData] = useState(props.sme)
+
+  useEffect(() => {
+    searchCompany()
+  }, [query])
 
   const toggleMode = () => {
     setIsDark(!isDark)
@@ -84,12 +96,74 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
     }
   }
 
-  const searchCompany = (name: string) => {
+  const setMain = () => {
+    setTableData(refData)
+  }
+
+  const setSme = () => {
+    setTableData(refMainData)
+  }
+
+  const setAll = () => {
+    setTableData(refSmeData)
+  }
+
+  const searchCompany = () => {
     const filteredData = trackerData.filter((item) => {
-      return item.company_name.includes(String(name))
+      const name = item.company_name?.toLowerCase()
+      const qName = query?.toLowerCase()
+      return name?.includes(qName)
     })
 
     setTableData(filteredData)
+  }
+
+  const positiveListing = async () => {
+    alert('psotive')
+    const pData = refData.filter((item) => {
+      return item.listing_price >= item.issue_price
+    })
+    setTableData(pData)
+  }
+
+  const negativeListing = async () => {
+    alert('negative')
+    const nData = refData.filter((item) => {
+      return item.listing_price < item.issue_price
+    })
+    setTableData(nData)
+  }
+
+  const cpGreaterthanIp = async () => {
+    alert('cp>ip')
+    const fData = refData.filter((item) => {
+      return item.current_price >= item.issue_price
+    })
+    setTableData(fData)
+  }
+
+  const cpLesserthanIp = async () => {
+    alert('cp<ip')
+    const fData = refData.filter((item) => {
+      return item.current_price < item.issue_price
+    })
+    setTableData(fData)
+  }
+
+  const cpGreaterthanLp = async () => {
+    alert('cp>lp')
+    const fData = refData.filter((item) => {
+      return item.current_price >= item.listing_price
+    })
+    setTableData(fData)
+  }
+
+  const cpLesserthanLp = async () => {
+    alert('cp<lp')
+    const fData = refData.filter((item) => {
+      return item.current_price < item.listing_price
+    })
+    setTableData(fData)
   }
 
   return (
@@ -99,34 +173,6 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
         ' overflow-hidden container mx-auto max-w-9xl w-[100vw]'
       }
     >
-      {/* <div className="bg-primary p-3 text-white h-[300px] flex justify-center items-center">
-        <span className="text-center">
-          <h1 className="font-bold text-[2.5rem] md:text-[3rem]">
-            IPO Tracker
-          </h1>
-          <p className="font-semibold text-[1.2rem] md:text-[1.5rem]">
-            This is the small description about IPO Tracker
-          </p>
-          <span>
-            <button
-              onClick={() => {
-                scrollToDiv('trackerGuide')
-              }}
-              className="p-2 border m-2 rounded-md hover:text-primary hover:bg-white font-bold w-[150px]"
-            >
-              How it works?
-            </button>
-            <button
-              onClick={() => {
-                scrollToDiv('tracker')
-              }}
-              className="p-2 border m-2 rounded-md hover:text-primary hover:bg-white font-bold w-[150px]"
-            >
-              Let&apos;s go
-            </button>
-          </span>
-        </span>
-      </div> */}
       <TrackerMenu darkMode={isDark} toggleMode={toggleMode} />
       <section className="w-[100%] md:w-[95%] mx-auto overflow-hidden block lg:hidden">
         <TrackerDetails
@@ -134,21 +180,48 @@ export default function WebApp(props: { data: TrackerDataType[] }) {
           toggleFilters={toggleFilters}
           filter={filter}
           search={searchCompany}
+          query={query}
+          setQuery={(q: string) => {
+            setQuery(q)
+          }}
           trackerData={tableData}
+          positiveListing={positiveListing}
+          negativeListing={negativeListing}
+          cpGreaterthanIp={cpGreaterthanIp}
+          cpLesserthanIp={cpLesserthanIp}
+          cpGreaterthanLp={cpGreaterthanLp}
+          cpLesserthanLp={cpLesserthanLp}
         />
       </section>
-      {/* <label className="mdlg:hidden">Swipe to view complete table</label> */}
+
       <div className="flex justify-around items-start flex-wrap mx-[auto] w-[100%] md:w-[95%]">
         <section className="w-[100%] lg:w-[65%] overflow-y-hidden overflow-x-hidden">
-          <TrackerTable darkMode={isDark} trackerData={tableData} />
+          <TrackerTable
+            darkMode={isDark}
+            trackerData={tableData}
+            setAll={setAll}
+            setMain={setMain}
+            setSme={setSme}
+          />
         </section>
+
         <section className="w-[30%] overflow-hidden hidden lg:block">
           <TrackerDetails
             darkMode={isDark}
             toggleFilters={toggleFilters}
             filter={filter}
             search={searchCompany}
+            query={query}
+            setQuery={(q: string) => {
+              setQuery(q)
+            }}
             trackerData={tableData}
+            positiveListing={positiveListing}
+            negativeListing={negativeListing}
+            cpGreaterthanIp={cpGreaterthanIp}
+            cpLesserthanIp={cpLesserthanIp}
+            cpGreaterthanLp={cpGreaterthanLp}
+            cpLesserthanLp={cpLesserthanLp}
           />
         </section>
       </div>
