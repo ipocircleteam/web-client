@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import FilterFooter from './filter-footer'
+import { Sectors } from '@/data'
 
 export default function FilterBody(props: {
   filter: (
@@ -12,6 +13,12 @@ export default function FilterBody(props: {
     p2: String,
     op: String,
   ) => void
+  positiveListing: () => void
+  negativeListing: () => void
+  cpGreaterthanIp: () => void
+  cpLesserthanIp: () => void
+  cpGreaterthanLp: () => void
+  cpLesserthanLp: () => void
 }) {
   const [form, setForm] = useState({
     sector: 'All',
@@ -25,7 +32,93 @@ export default function FilterBody(props: {
   return (
     <>
       <div className="w-[100%] flex flex-col justify-center items-start p-2 px-4">
+        <label>Filters: </label>
+
         <div className="flex justify-between items-center w-[100%] mx-auto my-2">
+          <button
+            id="positive-tracker"
+            className="h-[40px] text-green-500 border-green-500 shadow-m shadow-green-100 rounded-lg font-bold w-[100%] border-2"
+            onClick={() => {
+              // change color
+              props.positiveListing()
+            }}
+          >
+            Positive Listing
+          </button>
+        </div>
+
+        <div className="flex justify-between items-center w-[100%] mx-auto my-2">
+          <button
+            id="negative-tracker"
+            className="h-[40px] text-red-500 border-red-500 shadow-m shadow-red-100 rounded-lg font-bold w-[100%] border-2"
+            onClick={() => {
+              // change color
+              props.negativeListing()
+            }}
+          >
+            Negative Listing
+          </button>
+        </div>
+
+        <div className="flex justify-center items-center w-[100%]">
+          <div className="flex justify-between items-center w-[50%] my-2 mx-1">
+            <button
+              id="negative-tracker"
+              className="h-[40px] shadow-m hover:bg-gray-100 bg-gray-200 rounded-lg font-bold w-[100%] border-2"
+              onClick={() => {
+                // change color
+                props.cpGreaterthanIp()
+              }}
+            >
+              CP &gt; IP
+            </button>
+          </div>
+          <div className="flex justify-between items-center w-[50%] my-2 mx-1">
+            <button
+              id="negative-tracker"
+              className="h-[40px] shadow-m hover:bg-gray-100 bg-gray-200 rounded-lg font-bold w-[100%] border-2"
+              onClick={() => {
+                // change color
+                props.cpLesserthanIp()
+              }}
+            >
+              CP &lt; IP
+            </button>
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center w-[100%]">
+          <div className="flex justify-between items-center w-[50%] my-2 mx-1">
+            <button
+              id="negative-tracker"
+              className="h-[40px] shadow-m hover:bg-gray-100 bg-gray-200 rounded-lg font-bold w-[100%] border-2"
+              onClick={() => {
+                // change color
+                props.cpGreaterthanLp()
+              }}
+            >
+              CP &gt; LP
+            </button>
+          </div>
+          <div className="flex justify-between items-center w-[50%] my-2 mx-1">
+            <button
+              id="negative-tracker"
+              className="h-[40px] shadow-m hover:bg-gray-100 bg-gray-200 rounded-lg font-bold w-[100%] border-2"
+              onClick={() => {
+                // change color
+                props.cpLesserthanLp()
+              }}
+            >
+              CP &lt; LP
+            </button>
+          </div>
+        </div>
+
+        <div className="text-gray-500 text-[13px]">
+          CP : Current Price, LP: Listing Price, IP: Issue Price
+        </div>
+
+        <div className=" w-[100%] mx-auto my-2">
           <label className=" h-[40px] flex items-center text-[15px]">
             Sector
           </label>
@@ -37,44 +130,24 @@ export default function FilterBody(props: {
                 [e.target.name]: e.target.value,
               })
             }}
-            className="w-[65%] h-[40px] p-1 outline-none border border-gray-600 rounded-md"
+            className="w-[100%] h-[40px] p-1 outline-none border border-gray-600 rounded-md"
           >
-            <option>All</option>
-            <option>Pharmaceutical</option>
-            <option>Technology</option>
-            <option>Education</option>
-            <option>Finance</option>
+            {Sectors.map((sector) => {
+              return <option key={sector}>{sector}</option>
+            })}
           </select>
         </div>
 
-        {/* <div className="flex justify-between items-center w-[100%] mx-auto my-2">
-          <label className=" h-[40px] flex items-center text-[1.1rem]">
-            Year
-          </label>
-          <input
-            className="w-[65%] h-[40px] p-1 outline-none border border-gray-600 rounded-lg"
-            type="number"
-            name="year"
-            max={new Date().getFullYear()}
-            value={form.year}
-            onChange={(e) => {
-              setForm({
-                ...form,
-                [e.target.name]: e.target.value,
-              })
-            }}
-          />
-        </div> */}
-
-        <div className="flex justify-between items-center w-[100%] mx-auto my-2">
+        <div className=" w-[100%] mx-auto my-2">
           <label className=" h-[40px] flex items-center text-[15px]">
-            Listing Gain(%)
+            IPOs with Listing Gain greater than {form.listing}%
           </label>
           <input
-            className="w-[65%] h-[40px] p-1 outline-none border border-gray-600 rounded-lg"
+            className="w-[100%] h-[40px] p-1 outline-none border border-gray-600 rounded-lg"
             type="number"
             name="listing"
-            value={form.listing}
+            placeholder="enter listing gain value(%)..."
+            value={form.listing === 0 ? '' : form.listing}
             onChange={(e) => {
               setForm({
                 ...form,
@@ -83,62 +156,6 @@ export default function FilterBody(props: {
             }}
           />
         </div>
-
-        {/* <div className="w-[100%] mx-auto my-[20px] border-t-2 px-1">
-          <label className="mt-[10px] h-[40px] flex items-center text-[1rem]">
-            Adjust parameters for comparative results
-          </label>
-
-          <select
-            name="parameter1"
-            onChange={(e) => {
-              setForm({
-                ...form,
-                [e.target.name]: e.target.value,
-              })
-            }}
-            className="w-[100%] h-[40px] my-[10px] p-1 outline-none border border-gray-600 rounded-md"
-          >
-            <option>Select parameter 1</option>
-            <option>Listing Price</option>
-            <option>Current Price</option>
-            <option>Dayend Price</option>
-            <option>Issue Price</option>
-          </select>
-
-          <select
-            name="operator"
-            onChange={(e) => {
-              setForm({
-                ...form,
-                [e.target.name]: e.target.value,
-              })
-            }}
-            className="w-[100%] h-[40px] my-[10px] p-1 outline-none border border-gray-600 rounded-md"
-          >
-            <option>Select comparator</option>
-            <option>More than</option>
-            <option>Same as</option>
-            <option>Less than</option>
-          </select>
-
-          <select
-            name="parameter2"
-            onChange={(e) => {
-              setForm({
-                ...form,
-                [e.target.name]: e.target.value,
-              })
-            }}
-            className="w-[100%] h-[40px] my-[10px] p-1 outline-none border border-gray-600 rounded-md"
-          >
-            <option>Select parameter 2</option>
-            <option>Current Price</option>
-            <option>Dayend Price</option>
-            <option>Listing Price</option>
-            <option>Issue Price</option>
-          </select>
-        </div> */}
       </div>
       <FilterFooter
         applyFlter={() => {

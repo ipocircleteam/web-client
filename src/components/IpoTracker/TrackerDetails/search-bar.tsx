@@ -1,17 +1,17 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Search } from '../../../../public/icons'
 
 export default function SearchBar(props: {
   darkMode: boolean
+  query: string
+  setQuery: (q: string) => void
   search: (name: string) => void
 }) {
-  const [searchQuery, setSearchQuery] = useState('')
-
   const searchCompany = () => {
-    props.search(searchQuery)
+    props.search(props.query)
   }
 
   return (
@@ -20,9 +20,9 @@ export default function SearchBar(props: {
         type="text"
         placeholder="Search company"
         className="p-2 rounded-l-lg border h-[40px] outline-none text-gray-600 w-[100%]"
-        value={searchQuery}
+        value={props.query}
         onChange={(e) => {
-          setSearchQuery(e?.target.value)
+          props.setQuery(e?.target.value)
         }}
       />
       <button

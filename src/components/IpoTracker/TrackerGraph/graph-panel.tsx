@@ -11,7 +11,7 @@ export default function GraphPanel(props: {
     <div
       className={
         (props.darkMode ? ' ' : ' ') +
-        ' border overflow-hidden w-[95%] flex justify-center items-center flex-wrap h-[auto] rounded-lg p-2'
+        ' border border-t-0 overflow-hidden w-[100%] flex justify-center items-center flex-wrap h-[auto] rounded-b-lg p-2'
       }
     >
       <PieCard

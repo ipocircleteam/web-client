@@ -12,10 +12,24 @@ export default function Filter(props: {
     p2: String,
     op: String,
   ) => void
+  positiveListing: () => void
+  negativeListing: () => void
+  cpGreaterthanIp: () => void
+  cpLesserthanIp: () => void
+  cpGreaterthanLp: () => void
+  cpLesserthanLp: () => void
 }) {
   return (
     <div id="filter" className=" bg-white border overflow-hidden">
-      <FilterBody filter={props.filter} />
+      <FilterBody
+        positiveListing={props.positiveListing}
+        negativeListing={props.negativeListing}
+        cpGreaterthanIp={props.cpGreaterthanIp}
+        cpLesserthanIp={props.cpLesserthanIp}
+        cpGreaterthanLp={props.cpGreaterthanLp}
+        cpLesserthanLp={props.cpLesserthanLp}
+        filter={props.filter}
+      />
     </div>
   )
 }

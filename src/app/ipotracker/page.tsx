@@ -6,7 +6,7 @@ import sanitizeData from '@/utils/prepareData'
 
 export default async function IpoTracker() {
   const dataResponse = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/tracker/details?year=2023`,
+    `${process.env.NEXT_PUBLIC_API_URL}/tracker/detailsWithSeries`,
     {
       method: 'GET',
       headers: {
@@ -17,11 +17,15 @@ export default async function IpoTracker() {
 
   const res = await dataResponse.json()
 
+  const all = res.data.all
+  const main = res.data.main
+  const sme = res.data.sme
+
   return (
     <div className="w-[100vw] mx-auto container">
       <Banner />
       <GmpOverview />
-      <WebApp data={res.data} />
+      <WebApp data={all} main={main} sme={sme} />
     </div>
   )
 }

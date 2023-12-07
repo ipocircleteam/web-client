@@ -9,6 +9,9 @@ import { TrackerDataType } from './table.types'
 export default function TrackerTable(props: {
   darkMode: boolean
   trackerData: TrackerDataType[]
+  setAll: () => void
+  setMain: () => void
+  setSme: () => void
 }) {
   const theme = props.darkMode ? 'text-[#FFFFFF]' : 'text-slate-600'
   const [start, setStart] = useState(0)
@@ -53,22 +56,54 @@ export default function TrackerTable(props: {
           ' mx-auto w-[100%] lg:w-[95%] flex justify-start  lg:justify-center items-center flex-wrap h-[auto] rounded-lg p-1'
         }
       >
-        <div className="mx-auto flex justify-start lg:justify-center items-center py-[10px] border-t border-b w-[100%]">
-          <button
-            onClick={handlePrevButton}
-            className="text-primary cursor-pointer border p-1 px-2"
-          >
-            Prev
-          </button>
-          <label className="mx-2">
-            ({start} - {end} / {props.trackerData.length})
-          </label>
-          <button
-            onClick={handleNextButton}
-            className="text-primary cursor-pointer border p-1 px-2"
-          >
-            Next
-          </button>
+        <div className="mx-auto flex justify-start lg:justify-between items-center py-[10px] border-t border-b w-[100%]">
+          <div>
+            <button
+              onClick={() => {
+                props.setAll()
+              }}
+              id="all-ipo-tracker"
+              className="text-primary cursor-pointer p-1 px-2 mx-2 rounded-lg shadow-md hover:border border-primary shadow-blue-200"
+            >
+              All IPOs
+            </button>
+            <button
+              onClick={() => {
+                props.setMain()
+              }}
+              id="main-ipo-tracker"
+              className="text-primary cursor-pointer p-1 px-2 mx-2 rounded-lg shadow-md hover:border border-primary shadow-blue-200"
+            >
+              Mainboard IPOs
+            </button>
+            <button
+              onClick={() => {
+                props.setSme()
+              }}
+              id="sme-ipo-tracker"
+              className="text-primary cursor-pointer p-1 px-2 mx-2 rounded-lg shadow-md hover:border border-primary shadow-blue-200"
+            >
+              SME IPOs
+            </button>
+          </div>
+
+          <div>
+            <button
+              onClick={handlePrevButton}
+              className="text-primary cursor-pointer border p-1 px-2"
+            >
+              Prev
+            </button>
+            <label className="mx-2">
+              ({start} - {end} / {props.trackerData.length})
+            </label>
+            <button
+              onClick={handleNextButton}
+              className="text-primary cursor-pointer border p-1 px-2"
+            >
+              Next
+            </button>
+          </div>
         </div>
         <table className="w-[100%] mx-auto">
           <TableHead darkMode={props.darkMode} />
