@@ -28,12 +28,12 @@ export const CompanyDetailsData: CompanyDetailsType = {
 
 export const IpoDetailsData: IpoDetailsType = {
   ipo_date: '',
-  face_value: 0,
-  price_band: 0,
-  lot_size_retails: 0,
-  total_size: 0,
-  fresh_issue: 0,
-  ofs: 0,
+  face_value: '',
+  price_band: '',
+  lot_size_retails: '',
+  total_size: '',
+  fresh_issue: '',
+  ofs: '',
   issue_type: '',
   listing_at: [],
 }
@@ -50,21 +50,33 @@ export const IpoTimetableData: IpoTimetableType = {
 }
 
 export const LotSizeData: LotSizeType = {
-  min_retail: 0,
-  max_retail: 0,
-  min_shni: 0,
-  max_shni: 0,
-  min_bhni: 0,
-  max_bhni: 0,
+  min_retail_lots: '',
+  max_retail_lots: '',
+  min_shni_lots: '',
+  max_shni_lots: '',
+  min_bhni_lots: '',
+  max_bhni_lots: '',
+  min_retail_shares: '',
+  max_retail_shares: '',
+  min_shni_shares: '',
+  max_shni_shares: '',
+  min_bhni_shares: '',
+  max_bhni_shares: '',
+  min_retail_price: '',
+  max_retail_price: '',
+  min_shni_price: '',
+  max_shni_price: '',
+  min_bhni_price: '',
+  max_bhni_price: '',
 }
 
 export const PerformanceData: PerformanceIndicatorsType = {
-  market_cap: 0,
-  roe: 0,
-  roce: 0,
-  debt: 0,
-  eps: 0,
-  ronw: 0,
+  market_cap: '',
+  roe: '',
+  roce: '',
+  debt: '',
+  eps: '',
+  ronw: '',
 }
 
 export const CompanyFinancialData: CompanyFinancialsType = {
@@ -117,9 +129,9 @@ export const CompanyFinancialData: CompanyFinancialsType = {
 
 export const SubscriptionsData: SubscriptionsType = {
   qib: '',
-  nii_snii: 0,
-  nii_bnii: 0,
-  retail: 0,
+  nii_snii: '',
+  nii_bnii: '',
+  retail: '',
 }
 
 export const DataPanelData: DataPanelType = {
@@ -133,21 +145,21 @@ export const DataPanelData: DataPanelType = {
 
 export const AnchorDetailsData: AnchorDetailsType = {
   bid_date: '',
-  shares_offerred: 0,
-  portion_size: 0,
-  anchorLockIn_50per_30days: 0,
-  anchorLockIn_50per_90days: 0,
+  shares_offerred: '',
+  portion_size: '',
+  anchorLockIn_50per_30days: '',
+  anchorLockIn_50per_90days: '',
 }
 
 export const IpoReservationData: IpoReservationType = {
-  qib_shares_offerred: 0,
-  nil_shares_offerred: 0,
-  retail_shares_offerred: 0,
+  qib_shares_offerred: '',
+  nil_shares_offerred: '',
+  retail_shares_offerred: '',
 }
 
 export const PromoterHoldingsData: PromoterHoldingsType = {
-  preissue_share_holdings: 0,
-  postissue_share_holdings: 0,
+  preissue_share_holdings: '',
+  postissue_share_holdings: '',
 }
 
 export const ObjectIssueData: ObjectIssueType = {
