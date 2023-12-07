@@ -56,13 +56,13 @@ export default function TrackerDetails(props: {
         cpGreaterthanLp={props.cpGreaterthanLp}
         cpLesserthanLp={props.cpLesserthanLp}
       />
-      <GraphPanel
+      {/* <GraphPanel
         darkMode
         data1={[
           { name: 'Listing', value: getTotalPrice('listing_price') },
           { name: 'Current', value: getTotalPrice('current_price') },
         ]}
-      />
+      /> */}
     </div>
   )
 }

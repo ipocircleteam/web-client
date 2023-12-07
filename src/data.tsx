@@ -6,10 +6,10 @@ export const ipoDetailsItems: {
     text: 'Statistics',
     id: 'dataTables',
   },
-  {
-    text: 'GMP',
-    id: 'gmp',
-  },
+  // {
+  //   text: 'GMP',
+  //   id: 'gmp',
+  // },
   // {
   //   text: 'Anchor Details',
   //   id: 'anchorDetails',
@@ -38,14 +38,14 @@ export const ipoDetailsItems: {
   //   text: 'Documents',
   //   id: 'documents',
   // },
-  {
-    text: 'Review',
-    id: 'ourReview',
-  },
-  {
-    text: 'Discussions',
-    id: 'discussions',
-  },
+  // {
+  //   text: 'Review',
+  //   id: 'ourReview',
+  // },
+  // {
+  //   text: 'Discussions',
+  //   id: 'discussions',
+  // },
 ]
 
 export const Sectors = [

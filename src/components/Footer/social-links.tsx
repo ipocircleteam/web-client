@@ -8,7 +8,8 @@ export default function SocialLinks() {
     <div className="flex justify-start items-center">
       <Link
         title="Linkedin"
-        href="/linkedin"
+        href="https://www.linkedin.com/company/ipocircle"
+        target="__blank"
         className="mr-[15px] cursor-pointer"
       >
         {/* <Image src={Linkedin} alt="" width={15} height={15} /> */}
@@ -16,7 +17,8 @@ export default function SocialLinks() {
       </Link>
       <Link
         title="Twitter"
-        href="/twitter"
+        href="https://twitter.com/ipocircle"
+        target="__blank"
         className="mr-[15px] cursor-pointer"
       >
         {/* <Image src={Twitter} alt="" width={15} height={15} /> */}
@@ -24,7 +26,8 @@ export default function SocialLinks() {
       </Link>
       <Link
         title="Instagram"
-        href="/instagram"
+        href="https://www.instagram.com/ipo.circle/"
+        target="__blank"
         className="mr-[15px] cursor-pointer"
       >
         {/* <Image src={Instagram} alt="" width={15} height={15} /> */}

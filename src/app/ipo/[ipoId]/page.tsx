@@ -9,10 +9,13 @@ import sanitizeIpoDetailsData from '@/utils/sanitizeDetailsData'
 import Navigation from './navigation'
 import { InitialDetailsData } from '../initial.data'
 import axios from 'axios'
-import { usePathname } from 'next/navigation'
+import { redirect, usePathname } from 'next/navigation'
+import Image from 'next/image'
+import { LogoIcon } from '../../../../public/logo'
 
 export default function IPODetailsPage() {
   const [data, setData] = useState(InitialDetailsData)
+  const [loading, setLoading] = useState(true)
   const path = usePathname()
   const url: string | undefined = path?.substring(5)
   // @ts-ignore
@@ -24,15 +27,24 @@ export default function IPODetailsPage() {
       .then(async (res) => {
         const formattedData = await sanitizeIpoDetailsData(res.data)
         console.log(formattedData)
-
         setData(formattedData)
+        setLoading(false)
+      })
+      .catch((error) => {
+        console.log(error)
+        setLoading(false)
       })
   }, [ipoId])
 
   return (
     <>
+      {loading === true && (
+        <div className="fixed top-0 bg-gray-500 bg-opacity-30 flex justify-center items-center w-[100vw] h-[100vh]">
+          <LoadingUi />
+        </div>
+      )}
       <div className=" w-[100vw] container mx-auto ">
-        <div className="bg-white w-[95vw] container mx-auto">
+        <div className="bg-white w-[95%] md:w-[90%] lg:w-[85%] container mx-auto">
           <div className="w-[100%] mx-auto container bg-white mb-[20px]">
             <CompanyDetails data={data.CompanyDetailsData} />
             <hr />
@@ -43,5 +55,16 @@ export default function IPODetailsPage() {
         </div>
       </div>
     </>
+  )
+}
+
+function LoadingUi() {
+  return (
+    <section className="mb-[450px] flex justify-center flex-col items-center">
+      <div className="loader w-[100px]">
+        <Image src={LogoIcon} alt="" />
+      </div>
+      <p className="text-white font-bold text-[25px]">Loading data...</p>
+    </section>
   )
 }

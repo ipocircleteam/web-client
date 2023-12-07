@@ -153,12 +153,22 @@ export const ProductsData: ProductDataType[] = [
   {
     title: 'GMP Analyser',
     link: '/gmp',
-    desc: 'Analytics of upcoming and current IPOs',
+    desc: 'GMP Analysis tool for upcoming IPOs',
+  },
+  {
+    title: 'Opti Order',
+    link: '/optiorder',
+    desc: 'Priority list to help you make smart choices',
   },
   {
     title: 'Ask Jarvis',
     link: '/algorithm',
     desc: 'Algorithm driven IPO investing strategies',
+  },
+  {
+    title: 'Much More',
+    link: '/',
+    desc: 'Will be adding more tools to this list',
   },
 ]
 

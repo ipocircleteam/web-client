@@ -18,6 +18,7 @@ export default function WebApp(props: {
   const [query, setQuery] = useState('')
   const [refMainData, setRefMainData] = useState(props.main)
   const [refSmeData, setRefSmeData] = useState(props.sme)
+  const [filterState, setFilterState] = useState('All IPOs')
 
   useEffect(() => {
     searchCompany()
@@ -36,7 +37,7 @@ export default function WebApp(props: {
     year: number,
     price: number,
   ) => {
-    if (String(sector) === 'All' && Number(year) === 0 && Number(price) === 0) {
+    if (String(sector) === 'All' && Number(price) === 0) {
       return trackerData
     } else {
       const filteredData = trackerData.filter((item) => {
@@ -88,24 +89,35 @@ export default function WebApp(props: {
       Number(year) === 0 &&
       Number(listing_gain) === 0
     ) {
-      setTableData(trackerData)
+      setFilterState('All IPOs')
+      setTableData(refData)
     } else {
-      const filterData = await getFilteredData(sector, year, listing_gain)
-      const comparedData = await getComparedData(filterData, listing_gain)
-      setTableData(listing_gain === 0 ? filterData : comparedData)
+      const comparedData = trackerData.filter((item) => {
+        const listingGainCal =
+          ((item.listing_price - item.issue_price) / item.issue_price) * 100
+        if (sector === 'All') {
+          return listingGainCal >= listing_gain
+        } else {
+          return listingGainCal >= listing_gain && item.sector === sector
+        }
+      })
+      setTableData(comparedData)
     }
   }
 
   const setMain = () => {
-    setTableData(refData)
-  }
-
-  const setSme = () => {
+    setFilterState('Main IPOs')
     setTableData(refMainData)
   }
 
-  const setAll = () => {
+  const setSme = () => {
+    setFilterState('SME IPOs')
     setTableData(refSmeData)
+  }
+
+  const setAll = () => {
+    setFilterState('All IPOs')
+    setTableData(refData)
   }
 
   const searchCompany = () => {
@@ -115,53 +127,64 @@ export default function WebApp(props: {
       return name?.includes(qName)
     })
 
+    if (query.length === 0) {
+      setFilterState('All IPOs')
+    }
     setTableData(filteredData)
   }
 
   const positiveListing = async () => {
-    alert('psotive')
-    const pData = refData.filter((item) => {
-      return item.listing_price >= item.issue_price
+    const pData = await refData.filter((item) => {
+      if (item.listing_price !== null || item.issue_price !== null) {
+        return item.listing_price >= item.issue_price
+      }
     })
+    setFilterState('Positive Lisitng')
     setTableData(pData)
   }
 
   const negativeListing = async () => {
-    alert('negative')
+    setFilterState('Negative Lisitng')
     const nData = refData.filter((item) => {
-      return item.listing_price < item.issue_price
+      if (item.listing_price !== null || item.issue_price !== null) {
+        return item.listing_price < item.issue_price
+      }
     })
     setTableData(nData)
   }
 
   const cpGreaterthanIp = async () => {
-    alert('cp>ip')
+    setFilterState('CP > IP')
     const fData = refData.filter((item) => {
-      return item.current_price >= item.issue_price
+      if (item.current_price !== null || item.issue_price !== null)
+        return item.current_price >= item.issue_price
     })
     setTableData(fData)
   }
 
   const cpLesserthanIp = async () => {
-    alert('cp<ip')
+    setFilterState('CP < IP')
     const fData = refData.filter((item) => {
-      return item.current_price < item.issue_price
+      if (item.current_price !== null || item.issue_price !== null)
+        return item.current_price < item.issue_price
     })
     setTableData(fData)
   }
 
   const cpGreaterthanLp = async () => {
-    alert('cp>lp')
+    setFilterState('CP > LP')
     const fData = refData.filter((item) => {
-      return item.current_price >= item.listing_price
+      if (item.listing_price !== null || item.current_price !== null)
+        return item.current_price >= item.listing_price
     })
     setTableData(fData)
   }
 
   const cpLesserthanLp = async () => {
-    alert('cp<lp')
+    setFilterState('CP < LP')
     const fData = refData.filter((item) => {
-      return item.current_price < item.listing_price
+      if (item.listing_price !== null || item.current_price !== null)
+        return item.current_price < item.listing_price
     })
     setTableData(fData)
   }
@@ -202,6 +225,7 @@ export default function WebApp(props: {
             setAll={setAll}
             setMain={setMain}
             setSme={setSme}
+            filterState={filterState}
           />
         </section>
 

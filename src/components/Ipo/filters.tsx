@@ -5,9 +5,9 @@ import { Search } from '../../../public/icons'
 export default function Filters(props: {
   search: (query: string) => void
   reset: () => void
+  query: string
+  changeQuery: (q: string) => void
 }) {
-  const [query, setQuery] = useState('')
-
   return (
     <>
       <div className="overflow-hidden h-[30px] border w-[300px] flex justify-start mdlg:justify-between items-start mdlg:items-center">
@@ -15,15 +15,15 @@ export default function Filters(props: {
           className="w-[90%] h-[25px] outline-none px-1 text-primary"
           type="text"
           placeholder="Search an IPO"
-          value={query}
+          value={props.query}
           onChange={(e) => {
-            setQuery(e.target.value)
+            props.changeQuery(e.target.value)
           }}
         />
         <button
           className="w-[10%] h-[25px]"
           onClick={() => {
-            props.search(query)
+            props.search(props.query)
           }}
         >
           <Image height={15} src={Search} alt="Search" />
