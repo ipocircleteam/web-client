@@ -48,23 +48,10 @@ export default function DataPanel(props: {
       <div className="w-[95%] mx-auto mb-[30px]">
         <p className="text-justify mdlg:text-left">
           {props.companyData.description}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-          sagittis lacus sem, at sollicitudin ipsum pretium et. Maecenas lacinia
-          nunc a mauris pretium, ornare hendrerit eros fermentum. Nunc tincidunt
-          elementum mi, lobortis maximus ipsum sagittis ac. Sed laoreet, erat id
-          volutpat pharetra, tortor dolor semper urna, at ultrices est erat id
-          nisi. Suspendisse vitae tristique justo. Maecenas aliquam lorem ac
-          fringilla vulputate. Mauris nec dui in augue pellentesque imperdiet
-          non a lacus. Nulla porttitor in magna sed consequat. Fusce nec ligula
-          feugiat, pretium lacus sit amet, porttitor augue. Duis vitae ante
-          finibus, vulputate ex quis, tincidunt odio. Etiam et velit in lacus
-          pharetra dignissim. Nam pulvinar felis velit, ac eleifend ligula
-          porttitor eu. Sed sed mollis augue, quis tincidunt diam. Nulla
-          facilisi.
         </p>
       </div>
 
-      <div id="dataTables" className="hidden lg:block">
+      <div id="dataTables" className="hidden lg:block h-[auto]">
         <Box sx={{ width: '100%' }}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <Tabs

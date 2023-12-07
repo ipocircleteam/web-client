@@ -9,6 +9,7 @@ import Slider from '@mui/material/Slider'
 import Result from '@/components/Algorithm/result'
 import Footer from '@/components/Footer/footer'
 import HelpGuide from '@/components/Algorithm/help-guide'
+import Products from '@/components/Home-Page/Products/products'
 
 export default function Consultation() {
   const [form, setForm] = useState({
@@ -70,7 +71,7 @@ export default function Consultation() {
   return (
     <>
       <div className="mx-auto container max-w-9xl">
-        <div className="bg-primary p-3 text-white h-[400px] flex justify-center items-center">
+        <div className="bg-primary p-3 text-white h-[300px] flex justify-center items-center">
           <span className="text-center">
             <h1 className="font-bold text-[2.5rem] md:text-[3rem]">JARVIS</h1>
             <p className="font-semibold text-[1.2rem] md:text-[1.5rem]">
@@ -101,7 +102,13 @@ export default function Consultation() {
           id="algoTool"
           className="text-center flex flex-col justify-center items-center mt-[30px]"
         >
-          <h1 className="text-[25px] my-[20px]">COMING SOON</h1>
+          <div className="border rounded-lg p-7">
+            <p>We are currently testing our algo, it will be live soon</p>
+            <h1 className="text-[35px] mb-[20px] font-bold text-secondary">
+              COMING SOON
+            </h1>
+          </div>
+          <Products />
           {/* <label className="text-primary text-[1.2rem] font-bold mb-[20px]">
             Please enter following details
           </label>

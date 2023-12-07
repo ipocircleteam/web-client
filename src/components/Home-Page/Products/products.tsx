@@ -11,7 +11,7 @@ export default function Products() {
         Explore our tools
       </h1>
 
-      <section className="flex flex-wrap justify-around items-center w-[90%] md:w-[80%] mx-auto">
+      <section className="flex flex-wrap justify-center items-center w-[90%] md:w-[80%] mx-auto">
         {ProductsData.map((item, index) => {
           return (
             <ProductCard

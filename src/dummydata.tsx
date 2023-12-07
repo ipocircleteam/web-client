@@ -150,15 +150,16 @@ export const ProductsData: ProductDataType[] = [
     link: '/ipotracker',
     desc: 'Know past and current_price performing IPOs',
   },
-  {
-    title: 'GMP Analyser',
-    link: '/gmp',
-    desc: 'Analytics of upcoming and current IPOs',
-  },
+
   {
     title: 'Ask Jarvis',
     link: '/algorithm',
     desc: 'Algorithm driven IPO investing strategies',
+  },
+  {
+    title: 'Much more to come',
+    link: '/',
+    desc: 'Working on other tools for primary markets',
   },
 ]
 
