@@ -19,6 +19,8 @@ export default function DataContainer(props: {
   const [dataType, setDataType] = useState('main')
   const [start, setStart] = useState(0)
   const [end, setEnd] = useState(19)
+  const [query, setQuery] = useState('')
+  const refdata = dataType === 'main' ? props.mainData : props.smeData
 
   async function updateData() {
     toast.loading('Fetching data ...')
@@ -38,9 +40,12 @@ export default function DataContainer(props: {
       isFirstRender.current = false
       return
     }
-
     updateData()
   }, [start, end])
+
+  useEffect(() => {
+    search()
+  }, [query])
 
   const toggleView = (type: string) => {
     if (type === 'main') {
@@ -52,12 +57,17 @@ export default function DataContainer(props: {
     }
   }
 
-  const search = (query: string) => {
-    reset()
-    const filteredData = data.filter((item) => {
-      return item.name.includes(String(query))
+  const search = () => {
+    const filteredData = refdata.filter((item) => {
+      const name = item.name.toLowerCase()
+      const qname = query.toLowerCase()
+      return name.includes(qname)
     })
-    setData(filteredData)
+    if (query.length === 0) {
+      dataType === 'main' ? setData(props.mainData) : setData(props.smeData)
+    } else {
+      setData(filteredData)
+    }
   }
 
   const reset = () => {
@@ -103,7 +113,14 @@ export default function DataContainer(props: {
           )}
 
           <div className="hidden md:block">
-            <Filters search={search} reset={reset} />
+            <Filters
+              search={search}
+              query={query}
+              reset={reset}
+              changeQuery={(q) => {
+                setQuery(q)
+              }}
+            />
           </div>
         </div>
       </div>
@@ -113,7 +130,14 @@ export default function DataContainer(props: {
       </div>
 
       <div className="block md:hidden">
-        <Filters search={search} reset={reset} />
+        <Filters
+          search={search}
+          query={query}
+          reset={reset}
+          changeQuery={(q) => {
+            setQuery(q)
+          }}
+        />
       </div>
     </>
   )

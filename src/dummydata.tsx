@@ -150,16 +150,25 @@ export const ProductsData: ProductDataType[] = [
     link: '/ipotracker',
     desc: 'Know past and current_price performing IPOs',
   },
-
+  {
+    title: 'GMP Analyser',
+    link: '/gmp',
+    desc: 'GMP Analysis tool for upcoming IPOs',
+  },
+  {
+    title: 'Opti Order',
+    link: '/optiorder',
+    desc: 'Priority list to help you make smart choices',
+  },
   {
     title: 'Ask Jarvis',
     link: '/algorithm',
     desc: 'Algorithm driven IPO investing strategies',
   },
   {
-    title: 'Much more to come',
+    title: 'Much More',
     link: '/',
-    desc: 'Working on other tools for primary markets',
+    desc: 'Will be adding more tools to this list',
   },
 ]
 

@@ -60,7 +60,7 @@ export default function FilterBody(props: {
           </button>
         </div>
 
-        <div className="flex justify-center items-center w-[100%]">
+        {/* <div className="flex justify-center items-center w-[100%]">
           <div className="flex justify-between items-center w-[50%] my-2 mx-1">
             <button
               id="negative-tracker"
@@ -116,6 +116,10 @@ export default function FilterBody(props: {
 
         <div className="text-gray-500 text-[13px]">
           CP : Current Price, LP: Listing Price, IP: Issue Price
+        </div> */}
+        <div className="w-[100%] h-[200px] bg-gray-200 rounded-lg flex flex-col justify-center items-center">
+          <p className="text-secondary text-[25px] font-bold">COMING SOON</p>
+          <p className="text-[12px]">Sneek peek: Live Current Price Feed :)</p>
         </div>
 
         <div className=" w-[100%] mx-auto my-2">
@@ -132,6 +136,7 @@ export default function FilterBody(props: {
             }}
             className="w-[100%] h-[40px] p-1 outline-none border border-gray-600 rounded-md"
           >
+            <option>All</option>
             {Sectors.map((sector) => {
               return <option key={sector}>{sector}</option>
             })}

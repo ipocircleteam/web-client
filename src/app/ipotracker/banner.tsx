@@ -20,8 +20,9 @@ export default function Banner() {
     <div className="bg-primary p-3 text-white h-[300px] flex justify-center items-center">
       <span className="text-center">
         <h1 className="font-bold text-[2.5rem] md:text-[3rem]">IPO Tracker</h1>
-        <p className="font-semibold text-[1.2rem] md:text-[1.5rem]">
-          This is the small description about IPO Tracker
+        <p className=" text-[18px] w-[90%] md:w-[75%] mb-[20px] lg:w-[60%] mx-auto">
+          Screen IPOs based on multiple parameters, access real-time insights,
+          and customize filters for informed decisions.
         </p>
         <span>
           <button

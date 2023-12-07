@@ -10,6 +10,8 @@ import Result from '@/components/Algorithm/result'
 import Footer from '@/components/Footer/footer'
 import HelpGuide from '@/components/Algorithm/help-guide'
 import Products from '@/components/Home-Page/Products/products'
+import Image from 'next/image'
+import { AlgoPeek } from '../../../public/images'
 
 export default function Consultation() {
   const [form, setForm] = useState({
@@ -75,7 +77,7 @@ export default function Consultation() {
           <span className="text-center">
             <h1 className="font-bold text-[2.5rem] md:text-[3rem]">JARVIS</h1>
             <p className="font-semibold text-[1.2rem] md:text-[1.5rem]">
-              Algorithm to guide you in your IPO investments
+              Algorithm guided and data backed IPO investments
             </p>
             <span>
               <button
@@ -108,6 +110,21 @@ export default function Consultation() {
               COMING SOON
             </h1>
           </div>
+          <div className="my-[20px] w-[100%]">
+            <h1 className="my-[10px]">What&apos;s cooking?</h1>
+            <div className="w-[95%] md:w-[70%] lg:w-[60%] border rounded-lg mx-auto shadow-md p-4">
+              <p className="w-[90%] lg:w-[80%] mx-auto my-[20px]">
+                Introducing our advanced IPO Suggestion Algorithm at IPO Circle!
+                Seamlessly integrating risk profiling, allotment probabilities,
+                and profit/loss expectations, this algorithm guides you through
+                a curated sequence of IPOs, optimizing your investment strategy
+                for success. Elevate your IPO experience with data-driven
+                precision.
+              </p>
+              <Image src={AlgoPeek} alt="" />
+            </div>
+          </div>
+
           <Products />
           {/* <label className="text-primary text-[1.2rem] font-bold mb-[20px]">
             Please enter following details

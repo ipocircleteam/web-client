@@ -12,6 +12,7 @@ export default function TrackerTable(props: {
   setAll: () => void
   setMain: () => void
   setSme: () => void
+  filterState: string
 }) {
   const theme = props.darkMode ? 'text-[#FFFFFF]' : 'text-slate-600'
   const [start, setStart] = useState(0)
@@ -103,6 +104,10 @@ export default function TrackerTable(props: {
             >
               Next
             </button>
+          </div>
+
+          <div className="border-2 text-primary p-1 w-[250px] font-bold border-primary rounded-md">
+            Current Filter: {props.filterState}
           </div>
         </div>
         <table className="w-[100%] mx-auto">
