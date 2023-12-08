@@ -24,23 +24,13 @@ export default function AnchorDetails(props: { data: AnchorDetailsType }) {
           <td className="pl-[10px] border-r">
             Anchor lock in period (ends for 50% share, 30 days)
           </td>
-          <td className="pl-[10px]">
-            {Number(props.data.anchorLockIn_50per_30days.substring(0, 4)) <=
-            1970
-              ? '---'
-              : props.data.anchorLockIn_50per_30days}
-          </td>
+          <td className="pl-[10px]">{props.data.anchorLockIn_50per_30days}</td>
         </tr>
         <tr className="border">
           <td className="pl-[10px] border-r">
             Anchor lock in period (ends for remaining 50% share, 90 days)
           </td>
-          <td className="pl-[10px]">
-            {Number(props.data.anchorLockIn_50per_90days.substring(0, 4)) <=
-            1970
-              ? '---'
-              : props.data.anchorLockIn_50per_90days}
-          </td>
+          <td className="pl-[10px]">{props.data.anchorLockIn_50per_90days}</td>
         </tr>
       </table>
     </div>
