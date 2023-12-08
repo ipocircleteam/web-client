@@ -8,7 +8,7 @@ export default function LotSize(props: { data: LotSizeType }) {
     >
       <thead>
         <tr className="border">
-          <td className="px-[10px] border-r">CAtegory</td>
+          <td className="px-[10px] border-r">Category</td>
           <td className="px-[10px] border-r">Lots Size</td>
           <td className="px-[10px] border-r">Shares</td>
           <td className="px-[10px]">Price</td>

@@ -16,13 +16,22 @@ export function IpoTable(props: { data: RowDataType[] }) {
         </tr>
 
         {props.data.map((item) => {
+          const openDate = new Date(item.opendate)
+          const closeDate = new Date(item.enddate)
+          const currDate = new Date()
+          var status = 'Upcoming'
+          if (openDate > currDate) status = 'Upcoming'
+          else if (openDate <= currDate && closeDate >= currDate)
+            status = 'Live'
+          else if (currDate > closeDate) status = 'Closed'
+
           const data = {
             sno: item.sno,
             ipoID: item.ipoID,
             name: item.name,
             opendate: item.opendate,
             enddate: item.enddate,
-            status: item.status,
+            status: status,
           }
           return <TableRow key={item.sno} data={data} scaling={false} />
         })}

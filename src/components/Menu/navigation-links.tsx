@@ -38,7 +38,7 @@ export function LargeNavigation() {
         className="mx-4 text-[1.6rem] md:text-[1.1rem] bg-secondary p-2 px-4 font-semibold rounded-lg border border-secondary
           hover:bg-base hover:border-secondary custom-btn-transition text-base hover:text-primary"
       >
-        Ask Jarvis
+        Ask Maverick
       </Link>
     </div>
   )
@@ -99,7 +99,7 @@ export function SmallNavigationLinks(props: { callback: () => void }) {
           href="/algorithm"
           className="mx-4 text-primary hover:text-secondary font-semibold"
         >
-          Ask Jarvis
+          Ask Maverick
         </Link>
       </div>
     </>

@@ -14,23 +14,23 @@ export default function PerformanceIndicators(props: {
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">ROE</td>
-        <td className="px-[10px]">{props.data.roe}%</td>
+        <td className="px-[10px]">{props.data.roe}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">ROCE</td>
-        <td className="px-[10px]">{props.data.roce}%</td>
+        <td className="px-[10px]">{props.data.roce}</td>
       </tr>
       <tr className="border">
-        <td className="px-[10px] border-r">Debt</td>
-        <td className="px-[10px]">{props.data.debt}%</td>
+        <td className="px-[10px] border-r">Debt/Equity</td>
+        <td className="px-[10px]">{props.data.debt}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">EPS</td>
-        <td className="px-[10px]">{props.data.eps}%</td>
+        <td className="px-[10px]">{props.data.eps}</td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">RoNW</td>
-        <td className="px-[10px]">{props.data.ronw}%</td>
+        <td className="px-[10px]">{props.data.ronw}</td>
       </tr>
     </table>
   )

@@ -30,13 +30,7 @@ interface TabPanelProps {
   value: number
 }
 
-export default function DataPanel(props: {
-  data: DataPanelType
-  companyData: CompanyDetailsType
-  AnchorDetailsData: AnchorDetailsType
-  IpoReservationData: IpoReservationType
-  PromoterHoldingsData: PromoterHoldingsType
-}) {
+export default function DataPanel(props: { data: any }) {
   const [value, setValue] = React.useState(0)
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -47,7 +41,7 @@ export default function DataPanel(props: {
     <>
       <div className="w-[95%] mx-auto mb-[30px]">
         <p className="text-justify mdlg:text-left">
-          {props.companyData.description}
+          {props.data.CompanyDetailsData.description}
         </p>
       </div>
 
@@ -64,10 +58,10 @@ export default function DataPanel(props: {
               <Tab label="Timetable" {...a11yProps(1)} />
               <Tab label="Lot Size" {...a11yProps(2)} />
               <Tab label="Performance " {...a11yProps(3)} />
-              <Tab label="Subscriptions" {...a11yProps(4)} />
+              <Tab label="Subs" {...a11yProps(4)} />
               <Tab label="Company Financials" {...a11yProps(5)} />
               <Tab label="Anchor Details" {...a11yProps(6)} />
-              <Tab label="Reservations" {...a11yProps(7)} />
+              <Tab label="Reserves" {...a11yProps(7)} />
               <Tab label="Promoter Holdings" {...a11yProps(8)} />
             </Tabs>
           </Box>
@@ -90,13 +84,13 @@ export default function DataPanel(props: {
             <CompanyFinancials data={props.data.CompanyFinancialsData} />
           </CustomTabPanel>
           <CustomTabPanel value={value} index={6}>
-            <AnchorDetails data={props.AnchorDetailsData} />
+            <AnchorDetails data={props.data.AnchorDetailsData} />
           </CustomTabPanel>
           <CustomTabPanel value={value} index={7}>
-            <IpoReservation data={props.IpoReservationData} />
+            <IpoReservation data={props.data.IppoReservationData} />
           </CustomTabPanel>
           <CustomTabPanel value={value} index={8}>
-            <PromoterHoldings data={props.PromoterHoldingsData} />
+            <PromoterHoldings data={props.data.PromoterHoldingsData} />
           </CustomTabPanel>
         </Box>
       </div>

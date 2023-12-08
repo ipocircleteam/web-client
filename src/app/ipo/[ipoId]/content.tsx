@@ -17,16 +17,12 @@ import Subscriptions from './tables/subscriptions'
 import { ContentType } from '../data.types'
 
 export default function Content(props: { data: ContentType }) {
+  console.log(props.data)
+
   return (
     <div className="overflow-hidden mx-auto p-1 md:p-4 container">
-      <div className="lg:h-[300px]">
-        <DataPanel
-          data={props.data.DataPanelData}
-          companyData={props.data.CompanyDetailsData}
-          AnchorDetailsData={props.data.AnchorDetailsData}
-          IpoReservationData={props.data.IppoReservationData}
-          PromoterHoldingsData={props.data.PromoterHoldingsData}
-        />
+      <div className="lg:h-[auto]">
+        <DataPanel data={props.data} />
 
         <div className="block lg:hidden">
           <NameDivider text="Ipo Details" width={0} />
@@ -52,7 +48,7 @@ export default function Content(props: { data: ContentType }) {
 
       {/* <GMP data={props.data.GmpData} /> */}
 
-      <div className="lg:mt-[220px]">
+      <div className="lg:mt-[]">
         <ObjectIssue data={props.data.ObjectIssueData} />
 
         <div className="w-[100%] flex flex-wrap justify-around items-start">

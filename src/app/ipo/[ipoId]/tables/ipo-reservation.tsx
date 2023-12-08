@@ -1,6 +1,8 @@
 import { IpoReservationType } from '../../data.types'
 
 export default function IpoReservation(props: { data: IpoReservationType }) {
+  console.log(props.data)
+
   return (
     <table
       id="ipoReservation"

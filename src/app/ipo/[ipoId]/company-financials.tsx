@@ -14,16 +14,16 @@ export default function CompanyFinancials(props: {
           <td className="pl-[10px] text-center">{props.data.period1.date}</td>
           <td className="pl-[10px] text-center">{props.data.period2.date}</td>
           <td className="pl-[10px] text-center">{props.data.period3.date}</td>
-          <td className="pl-[10px] text-center">{props.data.period4.date}</td>
-          <td className="pl-[10px] text-center">{props.data.period5.date}</td>
+          {/* <td className="pl-[10px] text-center">{props.data.period4.date}</td> */}
+          {/* <td className="pl-[10px] text-center">{props.data.period5.date}</td> */}
         </tr>
         <tr className="border">
           <td className="pl-[10px] border-r">Assets</td>
           <td className="pl-[10px] text-center">{props.data.period1.assets}</td>
           <td className="pl-[10px] text-center">{props.data.period2.assets}</td>
           <td className="pl-[10px] text-center">{props.data.period3.assets}</td>
-          <td className="pl-[10px] text-center">{props.data.period4.assets}</td>
-          <td className="pl-[10px] text-center">{props.data.period5.assets}</td>
+          {/* <td className="pl-[10px] text-center">{props.data.period4.assets}</td> */}
+          {/* <td className="pl-[10px] text-center">{props.data.period5.assets}</td> */}
         </tr>
         <tr className="border">
           <td className="pl-[10px] border-r">Revenue</td>
@@ -36,12 +36,12 @@ export default function CompanyFinancials(props: {
           <td className="pl-[10px] text-center">
             {props.data.period3.revenue}
           </td>
-          <td className="pl-[10px] text-center">
+          {/* <td className="pl-[10px] text-center">
             {props.data.period4.revenue}
           </td>
           <td className="pl-[10px] text-center">
             {props.data.period5.revenue}
-          </td>
+          </td> */}
         </tr>
         <tr className="border">
           <td className="pl-[10px] border-r">Profit after tax</td>
@@ -54,12 +54,12 @@ export default function CompanyFinancials(props: {
           <td className="pl-[10px] text-center">
             {props.data.period3.profits_after_tax}
           </td>
-          <td className="pl-[10px] text-center">
+          {/* <td className="pl-[10px] text-center">
             {props.data.period4.profits_after_tax}
           </td>
           <td className="pl-[10px] text-center">
             {props.data.period5.profits_after_tax}
-          </td>
+          </td> */}
         </tr>
         <tr className="border">
           <td className="pl-[10px] border-r">Net Worth</td>
@@ -72,12 +72,12 @@ export default function CompanyFinancials(props: {
           <td className="pl-[10px] text-center">
             {props.data.period3.networth}
           </td>
-          <td className="pl-[10px] text-center">
+          {/* <td className="pl-[10px] text-center">
             {props.data.period4.networth}
           </td>
           <td className="pl-[10px] text-center">
             {props.data.period5.networth}
-          </td>
+          </td> */}
         </tr>
         <tr className="border">
           <td className="pl-[10px] border-r">Reserves and Surplus</td>
@@ -90,12 +90,12 @@ export default function CompanyFinancials(props: {
           <td className="pl-[10px] text-center">
             {props.data.period3.reserves_and_surplus}
           </td>
-          <td className="pl-[10px] text-center">
+          {/* <td className="pl-[10px] text-center">
             {props.data.period4.reserves_and_surplus}
           </td>
           <td className="pl-[10px] text-center">
             {props.data.period5.reserves_and_surplus}
-          </td>
+          </td> */}
         </tr>
         <tr className="border">
           <td className="pl-[10px] border-r">Total Borrowing</td>
@@ -108,12 +108,12 @@ export default function CompanyFinancials(props: {
           <td className="pl-[10px] text-center">
             {props.data.period3.total_borrowings}
           </td>
-          <td className="pl-[10px] text-center">
+          {/* <td className="pl-[10px] text-center">
             {props.data.period4.total_borrowings}
           </td>
           <td className="pl-[10px] text-center">
             {props.data.period5.total_borrowings}
-          </td>
+          </td> */}
         </tr>
       </table>
     </div>

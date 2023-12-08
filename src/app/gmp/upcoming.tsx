@@ -7,13 +7,10 @@ export default function Upcoming(props: { data: any }) {
       <div>
         <h1 className="text-[35px] font-bold text-secondary">Upcoming IPOs</h1>
 
-        <div className="flex flex-wrap justify-around items-center">
-          {/* {props.data.map((item: any) => {
-            return <UpcomingCard data={item} />
-          })} */}
-          <UpcomingCard data={data[0]} />
-          <UpcomingCard data={data[1]} />
-          <UpcomingCard data={data[2]} />
+        <div className="flex flex-wrap justify-center items-center">
+          {props.data.map((item: any) => {
+            return <UpcomingCard key={item.name} data={item} />
+          })}
         </div>
       </div>
     </div>

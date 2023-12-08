@@ -75,7 +75,7 @@ export default function Consultation() {
       <div className="mx-auto container max-w-9xl">
         <div className="bg-primary p-3 text-white h-[300px] flex justify-center items-center">
           <span className="text-center">
-            <h1 className="font-bold text-[2.5rem] md:text-[3rem]">JARVIS</h1>
+            <h1 className="font-bold text-[2.5rem] md:text-[3rem]">MAVERICK</h1>
             <p className="font-semibold text-[1.2rem] md:text-[1.5rem]">
               Algorithm guided and data backed IPO investments
             </p>
