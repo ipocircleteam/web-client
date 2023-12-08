@@ -58,7 +58,12 @@ export function SmallNavigationLinks(props: { callback: () => void }) {
         />
       </div>
 
-      <div className="m-2 text-[20px]">
+      <div
+        className="m-2 text-[20px]"
+        onClick={() => {
+          props.callback()
+        }}
+      >
         <Link
           href="/gmp"
           className="mx-4 text-primary hover:text-secondary font-semibold"
@@ -67,7 +72,12 @@ export function SmallNavigationLinks(props: { callback: () => void }) {
         </Link>
       </div>
 
-      <div className="m-2 text-[20px]">
+      <div
+        className="m-2 text-[20px]"
+        onClick={() => {
+          props.callback()
+        }}
+      >
         <Link
           href="/ipo"
           className="mx-4 text-primary hover:text-secondary font-semibold"
@@ -76,7 +86,12 @@ export function SmallNavigationLinks(props: { callback: () => void }) {
         </Link>
       </div>
 
-      <div className="m-2 text-[20px]">
+      <div
+        className="m-2 text-[20px]"
+        onClick={() => {
+          props.callback()
+        }}
+      >
         <Link
           href="/ipotracker"
           className="mx-4 text-primary hover:text-secondary font-semibold"
@@ -85,7 +100,12 @@ export function SmallNavigationLinks(props: { callback: () => void }) {
         </Link>
       </div>
 
-      <div className="m-2 text-[20px]">
+      <div
+        className="m-2 text-[20px]"
+        onClick={() => {
+          props.callback()
+        }}
+      >
         <Link
           href="/optiorder"
           className="mx-4 text-primary hover:text-secondary font-semibold"
@@ -94,7 +114,12 @@ export function SmallNavigationLinks(props: { callback: () => void }) {
         </Link>
       </div>
 
-      <div className="m-2 text-[20px]">
+      <div
+        className="m-2 text-[20px]"
+        onClick={() => {
+          props.callback()
+        }}
+      >
         <Link
           href="/algorithm"
           className="mx-4 text-primary hover:text-secondary font-semibold"
