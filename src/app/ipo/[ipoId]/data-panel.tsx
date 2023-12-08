@@ -60,8 +60,8 @@ export default function DataPanel(props: { data: any }) {
               <Tab label="Performance " {...a11yProps(3)} />
               <Tab label="Subs" {...a11yProps(4)} />
               <Tab label="Company Financials" {...a11yProps(5)} />
-              <Tab label="Anchor Details" {...a11yProps(6)} />
-              <Tab label="Reserves" {...a11yProps(7)} />
+              <Tab label="Anchor" {...a11yProps(6)} />
+              <Tab label="Reservations" {...a11yProps(7)} />
               <Tab label="Promoter Holdings" {...a11yProps(8)} />
             </Tabs>
           </Box>
