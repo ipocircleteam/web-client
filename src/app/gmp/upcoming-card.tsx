@@ -3,7 +3,7 @@ import Linegraph from './linegraph'
 export default function UpcomingCard(props: { data: any }) {
   return (
     <div className=" w-[320px] h-[300px] rounded-lg shadow-md p-2 overflow-hidden mx-4 text-center">
-      <div className="w-[100%] h-[200px] overflow-scroll border rounded-sm">
+      <div className="w-[100%] h-[200px] overflow-hidden border rounded-sm">
         <Linegraph data={props.data.gmp} />
       </div>
       <h1 className="text-primary text-[18px] font-semibold">
