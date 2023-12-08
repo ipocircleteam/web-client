@@ -8,7 +8,11 @@ export default function IpoDetails(props: { data: IpoDetailsType }) {
     >
       <tr className="border">
         <td className="px-[10px] border">IPO Date</td>
-        <td className="px-[10px]">{props.data.ipo_date}</td>
+        <td className="px-[10px]">
+          {Number(props.data.ipo_date.substring(0, 4)) <= 1970
+            ? '---'
+            : props.data.ipo_date.substring(0, 10)}
+        </td>
       </tr>
       <tr className="border">
         <td className="px-[10px] border">Face Value</td>
@@ -40,7 +44,7 @@ export default function IpoDetails(props: { data: IpoDetailsType }) {
       </tr>
       <tr className="border">
         <td className="px-[10px] border-r">Listing At</td>
-        <td className="px-[10px]">Rs {props.data.listing_at}</td>
+        <td className="px-[10px]">{props.data.listing_at}</td>
       </tr>
     </table>
   )

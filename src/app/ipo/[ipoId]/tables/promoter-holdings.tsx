@@ -10,11 +10,11 @@ export default function PromoterHoldings(props: {
     >
       <tr className="border">
         <td className="pl-[10px] border-r">Pre-issue share holding</td>
-        <td className="pl-[10px]">{props.data.preissue_share_holdings}%</td>
+        <td className="pl-[10px]">{props.data.preissue_share_holdings}</td>
       </tr>
       <tr className="border">
         <td className="pl-[10px] border-r">Post-issue share holding</td>
-        <td className="pl-[10px]">{props.data.postissue_share_holdings}%</td>
+        <td className="pl-[10px]">{props.data.postissue_share_holdings}</td>
       </tr>
     </table>
   )

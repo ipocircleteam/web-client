@@ -1,18 +1,30 @@
 'use client'
-import { LineChart } from '@mui/x-charts/LineChart'
+import {
+  ResponsiveContainer,
+  LineChart,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  Line,
+} from 'recharts'
 
 export default function Linegraph(props: { data: any }) {
   return (
-    <LineChart
-      xAxis={[{ data: props.data.gmp.instant }]}
-      series={[
-        {
-          curve: 'natural',
-          data: props.data.gmp.values,
-        },
-      ]}
-      //   width={400}
-      //   height={300}
-    />
+    <div className="flex justify-center items-center w-[100%] h-[100%]">
+      <ResponsiveContainer width={300} height={180}>
+        <LineChart
+          data={props.data}
+          margin={{ top: 0, right: 30, left: 0, bottom: 0 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="instant" />
+          <YAxis />
+          <Tooltip />
+          <Line type="monotone" dataKey="value" stroke="#82ca9d" />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
   )
 }

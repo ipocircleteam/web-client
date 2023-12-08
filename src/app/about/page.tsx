@@ -7,8 +7,9 @@ export default async function About() {
   return (
     <div className="w-[100vw] ">
       <div className="w-[100%] h-[300px]">
-        <div className="h-[100%] text-[50px] font-semibold text-primary flex justify-center items-center w-[100%] md:w-[80%] lg:w-[60%] border-b-2 mx-auto">
-          WE ARE HERE TO STAY
+        <div className="h-[100%] text-center text-[50px] font-semibold text-primary flex justify-center items-center w-[100%] md:w-[80%] lg:w-[60%] border-b-2 mx-auto">
+          Transforming Investments, <br />
+          Empowering Vision
         </div>
       </div>
 
@@ -71,8 +72,8 @@ export default async function About() {
             Team IPO Circle
           </h1>
 
-          <div className=" w-[100%] h-[500px] md:flex justify-center items-center my-[20px]">
-            <div className="w-[300px] h-[95%] overflow-hidden mx-5 border rounded-lg shadow-lg my-2">
+          <div className=" w-[100%] min-h-[500px] h-[auto] text-center flex flex-wrap justify-center items-start my-[20px]">
+            <div className="w-[315px] h-[510px] overflow-hidden mx-5 border rounded-lg shadow-lg my-2">
               <div className="w-[100%] h-[300px] overflow-hidden border">
                 <Image src={Ujjawal} alt="" />
               </div>
@@ -80,12 +81,14 @@ export default async function About() {
                 <h2 className="text-primary font-bold">Ujjwal Roy</h2>
                 <h4 className="text-gray-700">CEO, Founder</h4>
                 <p className="text-gray-500 text-left">
-                  This is me, do whatever fuck you wanna do
+                  Trader and finance analyst behind IPO Circle, merging
+                  financial savvy with software knowledge. Elevating IPO
+                  investing with cutting-edge tools.
                 </p>
               </div>
             </div>
 
-            <div className="w-[300px] h-[95%] overflow-hidden mx-5 border rounded-lg shadow-lg my-2">
+            <div className="w-[315px] h-[510px] overflow-hidden mx-5 border rounded-lg shadow-lg my-2">
               <div className="w-[100%] h-[300px] overflow-hidden border">
                 <Image src={Piyush} alt="" />
               </div>
@@ -93,8 +96,8 @@ export default async function About() {
                 <h2 className="text-primary font-bold">Piyush Jaiswal</h2>
                 <h4 className="text-gray-700">CTO, Co-founder</h4>
                 <p className="text-gray-500 text-left">
-                  Software Developer, and a final year engineering student
-                  trying to build things that matter
+                  Software Developer, leading our technology team in creating
+                  cutting-edge software that powers our mission
                 </p>
               </div>
             </div>

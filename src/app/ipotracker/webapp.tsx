@@ -12,13 +12,13 @@ export default function WebApp(props: {
   sme: TrackerDataType[]
 }) {
   const [isDark, setIsDark] = useState(false)
-  const [tableData, setTableData] = useState(props.data)
+  const [tableData, setTableData] = useState(props.main)
   const [refData, setRefData] = useState(props.data)
-  const trackerData: TrackerDataType[] = props.data
+  const trackerData: TrackerDataType[] = props.main
   const [query, setQuery] = useState('')
   const [refMainData, setRefMainData] = useState(props.main)
   const [refSmeData, setRefSmeData] = useState(props.sme)
-  const [filterState, setFilterState] = useState('All IPOs')
+  const [filterState, setFilterState] = useState('Main IPOs')
 
   useEffect(() => {
     searchCompany()
@@ -89,8 +89,8 @@ export default function WebApp(props: {
       Number(year) === 0 &&
       Number(listing_gain) === 0
     ) {
-      setFilterState('All IPOs')
-      setTableData(refData)
+      setFilterState('Main IPOs')
+      setTableData(refMainData)
     } else {
       const comparedData = trackerData.filter((item) => {
         const listingGainCal =
@@ -128,7 +128,7 @@ export default function WebApp(props: {
     })
 
     if (query.length === 0) {
-      setFilterState('All IPOs')
+      setFilterState('Main IPOs')
     }
     setTableData(filteredData)
   }
@@ -136,7 +136,7 @@ export default function WebApp(props: {
   const positiveListing = async () => {
     const pData = await refData.filter((item) => {
       if (item.listing_price !== null || item.issue_price !== null) {
-        return item.listing_price >= item.issue_price
+        return Number(item.listing_price) >= Number(item.issue_price)
       }
     })
     setFilterState('Positive Lisitng')
@@ -147,7 +147,7 @@ export default function WebApp(props: {
     setFilterState('Negative Lisitng')
     const nData = refData.filter((item) => {
       if (item.listing_price !== null || item.issue_price !== null) {
-        return item.listing_price < item.issue_price
+        return Number(item.listing_price) < Number(item.issue_price)
       }
     })
     setTableData(nData)

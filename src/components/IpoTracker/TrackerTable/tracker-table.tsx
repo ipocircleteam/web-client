@@ -57,8 +57,8 @@ export default function TrackerTable(props: {
           ' mx-auto w-[100%] lg:w-[95%] flex justify-start  lg:justify-center items-center flex-wrap h-[auto] rounded-lg p-1'
         }
       >
-        <div className="mx-auto flex justify-start lg:justify-between items-center py-[10px] border-t border-b w-[100%]">
-          <div>
+        <div className="mx-auto flex flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center py-[10px] border-t border-b w-[100%]">
+          <div className="my-2 lg:my-0">
             <button
               onClick={() => {
                 props.setAll()
@@ -88,7 +88,7 @@ export default function TrackerTable(props: {
             </button>
           </div>
 
-          <div>
+          <div className="my-2 lg:my-0">
             <button
               onClick={handlePrevButton}
               className="text-primary cursor-pointer border p-1 px-2"
@@ -106,7 +106,7 @@ export default function TrackerTable(props: {
             </button>
           </div>
 
-          <div className="border-2 text-primary p-1 w-[250px] font-bold border-primary rounded-md">
+          <div className="border-2 my-2 lg:my-0 text-primary p-1 w-[250px] font-bold border-primary rounded-md">
             Current Filter: {props.filterState}
           </div>
         </div>
