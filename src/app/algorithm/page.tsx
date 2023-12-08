@@ -12,6 +12,7 @@ import HelpGuide from '@/components/Algorithm/help-guide'
 import Products from '@/components/Home-Page/Products/products'
 import Image from 'next/image'
 import { AlgoPeek } from '../../../public/images'
+import CollectMail from '@/components/Mail/collectMail'
 
 export default function Consultation() {
   const [form, setForm] = useState({
@@ -104,11 +105,12 @@ export default function Consultation() {
           id="algoTool"
           className="text-center flex flex-col justify-center items-center mt-[30px]"
         >
-          <div className="border rounded-lg p-7">
+          <div className="border rounded-lg p-7 w-[90%] md:w-[80%] lg:w-[50%]">
             <p>We are currently testing our algo, it will be live soon</p>
             <h1 className="text-[35px] mb-[20px] font-bold text-secondary">
               COMING SOON
             </h1>
+            <CollectMail />
           </div>
           <div className="my-[20px] w-[100%]">
             <h1 className="my-[10px]">What&apos;s cooking?</h1>
@@ -124,7 +126,6 @@ export default function Consultation() {
               <Image src={AlgoPeek} alt="" />
             </div>
           </div>
-
           <Products />
           {/* <label className="text-primary text-[1.2rem] font-bold mb-[20px]">
             Please enter following details

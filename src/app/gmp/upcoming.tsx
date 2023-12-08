@@ -5,7 +5,7 @@ export default function Upcoming(props: { data: any }) {
   return (
     <div>
       <div>
-        <h1 className="text-[35px] font-bold text-secondary">Upcoming IPOs</h1>
+        {/* <h1 className="text-[35px] font-bold text-secondary">Upcoming IPOs</h1> */}
 
         <div className="flex flex-wrap justify-center items-center">
           {props.data.map((item: any) => {
