@@ -2,8 +2,8 @@ export const data = [
   {
     id: '1',
     name: 'DOMS Industries Limited',
-    opening_date: '12 Dec 2023',
-    closing_date: '14 Dec 2023',
+    opening_date: '13 Dec 2023',
+    closing_date: '15 Dec 2023',
     gmp_per: '51.265',
     gmp_abs: '405',
     issue_price: '790',
@@ -29,6 +29,27 @@ export const data = [
       {
         instant: '7 Dec',
         value: 405,
+      },
+    ],
+  },
+  {
+    id: '2',
+    name: 'India Shelter Finance Corporation Limited',
+    opening_date: '13 Dec 2023',
+    closing_date: '15 Dec 2023',
+    gmp_per: '40.567',
+    gmp_abs: '200',
+    issue_price: '493',
+    issue_size: '1200 Cr',
+    retail: '420 Cr',
+    gmp: [
+      {
+        instant: 'Morning',
+        value: 95,
+      },
+      {
+        instant: 'Now',
+        value: 200,
       },
     ],
   },
