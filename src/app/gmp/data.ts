@@ -30,6 +30,14 @@ export const data = [
         instant: '7 Dec',
         value: 405,
       },
+      {
+        instant: '10 Dec',
+        value: 480,
+      },
+      {
+        instant: '11 Dec (8 pm)',
+        value: 438,
+      },
     ],
   },
   {
@@ -44,12 +52,58 @@ export const data = [
     retail: '420 Cr',
     gmp: [
       {
-        instant: 'Morning',
+        instant: '9 Dec (10 am)',
         value: 95,
       },
       {
-        instant: 'Now',
+        instant: '9 Dec (1 pm)',
         value: 200,
+      },
+      {
+        instant: '10 Dec (1 pm)',
+        value: 220,
+      },
+      {
+        instant: '11 Dec (8 pm)',
+        value: 150,
+      },
+    ],
+  },
+  {
+    id: '3',
+    name: 'INOX CVA',
+    opening_date: '14 Dec 2023',
+    closing_date: '18 Dec 2023',
+    gmp_per: '38.6',
+    gmp_abs: '255',
+    issue_price: '660',
+    issue_size: '1459.32 Cr',
+    retail: '---',
+    gmp: [
+      {
+        instant: '12 Dec',
+        value: 255,
+      },
+    ],
+  },
+  {
+    id: '4',
+    name: 'Motisons',
+    opening_date: '18 Dec 2023',
+    closing_date: '20 Dec 2023',
+    gmp_per: '109',
+    gmp_abs: '60',
+    issue_price: '55',
+    issue_size: '541 Cr',
+    retail: '53 Cr',
+    gmp: [
+      {
+        instant: '11 Dec (8 pmb)',
+        value: 11,
+      },
+      {
+        instant: '11 Dec (10 pm)',
+        value: 60,
       },
     ],
   },
