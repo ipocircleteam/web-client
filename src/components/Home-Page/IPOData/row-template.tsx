@@ -45,12 +45,12 @@ export default function TableRow(props: {
       <td title="See details" className="w-[30%] text-left cursor-pointer">
         <div className="m-0 p-0 flex justify-start items-center">
           <Link href={`/ipo/${props.data.ipoID}`}>{props.data.name + ''}</Link>
-          {Number(props.data.enddate.substring(0, 2)) ===
+          {/* {Number(props.data.enddate.substring(0, 2)) ===
           new Date().getDate() ? (
             <Closetag width={width} />
           ) : (
             ''
-          )}
+          )} */}
         </div>
       </td>
 
