@@ -5,7 +5,6 @@ RUN mkdir -p /usr/src/app && cp -a /tmp/node_modules /usr/src/app/
 
 WORKDIR /usr/src/app
 ADD . /usr/src/app
-COPY .env.build /usr/src/app/.env
 RUN rm -rf logs && mkdir logs
 RUN npm run build
 EXPOSE 3000

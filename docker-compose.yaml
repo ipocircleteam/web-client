@@ -1,4 +1,4 @@
-version: '1.0'
+version: '3.9'
 services:
   website-client:
     container_name: ipocircle-client
@@ -9,4 +9,4 @@ services:
     ports:
       - 3000:3000
     env_file:
-      - .env
+      - .env.dockerBuild
