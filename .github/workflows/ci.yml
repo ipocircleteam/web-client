@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 14
       - name: Installing dependencies
-        run: npm ci
+        run: npm install
       - name: Docker Build
         run: docker-compose build
       - name: Testing App
