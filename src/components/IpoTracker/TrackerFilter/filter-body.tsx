@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import FilterFooter from './filter-footer'
-import { Sectors } from '@/data'
+import { Sectors } from '@/lib/constants/data'
 
 export default function FilterBody(props: {
   filter: (

@@ -1,4 +1,4 @@
-import Footer from '@/components/Footer/footer'
+import Footer from '@/components/Footer'
 import Menu from '@/components/Menu/menu'
 import { Piyush, Ujjawal } from '../../../public/pics'
 import Image from 'next/image'

@@ -3,7 +3,7 @@ import { Raleway } from 'next/font/google'
 import type { Metadata } from 'next'
 import React from 'react'
 import Menu from '@/components/Menu/menu'
-import Footer from '@/components/Footer/footer'
+import Footer from '@/components/Footer'
 import Script from 'next/script'
 
 const raleway = Raleway({ subsets: ['latin'] })

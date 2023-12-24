@@ -1,6 +1,6 @@
 import React from 'react'
-import TableRow from '../Home-Page/IPOData/row-template'
-import { RowDataType } from '../Home-Page/IPOData/ipodata.types'
+import TableRow from '../Home/IPOData/row-template'
+import { RowDataType } from '../Home/IPOData/ipodata.types'
 
 export default function Table(props: { data: RowDataType[] }) {
   return (
