@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 # . "$(dirname -- "$0")/_/husky.sh"
 
-sudo npm run build && npm test --passWithNoTests --watchAll
+sudo npm run build && npm test --passWithNoTests --watchAll=true
