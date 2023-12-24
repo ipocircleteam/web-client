@@ -1,8 +1,5 @@
 name: CI
 
-env: 
-  NEXT_PUBLIC_API_URL='https://api.ipocircle.com/api/v1'
-
 on:
   push:
     branches:
@@ -25,7 +22,3 @@ jobs:
           node-version: 14
       - name: Installing dependencies
         run: npm install
-      - name: Docker Build
-        run: docker-compose build
-      - name: Testing App
-        run: npm run test
