@@ -2,7 +2,7 @@
 
 import React from 'react'
 import $ from 'jquery'
-import { ipoDetailsItems } from '@/data'
+import { ipoDetailsItems } from '@/lib/constants/data'
 
 export default function Navigation() {
   return (

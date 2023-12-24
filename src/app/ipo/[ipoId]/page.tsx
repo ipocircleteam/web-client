@@ -5,7 +5,7 @@ import CompanyDetails from '../../../components/IpoDetails/company-details'
 import dotenv from 'dotenv'
 dotenv.config()
 import Content from '../../../components/IpoDetails/content'
-import sanitizeIpoDetailsData from '@/lib/sanitizeDetailsData'
+import sanitizeIpoDetailsData from '@/lib/functions/sanitizeDetailsData'
 import Navigation from '../../../components/IpoDetails/navigation'
 import { InitialDetailsData } from '../initial.data'
 import axios from 'axios'

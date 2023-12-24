@@ -1,3 +1,5 @@
+import { ProductDataType } from '../../components/Home/Products/product.types'
+
 export const ipoDetailsItems: {
   text: string
   id: string
@@ -46,6 +48,34 @@ export const ipoDetailsItems: {
   //   text: 'Discussions',
   //   id: 'discussions',
   // },
+]
+
+export const ProductsData: ProductDataType[] = [
+  {
+    title: 'IPO Tracker',
+    link: '/ipotracker',
+    desc: 'Know past and current_price performing IPOs',
+  },
+  {
+    title: 'GMP Analyser',
+    link: '/gmp',
+    desc: 'GMP Analysis tool for upcoming IPOs',
+  },
+  {
+    title: 'IPO Pulse',
+    link: '/optiorder',
+    desc: 'Priority list to help you make smart choices',
+  },
+  {
+    title: 'Ask Maverick',
+    link: '/algorithm',
+    desc: 'Algorithm driven IPO investing strategies',
+  },
+  {
+    title: 'Much More',
+    link: '/',
+    desc: 'Will be adding more tools to this list',
+  },
 ]
 
 export const Sectors = [
