@@ -1,4 +1,4 @@
-import { IpoDetailsType } from '../../data.types'
+import { IpoDetailsType } from '../../../app/ipo/data.types'
 
 export default function IpoDetails(props: { data: IpoDetailsType }) {
   return (

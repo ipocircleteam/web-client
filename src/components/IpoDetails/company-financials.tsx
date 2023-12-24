@@ -1,4 +1,4 @@
-import { CompanyFinancialsType } from '../data.types'
+import { CompanyFinancialsType } from '../../app/ipo/data.types'
 
 export default function CompanyFinancials(props: {
   data: CompanyFinancialsType

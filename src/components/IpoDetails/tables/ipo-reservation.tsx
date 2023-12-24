@@ -1,4 +1,4 @@
-import { IpoReservationType } from '../../data.types'
+import { IpoReservationType } from '../../../app/ipo/data.types'
 
 export default function IpoReservation(props: { data: IpoReservationType }) {
   console.log(props.data)

@@ -1,4 +1,4 @@
-import { LotSizeType } from '../../data.types'
+import { LotSizeType } from '../../../app/ipo/data.types'
 
 export default function LotSize(props: { data: LotSizeType }) {
   return (

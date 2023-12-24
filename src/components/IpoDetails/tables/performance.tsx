@@ -1,4 +1,4 @@
-import { PerformanceIndicatorsType } from '../../data.types'
+import { PerformanceIndicatorsType } from '../../../app/ipo/data.types'
 
 export default function PerformanceIndicators(props: {
   data: PerformanceIndicatorsType

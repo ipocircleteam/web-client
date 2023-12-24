@@ -1,4 +1,4 @@
-import sanitizeData from '@/utils/prepareData'
+import sanitizeData from '@/lib/prepareData'
 import DataContainer from './data-container'
 import dotenv from 'dotenv'
 dotenv.config()

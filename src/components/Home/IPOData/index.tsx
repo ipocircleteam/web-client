@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import DataContainer from './data-container'
-import sanitizeData from '@/utils/prepareData'
+import sanitizeData from '@/lib/prepareData'
 import axios from 'axios'
 
 import dotenv from 'dotenv'

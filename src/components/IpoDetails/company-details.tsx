@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { CompanyDetailsType } from '../data.types'
+import { CompanyDetailsType } from '../../app/ipo/data.types'
 
 export default function CompanyDetails(props: { data: CompanyDetailsType }) {
   return (

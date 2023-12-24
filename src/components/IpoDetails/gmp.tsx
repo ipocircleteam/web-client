@@ -8,7 +8,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts'
-import { GmpDataType } from '../data.types'
+import { GmpDataType } from '../../app/ipo/data.types'
 
 export default function GMP(props: { data: GmpDataType[] }) {
   return (

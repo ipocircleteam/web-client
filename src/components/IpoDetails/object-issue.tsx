@@ -1,4 +1,4 @@
-import { ObjectIssueType } from '../data.types'
+import { ObjectIssueType } from '../../app/ipo/data.types'
 
 export default function ObjectIssue(props: { data: ObjectIssueType }) {
   return (

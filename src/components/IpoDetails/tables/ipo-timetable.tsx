@@ -1,4 +1,4 @@
-import { IpoTimetableType } from '../../data.types'
+import { IpoTimetableType } from '../../../app/ipo/data.types'
 
 export default function IpoTimeTable(props: { data: IpoTimetableType }) {
   return (

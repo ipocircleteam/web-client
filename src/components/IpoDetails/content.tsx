@@ -14,7 +14,7 @@ import LotSize from './tables/lot-size'
 import PerformanceIndicators from './tables/performance'
 import CompanyFinancials from './company-financials'
 import Subscriptions from './tables/subscriptions'
-import { ContentType } from '../data.types'
+import { ContentType } from '../../app/ipo/data.types'
 
 export default function Content(props: { data: ContentType }) {
   console.log(props.data)

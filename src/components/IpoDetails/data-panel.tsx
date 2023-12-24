@@ -22,7 +22,7 @@ import {
   DataPanelType,
   IpoReservationType,
   PromoterHoldingsType,
-} from '../data.types'
+} from '../../app/ipo/data.types'
 
 interface TabPanelProps {
   children?: React.ReactNode

@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
-import { LogoIcon } from '../../../../public/logo'
+import { LogoIcon } from '../../../public/logo'
 import NameDivider from '@/components/Global/name-divider'
-import { ReviewType } from '../data.types'
+import { ReviewType } from '../../app/ipo/data.types'
 
 export default function OurReview(props: { data: ReviewType }) {
   return (

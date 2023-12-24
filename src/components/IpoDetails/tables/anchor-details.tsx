@@ -1,4 +1,4 @@
-import { AnchorDetailsType } from '../../data.types'
+import { AnchorDetailsType } from '../../../app/ipo/data.types'
 
 export default function AnchorDetails(props: { data: AnchorDetailsType }) {
   return (

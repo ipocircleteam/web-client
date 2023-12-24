@@ -1,4 +1,4 @@
-import { SubscriptionsType } from '../../data.types'
+import { SubscriptionsType } from '../../../app/ipo/data.types'
 
 export default function Subscriptions(props: { data: SubscriptionsType }) {
   return (

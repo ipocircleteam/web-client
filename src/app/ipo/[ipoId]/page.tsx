@@ -1,12 +1,12 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import CompanyDetails from './company-details'
+import CompanyDetails from '../../../components/IpoDetails/company-details'
 import dotenv from 'dotenv'
 dotenv.config()
-import Content from './content'
-import sanitizeIpoDetailsData from '@/utils/sanitizeDetailsData'
-import Navigation from './navigation'
+import Content from '../../../components/IpoDetails/content'
+import sanitizeIpoDetailsData from '@/lib/sanitizeDetailsData'
+import Navigation from '../../../components/IpoDetails/navigation'
 import { InitialDetailsData } from '../initial.data'
 import axios from 'axios'
 import { redirect, usePathname } from 'next/navigation'

@@ -1,4 +1,4 @@
-import { PromoterHoldingsType } from '../../data.types'
+import { PromoterHoldingsType } from '../../../app/ipo/data.types'
 
 export default function PromoterHoldings(props: {
   data: PromoterHoldingsType

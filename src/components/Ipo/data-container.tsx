@@ -1,11 +1,11 @@
 'use client'
 
-import { RowDataType } from '../Home-Page/IPOData/ipodata.types'
+import { RowDataType } from '../Home/IPOData/ipodata.types'
 import Filters from './filters'
 import IpoCategory from './category'
 import Table from './table'
 import { useEffect, useState, useRef } from 'react'
-import traverseData from '@/utils/traverseData'
+import traverseData from '@/lib/traverseData'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 

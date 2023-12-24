@@ -1,8 +1,8 @@
-import Banner from './banner'
-import GmpOverview from './gmpOverview'
-import WebApp from './webapp'
+import Banner from '../../components/IpoTracker/banner'
+import GmpOverview from '../../components/IpoTracker/gmpOverview'
+import WebApp from '../../components/IpoTracker/webapp'
 import { trackerData } from '@/dummydata'
-import sanitizeData from '@/utils/prepareData'
+import sanitizeData from '@/lib/prepareData'
 
 export default async function IpoTracker() {
   const dataResponse = await fetch(
