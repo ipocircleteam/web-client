@@ -1,14 +1,14 @@
-name: CI/CD
+name: CI
 
 on:
   push:
     branches:
       - main
-      - develop
+      - dev
   pull_request:
     branches:
       - main
-      - develop
+      - dev
 
 jobs:
   build:
@@ -22,3 +22,7 @@ jobs:
           node-version: 14
       - name: Installing dependencies
         run: npm install
+      - name: Building App
+        run: npm run build
+      - name: Testing App
+        run: npm run test

@@ -2,4 +2,3 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm run format && git add . && git status 
-# && sudo rm -r .next && sudo npm run build
