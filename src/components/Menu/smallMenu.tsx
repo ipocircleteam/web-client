@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import MenuList from './menu-list'
+import MenuList from './menuList'
 import $ from 'jquery'
 import Navbar from './navbar'
 
@@ -17,10 +17,7 @@ export default function SmallMenu() {
   }
 
   return (
-    <div
-      data-testid="small-menu"
-      className="w-[100vw] mx-auto container max-w-9l "
-    >
+    <div data-testid="small-menu" className="w-[100%] mx-auto max-w-9l ">
       <Navbar callback={openMenu} />
       <MenuList callback={closeMenu} />
     </div>

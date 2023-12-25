@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react'
 import { Search } from '../../../../public/icons'
 
 export default function SearchBar(props: {
-  darkMode: boolean
   query: string
   setQuery: (q: string) => void
   search: (name: string) => void

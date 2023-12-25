@@ -1,5 +1,5 @@
 import sanitizeData from '@/lib/functions/prepareData'
-import DataContainer from './data-container'
+import DataContainer from './dataContainer'
 import dotenv from 'dotenv'
 dotenv.config()
 

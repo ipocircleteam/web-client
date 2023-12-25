@@ -11,7 +11,6 @@ export default function Table(props: { data: RowDataType[] }) {
         <td className="w-[12.5%]">Open</td>
         <td className="w-[12.5%]">Close</td>
         <td className="w-[10%]">Status</td>
-        <td className="w-[5%]"></td>
       </tr>
 
       {props.data.map((item) => {

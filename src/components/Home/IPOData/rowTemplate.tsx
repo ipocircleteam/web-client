@@ -58,39 +58,9 @@ export default function TableRow(props: {
       <td className="w-[12.5%]">{props.data.enddate.substring(0, 10)}</td>
 
       <td className={statusClass + ' w-[10%] '}>
-        <div className="m-0 p-0 flex justify-center items-center">
-          {width && width > 600 ? (
-            <>
-              {props.data.status === 'Live' ? (
-                <Blink blinkClass={blinkClass} />
-              ) : (
-                ''
-              )}
-              {props.data.status}
-            </>
-          ) : (
-            <Blink blinkClass={blinkClass} />
-          )}
+        <div className="m-0 p-0 flex justify-center items-center text-[12px] md:text-[15px]">
+          {props.data.status}
         </div>
-      </td>
-
-      <td className="w-[5%] cursor-pointer">
-        <button
-          title="See more"
-          className=" text-primary cursor-pointer flex items-center justify-center m-1 w-[30px] h-[20px] rounded-sm"
-        >
-          <Link href={`/ipo/${props.data.ipoID}`}>
-            <Image
-              title="See more"
-              className=" text-primary flex items-center justify-center m-1 
-        w-[30px] h-[20px] rounded-sm hover:translate-x-1"
-              src={RightArrow}
-              alt="->"
-              height={15}
-              width={15}
-            />
-          </Link>
-        </button>
       </td>
     </tr>
   )

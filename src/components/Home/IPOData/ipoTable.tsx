@@ -4,7 +4,7 @@ import { RowDataType } from '../../../lib/types/ipodata.types'
 export function IpoTable(props: { data: RowDataType[] }) {
   return (
     // Ad class custom-shadow-table to add shadow around table
-    <div className="w-[90vw] sm:w-[90vw] md:w-[85vw] lg:w-[65vw] lgx:w-[50vw] mx-auto mt-2 rounded-md border overflow-hidden">
+    <div className="w-[98vw] sm:w-[90vw] md:w-[85vw] lg:w-[65vw] lgx:w-[50vw] mx-auto mt-2 rounded-md border overflow-hidden">
       <table className="text-center w-[100%]">
         <tr className="w-[100%] p-4 text-[13px] lg:text-[15px] font-semibold text-grey-500 custom-tablerow">
           <td className="w-[10%]">#</td>
