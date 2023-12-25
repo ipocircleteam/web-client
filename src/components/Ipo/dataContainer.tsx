@@ -125,10 +125,6 @@ export default function DataContainer(props: {
         </div>
       </div>
 
-      <div className="w-[100%] lg:w-[80%] mx-auto border">
-        <Table data={data} />
-      </div>
-
       <div className="block md:hidden">
         <Filters
           search={search}
@@ -138,6 +134,9 @@ export default function DataContainer(props: {
             setQuery(q)
           }}
         />
+      </div>
+      <div className="w-[100%] lg:w-[80%] mx-auto border">
+        <Table data={data} />
       </div>
     </>
   )

@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Logo } from '../../../public/logo'
-import { LargeNavigation } from './navigation-links'
+import { LargeNavigation } from './navigationLinks'
 
 export default function LargeMenu() {
   return (
     <div
-      className="px-[10px] py-[7px] m-0 border-b w-[100vw] flex justify-between items-center container mx-auto"
+      className="px-[10px] py-[7px] m-0 border-b w-[100%] flex justify-between items-center mx-auto"
       data-testid="large-menu"
     >
       <Link href="/">

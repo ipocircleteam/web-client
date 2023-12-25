@@ -1,9 +1,9 @@
 import React from 'react'
-import FilterHeader from './filter-header'
-import FilterBody from './filter-body'
-import FilterFooter from './filter-footer'
+import SearchBar from './search-bar'
+import Filter from '../TrackerFilter'
+import { TrackerDataType } from '../../../lib/types/trackerTable.types'
 
-export default function Filter(props: {
+export default function TrackerDetails(props: {
   filter: (
     sector: string,
     year: number,
@@ -18,17 +18,26 @@ export default function Filter(props: {
   cpLesserthanIp: () => void
   cpGreaterthanLp: () => void
   cpLesserthanLp: () => void
+  search: (name: string) => void
+  query: string
+  setQuery: (q: string) => void
+  trackerData: TrackerDataType[]
 }) {
   return (
-    <div id="filter" className=" bg-white border overflow-hidden">
-      <FilterBody
+    <div className="w-[100%] border mx-auto overflow-hidden p-2">
+      <SearchBar
+        query={props.query}
+        setQuery={props.setQuery}
+        search={props.search}
+      />
+      <Filter
+        filter={props.filter}
         positiveListing={props.positiveListing}
         negativeListing={props.negativeListing}
         cpGreaterthanIp={props.cpGreaterthanIp}
         cpLesserthanIp={props.cpLesserthanIp}
         cpGreaterthanLp={props.cpGreaterthanLp}
         cpLesserthanLp={props.cpLesserthanLp}
-        filter={props.filter}
       />
     </div>
   )

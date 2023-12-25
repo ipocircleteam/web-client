@@ -1,7 +1,7 @@
 import React from 'react'
-import { CallBackType } from './menu.types'
+import { CallBackType } from '../../lib/types/menu.types'
 import $ from 'jquery'
-import { SmallNavigationLinks } from './navigation-links'
+import { SmallNavigationLinks } from './navigationLinks'
 
 export default function MenuList(props: CallBackType) {
   return (
