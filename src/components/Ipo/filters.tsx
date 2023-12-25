@@ -10,7 +10,7 @@ export default function Filters(props: {
 }) {
   return (
     <>
-      <div className="overflow-hidden h-[30px] border w-[300px] flex justify-start mdlg:justify-between items-start mdlg:items-center">
+      <div className="overflow-hidden h-[30px] border w-[100%] md:w-[300px] flex justify-start mdlg:justify-between items-start mdlg:items-center">
         <input
           className="w-[90%] h-[25px] outline-none px-1 text-primary"
           type="text"

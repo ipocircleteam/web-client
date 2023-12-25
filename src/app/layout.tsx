@@ -1,12 +1,12 @@
 import './globals.css'
-import { Raleway } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import type { Metadata } from 'next'
 import React from 'react'
 import Menu from '@/components/Menu/menu'
 import Footer from '@/components/Footer'
 import Script from 'next/script'
 
-const raleway = Raleway({ subsets: ['latin'] })
+const roboto = Roboto({ style: 'normal', weight: '300', subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'IPOCircle',
@@ -37,7 +37,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/png" href="../../public/logo/logo5.png" />
       </head>
-      <body className={raleway.className}>
+      <body className={roboto.className}>
         <Menu />
         {children}
         <Footer />
