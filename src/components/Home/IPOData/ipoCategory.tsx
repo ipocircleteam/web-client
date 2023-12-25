@@ -1,4 +1,4 @@
-import { IpoCategoryProps } from '../../lib/types/ipodata.types'
+import { IpoCategoryProps } from '../../../lib/types/ipodata.types'
 import $ from 'jquery'
 
 export default function IpoCategory(props: IpoCategoryProps) {
@@ -18,7 +18,7 @@ export default function IpoCategory(props: IpoCategoryProps) {
   }
 
   return (
-    <div className="mx-auto flex justify-left items-center">
+    <div className="w-[100%] mx-auto flex justify-center items-center">
       <button
         id="main"
         className="shift-view m-2 h-[30px] px-2 rounded-md text-primary"

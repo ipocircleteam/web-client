@@ -1,5 +1,5 @@
 'use client'
-import Footer from '@/components/Footer/footer'
+import Footer from '@/components/Footer'
 import Menu from '@/components/Menu/menu'
 import React from 'react'
 

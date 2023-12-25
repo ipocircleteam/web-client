@@ -1,8 +1,8 @@
-import Linegraph from './linegraph'
-import Gmptable from './table'
-import Upcoming from './upcoming'
-import { data } from './data'
-import Banner from './banner'
+import Linegraph from '../../components/GMP/linegraph'
+import Gmptable from '../../components/GMP/table'
+import Upcoming from '../../components/GMP/upcoming'
+import { data } from '../../components/GMP/data'
+import Banner from '../../components/GMP/banner'
 
 export default function GMP() {
   return (

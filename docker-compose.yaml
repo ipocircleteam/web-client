@@ -1,7 +1,7 @@
 version: '3.9'
 services:
-  trading-desk-client:
-    container_name: vn-creditcard-client
+  website-client:
+    container_name: ipocircle-client
     init: true
     build: 
       context: .
@@ -9,5 +9,4 @@ services:
     ports:
       - 3000:3000
     env_file:
-      - .env.dev
-      - .env.prod
+      - .env.dockerBuild
