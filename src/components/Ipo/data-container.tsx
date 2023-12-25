@@ -1,6 +1,6 @@
 'use client'
 
-import { RowDataType } from '../Home/IPOData/ipodata.types'
+import { RowDataType } from '../../lib/types/ipodata.types'
 import Filters from './filters'
 import IpoCategory from './category'
 import Table from './table'

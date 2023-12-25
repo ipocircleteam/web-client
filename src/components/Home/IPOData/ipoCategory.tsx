@@ -1,4 +1,4 @@
-import { IpoCategoryProps } from './ipodata.types'
+import { IpoCategoryProps } from '../../../lib/types/ipodata.types'
 import $ from 'jquery'
 
 export default function IpoCategory(props: IpoCategoryProps) {
