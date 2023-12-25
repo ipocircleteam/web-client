@@ -67,7 +67,7 @@ export default async function About() {
           probability of profit.
         </p>
 
-        <div>
+        {/* <div>
           <h1 className="text-[20px] text-bold text-black mt-[40px]">
             Team IPO Circle
           </h1>
@@ -102,7 +102,7 @@ export default async function About() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <br />
         <p className="font-bold text-[18px] mb-[50px]">
