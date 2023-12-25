@@ -1,21 +1,19 @@
 'use client'
 
 import React from 'react'
-import { RowDataType } from './ipodata.types'
-import useWindowWidth from '@/hooks/useWindowWidth'
 import Image from 'next/image'
-import { RightArrow } from '../../../../public/icons'
 import Link from 'next/link'
+
+import { RowDataType } from '../../../lib/types/ipodata.types'
+import useWindowWidth from '@/hooks/useWindowWidth'
+import { RightArrow } from '../../../../public/icons'
+import Closetag from './closetag'
 
 export default function TableRow(props: {
   data: RowDataType
   scaling: boolean
 }) {
   const width = useWindowWidth()
-
-  const openIpoPage = () => {
-    window.location.replace('/ipo/' + props.data.ipoID)
-  }
 
   const statusClass =
     props.data.status === 'Live'
@@ -31,6 +29,13 @@ export default function TableRow(props: {
       ? 'bg-yellow-500'
       : 'bg-red-500') + ' w-[10px] h-[10px] mr-2 rounded-full'
 
+  const isIpoClosingToday = (): boolean => {
+    const endDate = props.data.enddate.substring(0, 10)
+    const currDate = new Date().toISOString().substring(0, 10)
+    if (endDate === currDate) return true
+    return false
+  }
+
   return (
     <tr
       className={
@@ -38,19 +43,13 @@ export default function TableRow(props: {
         (props.scaling === true ? 'scaling-transition' : '') +
         ' p-4 text-primary custom-tablerow text-[13px] md:text-[1.1rem]'
       }
-      // onClick={openIpoPage}
     >
       <td className="w-[10%]">{props.data.sno}</td>
 
       <td title="See details" className="w-[30%] text-left cursor-pointer">
         <div className="m-0 p-0 flex justify-start items-center">
           <Link href={`/ipo/${props.data.ipoID}`}>{props.data.name + ''}</Link>
-          {/* {Number(props.data.enddate.substring(0, 2)) ===
-          new Date().getDate() ? (
-            <Closetag width={width} />
-          ) : (
-            ''
-          )} */}
+          {isIpoClosingToday() && <Closetag width={width} />}
         </div>
       </td>
 
@@ -94,22 +93,6 @@ export default function TableRow(props: {
         </button>
       </td>
     </tr>
-  )
-}
-
-function Closetag(props: { width: number | undefined }) {
-  return (
-    <div className="flex items-center justify-center rounded-lg">
-      {props.width && props.width > 600 ? (
-        <label className="text-center w-[100px] text-[12px] border border-red-500 text-red-500 ml-2 px-[3px] rounded-lg">
-          Closing Today
-        </label>
-      ) : (
-        <label className="text-center text-white px-[3px] rounded-full ml-1 bg-red-500 font-semibold text-[8px]">
-          Closing
-        </label>
-      )}
-    </div>
   )
 }
 

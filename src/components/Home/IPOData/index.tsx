@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import DataContainer from './data-container'
+import DataContainer from './dataContainer'
 import sanitizeData from '@/lib/functions/prepareData'
 import axios from 'axios'
 

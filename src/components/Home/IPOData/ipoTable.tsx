@@ -1,5 +1,5 @@
-import TableRow from './row-template'
-import { RowDataType } from './ipodata.types'
+import TableRow from './rowTemplate'
+import { RowDataType } from '../../../lib/types/ipodata.types'
 
 export function IpoTable(props: { data: RowDataType[] }) {
   return (

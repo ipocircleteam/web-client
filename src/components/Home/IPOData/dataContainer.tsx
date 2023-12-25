@@ -2,9 +2,9 @@
 
 import { useState } from 'react'
 
-import IpoCategory from './ipo-category'
-import { IpoTable } from './ipo-table'
-import { RowDataType } from './ipodata.types'
+import IpoCategory from './ipoCategory'
+import { IpoTable } from './ipoTable'
+import { RowDataType } from '../../../lib/types/ipodata.types'
 
 export default function DataContainer(props: {
   mainData: RowDataType[]
