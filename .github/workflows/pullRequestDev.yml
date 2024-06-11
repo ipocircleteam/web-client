@@ -1,13 +1,8 @@
-name: CI
+name: PULL REQUEST ON DEV
 
 on:
-  push:
-    branches:
-      - main
-      - dev
   pull_request:
     branches:
-      - main
       - dev
 
 jobs:
@@ -22,3 +17,6 @@ jobs:
           node-version: 14
       - name: Installing dependencies
         run: npm install
+      - name: Run Tests
+        run: npm run test
+        # dev deployment

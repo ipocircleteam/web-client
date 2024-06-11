@@ -28,7 +28,8 @@ export async function IpoData() {
   //     sme = res.data.data
   //   })
 
-  const sme = await smeDataResponse.json()
+  const sme = await smeDataResponse
+  console.log(sme)
 
   const mainDataResponse = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/ipo/details?concise=true&type=eq&count=7`, // replace main url
@@ -40,7 +41,7 @@ export async function IpoData() {
       },
     },
   )
-  const main = await mainDataResponse.json()
+  const main = await mainDataResponse
   // var main
   // await axios
   //   .get(
