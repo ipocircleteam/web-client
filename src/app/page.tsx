@@ -4,15 +4,17 @@ import Hero from '@/components/Home/Hero/hero'
 import { IpoData } from '@/components/Home/IPOData'
 import Products from '@/components/Home/Products'
 import IpoStudy from '@/components/Home/IpoStudy/ipostudy'
+import Downtime from '@/pages/downtime'
 
 export default async function Home() {
   return (
     <>
-      <Hero />
+      <Downtime />
+      {/* <Hero />
       <IpoData />
       <HomeBanner />
       <Products />
-      <Features />
+      <Features /> */}
       {/* <IpoStudy /> */}
     </>
   )

@@ -40,7 +40,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Menu />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   )
