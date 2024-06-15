@@ -21,7 +21,7 @@ export default function LargeMenu() {
         </div>
       </Link>
 
-      {/* <LargeNavigation /> */}
+      <LargeNavigation />
     </div>
   )
 }
