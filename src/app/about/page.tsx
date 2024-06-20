@@ -1,8 +1,3 @@
-import Footer from '@/components/Footer'
-import Menu from '@/components/Menu/menu'
-import { Piyush, Ujjawal } from '../../../public/pics'
-import Image from 'next/image'
-
 export default async function About() {
   return (
     <div className="w-[100vw] ">

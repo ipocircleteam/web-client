@@ -1,18 +1,9 @@
 'use client'
-
-import Menu from '@/components/Menu/menu'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
-import Box from '@mui/material/Box'
-import Stack from '@mui/material/Stack'
-import Slider from '@mui/material/Slider'
-import Result from '@/components/Algorithm/result'
-import Footer from '@/components/Footer'
-import HelpGuide from '@/components/Algorithm/help-guide'
-import Products from '@/components/Home/Products'
 import Image from 'next/image'
 import { AlgoPeek } from '../../../public/images'
-import CollectMail from '@/components/Mail/collectMail'
+import CollectMail from '@/components/STALE/Mail/collectMail'
 
 export default function Consultation() {
   const [form, setForm] = useState({
@@ -126,7 +117,7 @@ export default function Consultation() {
               <Image src={AlgoPeek} alt="" />
             </div>
           </div>
-          <Products />
+          {/* <Products /> */}
           {/* <label className="text-primary text-[1.2rem] font-bold mb-[20px]">
             Please enter following details
           </label>

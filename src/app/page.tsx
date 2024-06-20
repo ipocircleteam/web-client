@@ -1,20 +1,30 @@
-import HomeBanner from '@/components/Home/Banner/home-banner'
-import Features from '@/components/Home/Features/features'
-import Hero from '@/components/Home/Hero/hero'
-import { IpoData } from '@/components/Home/IPOData'
-import Products from '@/components/Home/Products'
-import IpoStudy from '@/components/Home/IpoStudy/ipostudy'
-import Downtime from '@/pages/downtime'
+import {
+  HomeHero,
+  IpoPreviewList,
+  Banner,
+  Products,
+  Features,
+  DocsPreview,
+} from '@/components'
+import { IpoPreviewProps } from '@/types/ipodata'
+import { getIpoPreviewData } from '@/services/ipoService'
+
+async function fetchData(): Promise<IpoPreviewProps> {
+  const { main, sme } = await getIpoPreviewData(7)
+  return { main, sme }
+}
 
 export default async function Home() {
+  const { main, sme } = await fetchData()
+
   return (
     <>
-      <Hero />
-      <IpoData />
-      <HomeBanner />
+      <HomeHero />
+      <IpoPreviewList main={main} sme={sme} />
+      <Banner />
       <Products />
       <Features />
-      <IpoStudy />
+      <DocsPreview />
     </>
   )
 }

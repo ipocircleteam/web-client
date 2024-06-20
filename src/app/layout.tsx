@@ -2,9 +2,8 @@ import './globals.css'
 import { Roboto } from 'next/font/google'
 import type { Metadata } from 'next'
 import React from 'react'
-import Menu from '@/components/Menu/menu'
-import Footer from '@/components/Footer'
 import Script from 'next/script'
+import { Footer, Header } from '@/components/layout'
 
 const roboto = Roboto({ style: 'normal', weight: '300', subsets: ['latin'] })
 
@@ -38,7 +37,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="../../public/logo/logo5.png" />
       </head>
       <body className={roboto.className}>
-        <Menu />
+        <Header />
         {children}
         <Footer />
       </body>
