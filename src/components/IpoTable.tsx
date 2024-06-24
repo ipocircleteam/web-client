@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { IpoListRow, IpoWithStatus } from '../types/ipodata'
+import { useState, useEffect } from 'react'
+import { IpoWithStatus } from '../types/ipodata'
 import useWindowWidth from '@/hooks/useWindowWidth'
 import Link from 'next/link'
 import $ from 'jquery'
@@ -28,7 +28,7 @@ export default function IpoTableComponent(props: {
   }
 
   return (
-    <>
+    <div>
       <div className="w-[100%] mx-auto flex justify-center items-center">
         <button
           id="main"
@@ -50,15 +50,14 @@ export default function IpoTableComponent(props: {
           SME
         </button>
       </div>
-      <IpoTable data={data} />
-    </>
+      <Table data={data} />
+    </div>
   )
 }
 
-function IpoTable(props: { data: IpoWithStatus[] }) {
+function Table(props: { data: IpoWithStatus[] }) {
   return (
-    // Ad class custom-shadow-table to add shadow around table
-    <div className="w-[98vw] sm:w-[90vw] md:w-[85vw] lg:w-[65vw] lgx:w-[50vw] mx-auto mt-2 rounded-md border overflow-hidden">
+    <div className="w-[100%] mx-auto mt-2 rounded-md border overflow-hidden">
       <table className="text-center w-[100%]">
         <tr className="w-[100%] p-4 text-[13px] lg:text-[15px] font-semibold text-grey-500 custom-tablerow">
           <td className="w-[10%]">#</td>
@@ -66,7 +65,6 @@ function IpoTable(props: { data: IpoWithStatus[] }) {
           <td className="w-[17.5%]">Open</td>
           <td className="w-[17.5%]">Close</td>
           <td className="w-[10%]">Status</td>
-          {/* <td className="w-[5%]"></td> */}
         </tr>
 
         {props.data.map((item) => {

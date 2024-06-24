@@ -14,17 +14,31 @@ export const getIpoPreviewData = async (
     sme: [],
   }
 
+  const promiseArray =
+    count === 0
+      ? [
+          fetch(
+            `${process.env.NEXT_PUBLIC_API_URL}/ipo?concise=true&type=sme`,
+            { cache: 'no-store' },
+          ),
+          fetch(
+            `${process.env.NEXT_PUBLIC_API_URL}/ipo?concise=true&type=main`,
+            { cache: 'no-store' },
+          ),
+        ]
+      : [
+          fetch(
+            `${process.env.NEXT_PUBLIC_API_URL}/ipo?concise=true&type=sme&count=${count}`,
+            { cache: 'no-store' },
+          ),
+          fetch(
+            `${process.env.NEXT_PUBLIC_API_URL}/ipo?concise=true&type=main&count=${count}`,
+            { cache: 'no-store' },
+          ),
+        ]
+
   try {
-    const [smeResponse, mainResponse] = await Promise.all([
-      fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/ipo?concise=true&type=sme&count=7`,
-        { cache: 'no-store' },
-      ),
-      fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/ipo?concise=true&type=main&count=7`,
-        { cache: 'no-store' },
-      ),
-    ])
+    const [smeResponse, mainResponse] = await Promise.all(promiseArray)
 
     if (!smeResponse.ok || !mainResponse.ok) {
       throw new Error('Error fetching data!')
@@ -34,8 +48,14 @@ export const getIpoPreviewData = async (
       mainResponse.json(),
     ])
 
-    data.sme = await getIpoStatus(smeData.data, count)
-    data.main = await getIpoStatus(mainData.data, count)
+    data.sme = await getIpoStatus(
+      smeData.data,
+      count === 0 ? smeData.data.length : count,
+    )
+    data.main = await getIpoStatus(
+      mainData.data,
+      count === -0 ? mainData.data.length : count,
+    )
 
     return data
   } catch (error) {

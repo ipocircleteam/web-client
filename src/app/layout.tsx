@@ -1,11 +1,11 @@
 import './globals.css'
-import { Roboto } from 'next/font/google'
+import { Roboto, Montserrat, Open_Sans } from 'next/font/google'
 import type { Metadata } from 'next'
 import React from 'react'
 import Script from 'next/script'
 import { Footer, Header } from '@/components/layout'
 
-const roboto = Roboto({ style: 'normal', weight: '300', subsets: ['latin'] })
+const roboto = Open_Sans({ style: 'normal', weight: '400', subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'IPOCircle',
