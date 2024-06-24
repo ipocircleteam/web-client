@@ -1,5 +1,5 @@
-import Footer from '@/components/Footer'
-import Menu from '@/components/Menu/menu'
+// import Footer from '@/components/Footer'
+// import Menu from '@/components/Menu/menu'
 import Link from 'next/link'
 
 export default async function Careers() {

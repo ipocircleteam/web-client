@@ -1,6 +1,3 @@
-import Footer from '@/components/Footer'
-import Menu from '@/components/Menu/menu'
-
 export default async function PrivacyPolicy() {
   return (
     <div className="w-[100vw] ">

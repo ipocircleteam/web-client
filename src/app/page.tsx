@@ -1,21 +1,39 @@
-import HomeBanner from '@/components/Home/Banner/home-banner'
-import Features from '@/components/Home/Features/features'
-import Hero from '@/components/Home/Hero/hero'
-import { IpoData } from '@/components/Home/IPOData'
-import Products from '@/components/Home/Products'
-import IpoStudy from '@/components/Home/IpoStudy/ipostudy'
-import Downtime from '@/pages/downtime'
+import {
+  HomeHero,
+  IpoPreviewList,
+  Banner,
+  Products,
+  Features,
+  DocsPreview,
+} from '@/components'
+import { IpoPreviewProps } from '@/types/ipodata'
+import { getIpoPreviewData } from '@/services/ipoService'
+import Link from 'next/link'
+
+async function fetchData(): Promise<IpoPreviewProps> {
+  const { main, sme } = await getIpoPreviewData(7)
+  return { main, sme }
+}
 
 export default async function Home() {
+  const { main, sme } = await fetchData()
+
   return (
     <>
-      <Downtime />
-      {/* <Hero />
-      <IpoData />
-      <HomeBanner />
+      <HomeHero />
+      <div className="w-[98vw] sm:w-[90vw] md:w-[85vw] lg:w-[65vw] lgx:w-[50vw] mx-auto">
+        <IpoPreviewList main={main} sme={sme} />
+        <div
+          className="text-secondary my-2 text-center w-[100%] mx-auto text-[18px] 
+            hover:text-primary cursor-pointer"
+        >
+          <Link href="/ipo">See All</Link>
+        </div>
+      </div>
+      <Banner />
       <Products />
-      <Features /> */}
-      {/* <IpoStudy /> */}
+      <Features />
+      <DocsPreview />
     </>
   )
 }
